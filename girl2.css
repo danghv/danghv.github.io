@@ -1,0 +1,9 @@
+p#girl2.name::after {
+	content: ' Luu Diec Phi';
+}
+p#girl2.tuoi::after{
+	content: ' 30';
+}
+p#girl2.phimthamgia::after{
+	content: ' Than dieu dai hiep, ...';
+	}

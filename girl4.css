@@ -1,0 +1,9 @@
+p#girl1.name::after {
+	content: ' kim tae hee';
+}
+p#girl1.tuoi::after{
+	content: ' unknown';
+}
+p#girl1.phimthamgia::after{
+	content: ' many, ...';
+	}

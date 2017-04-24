@@ -1,0 +1,9 @@
+p#girl1.name::after {
+	content: ' Hua Tinh';
+}
+p#girl1.tuoi::after{
+	content: ' 36';
+}
+p#girl1.phimthamgia::after{
+	content: ' Tieu ngao giang ho, ...';
+	}
