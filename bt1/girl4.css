@@ -7,3 +7,7 @@ p#girl1.tuoi::after{
 p#girl1.phimthamgia::after{
 	content: ' many, ...';
 	}
+img{
+	max-width: 500px;
+	max-height: 500px;
+}
