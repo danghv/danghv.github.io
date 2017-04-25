@@ -7,3 +7,8 @@ p#girl2.tuoi::after{
 p#girl2.phimthamgia::after{
 	content: ' Than dieu dai hiep, ...';
 	}
+img{
+	
+	max-width = 500px;
+	max-height = 500px;
+}
