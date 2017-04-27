@@ -1,0 +1,81 @@
+
+
+#mainbanner{
+	width: 100%;
+}
+
+.bannermenu{
+	position: relative;
+}
+
+.menu{
+	text-align: left;
+    font-size: 30px;
+    /*background: #999;*/
+    position: absolute;
+    height: 144px;
+
+}
+
+
+}
+
+.menudad{
+	position: relative;
+	border: 2px solid red;
+}
+
+.album{
+	clear: left;
+	margin-left: 172px;
+}
+
+
+a {
+   	text-decoration: none;
+       	} 
+a:hover{
+	color: red;
+}
+*{
+	box-sizing: border-box;
+}
+
+
+
+div.gallery {
+	float: left;
+	width: 33.3333%;
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+#backtotop{
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	background-color: red;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.wrap{
+	max-width: 1020px;
+	margin: auto;
+}
