@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="formvalidate.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body>
+		<div class="wrap">
+			<h1>Register Form</h1>
+			<form action="result.html" id="form-register">
+				<input type="text" name="name" id="name" class = "style-input" placeholder="Full name">
+				<span class="error"></span>
+				<br>
+				<input type="text" name="email" id="email" class = "style-input" placeholder="Email">
+				<span class="error"></span>
+				<br>
+				<input type="password" name="password" id="password" class = "style-input" placeholder="Password">
+				<span class="error"></span>
+				<br>
+				<input type="date" name="dateOfBirth" id="dateOfBirth" class = "style-input" placeholder="Date of birth"><span class="error"></span>
+				<br>
+				<input type="text" name="address" id="address" class = "style-input" placeholder="Address">
+				<span class="error"></span>
+				<br>
+				<input type="text" name="phoneNumber" id="phoneNumber" class = "style-input" placeholder="Phone number"><span class="error"></span>
+				<br>
+				<input type="text" name="facebook" id="facebook" class = "style-input" placeholder="Facebook page"><span class="error"></span>
+				<br>
+				<input type="radio" name="Gender" class = "Gender" id="male" value="Nam" /><label for="male"> Nam </label>
+		        <input type="radio" name="Gender" id="female" class = "Gender" value="Nữ"/><label for="female"> Nữ </label><span class="error gender_msg"></span>
+		        <br> 
+				<input type = "submit" class="btn btn-primary" value = "Submit"/>
+			</form>
+		</div>
+			
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="formvalidate.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+.error{
+	color: red;
+}
+.style-input {
+    width: 200px;
+    border-radius: 10px;
+    margin: 2px;
+    border: 1px solid #337ab7;
+    padding: 10px;
+}
+.wrap{
+	padding: 100px;
+}
