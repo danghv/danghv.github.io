@@ -6,11 +6,20 @@
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<script type="text/javascript" src = "table.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="table.css">
 </head>
 
 <body ng-app = "my table">
 	<div ng-controller = "tableController">
-	  Show: <input type="number" name="limitTo" ng-model="limitRow"/>
+	  <strong>Show</strong>: <input type="number" name="limitTo" ng-model="limitRow"/>
 	        <select ng-model="sortColumn">
 	        	<option value = "tenCongTy">Tên Công Ty ASC</option>
 	        	<option value = "ceo">Tên CEO ASC</option>
@@ -23,17 +32,18 @@
 
 
 	        </select>
-		<table class="table">
+	    <strong>Search</strong>: <input type="text" name="search" ng-model = "searchText">
+		<table class="table table-striped table-bordered table-hover">
 		<thead>
 			<tr>
-				<td>Tên Công Ty</td>
-				<td>CEO</td>
-				<td>Mã Chứng Khoán</td>
-				<td>Năm Thành Lập</td>
+				<td ng-click="sortData('name')">Tên Công Ty<div ng-class="getSortClass('name')"></div></td>
+				<td ng-click="sortData('ceo')">CEO<div ng-class="getSortClass('ceo')"></div></td>
+				<td ng-click="sortData('maCK')">Mã Chứng Khoán<div ng-class="getSortClass('maCK')"></div></td>
+				<td ng-click="sortData('namThanhLap')">Năm Thành Lập<div ng-class="getSortClass('namThanhLap')"></div></td>
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="company in vnr50 | limitTo: limitRow | orderBy: sortColumn">
+			<tr ng-repeat="company in vnr50 | limitTo: limitRow |orderBy: sortColumn: reverse | filter: searchText">
 				<td>{{company.tenCongTy}}</td>
 				<td>{{company.ceo}}</td>
 				<td>{{company.maCK}}</td>

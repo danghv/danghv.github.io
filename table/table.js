@@ -14,11 +14,28 @@ function tableController($scope){
 				{tenCongTy: "Ngân hàng TMCP Sài Gòn", ceo: "Võ Tấn Hoàng Văn", maCK: "", namThanhLap: new Date("01/02/2012")},
 				{tenCongTy: "Ngân hàng TMCP Việt Nam Thịnh Vượng", ceo: "Nguyễn Đức Vinh", maCK: "", namThanhLap: new Date("01/01/1993")},
 				{tenCongTy: "Ngân hàng TMCP Sài Gòn Thương Tín", ceo: "Phan Huy Khang", maCK: "STB", namThanhLap: new Date("12/21/1991")},
+				{tenCongTy: "Techmaster.vn", ceo: "Trịnh Minh Cường", maCK: "", namThanhLap: new Date("01/01/2012")}
 
 	];
 	$scope.vnr50 = vnr50;
 	// var limitRow = 10;
-	$scope.limitRow = 5;
+	$scope.limitRow = 10;
 	$scope.sortColumn = "maCK";
+	$scope.reverse = false;
+	$scope.sortData = function(column){
+		if($scope.sortColumn == column){
+			$scope.reverse = !$scope.reverse;
+		}else {
+
+			$scope.reverse = false;
+			$scope.sortColumn = column;
+		}
+		
+	};
+	$scope.getSortClass = function(column){
+		if($scope.sortColumn == column){
+			return $scope.reverse?"arrow-up": "arrow-down";
+		}
+	}
 
 }
