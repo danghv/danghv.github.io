@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script type="text/javascript" src = "table.js"></script>
+</head>
+
+<body ng-app = "my table">
+	<div ng-controller = "tableController">
+	  Show: <input type="number" name="limitTo" ng-model="limitRow"/>
+	        <select ng-model="sortColumn">
+	        	<option value = "tenCongTy">Tên Công Ty ASC</option>
+	        	<option value = "ceo">Tên CEO ASC</option>
+	        	<option value = "maCK">Mã Chứng Khoán ASC</option>
+	        	<option value = "namThanhLap">Năm Thành Lập DES</option>
+	        	<option value = "-tenCongTy">Tên Công Ty DES</option>
+	        	<option value = "-ceo">Tên CEO DES</option>
+	        	<option value = "-maCK">Mã Chứng Khoán DES</option>
+	        	<option value = "-namThanhLap">Năm Thành Lập DES</option>
+
+
+	        </select>
+		<table class="table">
+		<thead>
+			<tr>
+				<td>Tên Công Ty</td>
+				<td>CEO</td>
+				<td>Mã Chứng Khoán</td>
+				<td>Năm Thành Lập</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="company in vnr50 | limitTo: limitRow | orderBy: sortColumn">
+				<td>{{company.tenCongTy}}</td>
+				<td>{{company.ceo}}</td>
+				<td>{{company.maCK}}</td>
+				<td>{{company.namThanhLap | date: "dd/MM/yyyy"}}</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+
+</body>
+
+</html>
