@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Kanban Board</title>
+	<link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	
+	<h1>Kanban Board</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<h5>TODO</h5>
+				<ul class="list-group sorted-list">
+				  <li class="list-group-item list-group-item-info">job 6 </li>
+				  <li class="list-group-item list-group-item-info">job 2 </li> 
+				  <li class="list-group-item list-group-item-info">job 3 </li>
+				  <li class="list-group-item list-group-item-info">job 4 </li>
+				  <li class="list-group-item list-group-item-info">job 5 </li> 
+				</ul>
+			</div>
+    		<div class="col-sm-4">
+				<h5>DOING</h5>
+				<ul class="list-group sorted-list">
+				  
+				  <li class="list-group-item list-group-item-warning">job 1 </li>
+				</ul>
+			</div>
+    		<div class="col-sm-4">
+				<h5>DONE</h5>
+				<ul class="list-group sorted-list">
+				  <li class="list-group-item list-group-item-success">job 10 </li>				  
+				  <li class="list-group-item list-group-item-success">job 11 </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="plugins/jqueryui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="plugins/bootstrap/bootstrap.min.js"></script>
+
+	<script>
+	  $( function() {
+	    $( ".sorted-list" ).sortable({
+	      connectWith: ".sorted-list"
+	    });
+	  } );
+  	</script>
+</body>
+</html>
