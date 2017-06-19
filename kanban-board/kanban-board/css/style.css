@@ -2,3 +2,23 @@ h1{
 	color: lightcoral;
 	text-align: center;
 }
+.ui-state-heighlight{
+	background-color: #fafafa;
+	height: calc(1.5rem + 20px);
+}
+.dragging{
+	-ms-transform: rotate(1deg);
+	-webkit-transform: rotate(1deg);
+	transform: rotate(1deg);
+}
+/*.glyphicon{
+	display: none;
+}*/
+.glyphicon:hover{
+	display: inline;
+}
+span.glyphicon.glyphicon-trash {
+    padding-left: 100px;
+    position: absolute;
+    right: 0px;
+}
