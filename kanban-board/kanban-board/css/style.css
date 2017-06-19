@@ -20,5 +20,6 @@ h1{
 span.glyphicon.glyphicon-trash {
     padding-left: 100px;
     position: absolute;
-    right: 0px;
+    right: 10px;
+    top: 10px;
 }
