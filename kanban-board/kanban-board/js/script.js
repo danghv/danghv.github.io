@@ -19,9 +19,17 @@
 			setData: function (data){
 				localStorage.setItem('list', JSON.stringify(data));
 			}
+			// numberOfTodoJobs: function(){
+			// 	// COLUMN_TYPE.forEach(function(type){
+			// 		$('#todo-badge').text($('#todo').length);
+			// 	// });
+			// }
 		}
-
+		// $('#todo-badge').text($('#todo').length);
+		// $('#doing-badge').text($('#doing').length);
+		// $('#done-badge').text($('#done').length);
 		var list = DB.getData();
+		DB.numberOfJobs;
 		var app = {
 			newJob: function(e, type, input){
 				var jobName = $(input).val();
@@ -36,16 +44,27 @@
 					this.addJobToList(type, jobName);
 					//Reset input
 					$(input).val('');
+					//update badge
+					// $('#todo-badge').text($('#todo').length);
+					// $('#doing-badge').text($('#doing').length);
+					// $('#done-badge').text($('#done').length);
 				}
+
 			},
 			addJobToList: function(type, jobName){
 				var item = '<li class="list-group-item list-group-item-info">'+jobName+'<span class="glyphicon glyphicon-trash" onclick="app.deleteJob(this)" data-toggle="modal" data-target="#modalConfirm"></span>' + '</li>';
 				$('#'+type).append(item);
+				$('#todo-badge').text($('.todo-style ul').children().length);
+				$('#doing-badge').text($('.doing-style ul').children().length);
+				$('#done-badge').text($('.done-style ul').children().length);
 			}, 
 			deleteJob: function(span){
 				var modal = $('#modalConfirm');
 				var item = $(span).parent();
 				var btn = $('#btn-delete');
+				var number = item.parent().length;
+				console.log(number);
+				console.log(item.parent()[0]);
 				// modal.openModal();
 				btn.off('click');
 
@@ -57,15 +76,26 @@
 					DB.setData(list);
 					item.remove();
 					$('#modalConfirm').modal('hide');
+					$('#todo-badge').text($('.todo-style ul').children().length);
+					$('#doing-badge').text($('.doing-style ul').children().length);
+					$('#done-badge').text($('.done-style ul').children().length);
 				});
-			}	
+				
+			},
+
 		};
 		COLUMN_TYPE.forEach(function(type){
 			var columnType = list[type] || [];
+			// $('#'+type+'-badge').text($('.'+type+'-style ul').children().length);
 			columnType.forEach(function(jobName){
 				app.addJobToList(type, jobName);
 			});
 		});
+		
+		$('#todo-badge').text($('.todo-style ul').children().length);
+		$('#doing-badge').text($('.doing-style ul').children().length);
+		$('#done-badge').text($('.done-style ul').children().length);
+
 
 		// var doing = list['doing'] || [];
 		// doing.forEach(function(job){
@@ -84,6 +114,10 @@
 	      	var oldItemPosition = ui.item.index();
 	      	ui.item.oldItemPosition = oldItemPosition;
 	      	console.log(oldItemPosition);
+
+	      	$('#todo-badge').text($('.todo-style ul').children().length);
+			$('#doing-badge').text($('.doing-style ul').children().length);
+			$('#done-badge').text($('.done-style ul').children().length);
 	      },
 	      stop: function(event, ui){
 	      	//Remove style class
@@ -100,6 +134,10 @@
 
 	      	//Store data to localstorage
 	      	DB.setData(list);
+
+	      	$('#todo-badge').text($('.todo-style ul').children().length);
+			$('#doing-badge').text($('.doing-style ul').children().length);
+			$('#done-badge').text($('.done-style ul').children().length);
 	      }
 	    });
 	  

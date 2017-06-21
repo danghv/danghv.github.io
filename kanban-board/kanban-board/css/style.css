@@ -23,3 +23,20 @@ span.glyphicon.glyphicon-trash {
     right: 10px;
     top: 10px;
 }
+
+.todo-style h5{
+	background: green;
+	/*padding: 10px;*/
+}
+.doing-style h5{
+	background: yellow;
+	/*padding: 10px;*/
+	
+}
+.done-style h5{
+	background: blue;
+	/*padding: 10px;*/
+}
+.todo-style h5 , .doing-style h5 , .done-style h5{
+	padding: 10px;
+}
