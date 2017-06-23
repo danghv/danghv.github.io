@@ -1,0 +1,13 @@
+
+.gallery img{
+	width: 100%;
+	height: auto;
+}
+.desc{
+	padding: 15px;
+	text-align: center;
+}
+.responsive{
+	width: 500px;
+	margin: auto;
+}

@@ -1,0 +1,32 @@
+.back{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.grid{
+	float: left;
+	position: relative;
+}
+.card {
+	position: relative;
+}
+.card .back{
+	transform: rotateY(180deg);
+}
+.card.flipped .back{
+	transform: rotateY(0deg);
+}
+.card.flipped .front{
+	transform: rotateY(180deg);
+}
+.card .back, .card .front{
+	transition: all 0.5s;
+	backface-visibility: hidden;
+}
+
+.grid{
+	padding: 10px;
+	width: 20%;
+	height: auto;
+}

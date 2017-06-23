@@ -1,0 +1,26 @@
+<html>
+
+<head>
+  <title></title>
+  <script>
+    function changeFontSize(x) {
+      x = document.getElementsByClassName("para");
+      for(var i = 0;i<x.length;i++){
+        x[i].style.fontSize="20px";
+      }
+     
+    }
+  </script>
+
+</head>
+
+<body>
+
+  <p id="p1" class="para">Lorem Ipsum is simply dummy</p>
+  <p id="p2" class="para">Aliquam vitae velit metus</p>
+  <p id="p3" class="para">Etiam congue vitae nisi quis mollis.</p>
+  <button type="button" onclick="changeFontSize('50px')">Change the fontsize</button>
+  
+</body>
+
+</html>
