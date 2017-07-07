@@ -30,6 +30,9 @@
 		</div>
 		</div>
 	</template>
+	<script>
+		
+	</script>
 	<style>
 		.header-bar {
 			padding: 50px 200px;
