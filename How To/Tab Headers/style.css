@@ -1,0 +1,50 @@
+button.tablink {
+    width: 25%;
+    float: left;
+    font-size: 25px;
+    border: none;
+    background-color: lightgrey;
+    height: 50px;
+}
+
+button.tablink:hover {
+    background-color: grey;
+}
+
+div#London {
+    text-align: center;
+    background-color: red;
+    height: 200px;
+    padding: 100px 0 0 0;
+    color: white;
+    display: none;
+}
+
+div#Tokyo {
+    text-align: center;
+    background-color: blue;
+    height: 200px;
+    display: none;
+     padding: 100px 0 0 0;
+     color: white;
+}
+
+div#Paris {
+    text-align: center;
+    background-color: green;
+    height: 200px;
+    display: none;
+     padding: 100px 0 0 0;
+     color: white;
+}
+div#Oslo {
+    text-align: center;
+    background-color: orange;
+    height: 200px;
+    display: none;
+     padding: 100px 0 0 0;
+     color: white;
+}
+.tablink:hover {
+    background-color: grey;
+}

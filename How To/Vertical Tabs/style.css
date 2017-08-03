@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+button.tablinks {
+    display: block;
+    border: none;
+    font-size: 25px;
+    padding: 20px 5px;
+    width: 100%;
+    text-align: left;
+}
+button.tablinks:hover, button.tablinks.active {
+    background-color: grey;
+}
+
+.tab {
+    background-color: gainsboro;
+    width: 30%;
+    float: left;
+    border: 1px solid gainsboro;
+    height: 300px;
+}
+
+.tabcontent {
+    float: left;
+    border: 1px solid gainsboro;
+    height: 300px;
+    width: 70%;
+}
+
+div#Paris {
+    display: none;
+}
+
+div#Tokyo {
+    display: none;
+}
+
+.container {
+      
+}

@@ -1,0 +1,25 @@
+* {
+	box-sizing: border-box;
+}
+div#myTopnav {
+    background-color: #423d3d;
+    overflow: hidden;
+}
+
+#myTopnav a {
+    color: white;
+    padding: 14px 16px;
+    float: left;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+}
+
+#myTopnav a:hover {
+    background-color: #8e897f;
+}
+
+a.active {
+	background-color: green;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		document.getElementById('defaultOpen').click();
+		function displayPara(cityName, color, element){
+			var i, tabcontents, tablinks;
+			tabcontents = document.getElementsByClassName('tabcontent');
+			for (i = 0; i < tabcontents.length; i++) {
+				tabcontents[i].style.display = 'none';
+			}
+			tablinks = document.getElementsByClassName('tablink');
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].style.backgroundColor = 'lightgrey';
+			}
+			element.style.backgroundColor = color;
+			document.getElementById(cityName).style.display = 'block';
+
+		}
+
+	</script>
+</head>
+<body>
+	<div id="London" class="tabcontent">
+		<h1>London</h1>
+		<p>London is the capital city of England.</p>
+	</div>
+	<div id="Paris" class="tabcontent">
+		<h1>Paris</h1>
+		<p>Paris is the capital city of France.</p>
+	</div>
+	<div id="Tokyo" class="tabcontent">
+		<h1>Tokyo</h1>
+		<p>Tokyo is the capital city of Japan.</p>
+	</div>
+	<div id="Oslo" class="tabcontent">
+		<h1>Oslo</h1>
+		<p>Oslo is the capital city of Canada.</p>
+	</div>
+	<button id="defaultOpen" class="tablink" onclick="displayPara('London', 'red', this)">London</button>
+	<button class="tablink" onclick="displayPara('Paris', 'green', this)">Paris</button>
+	<button class="tablink" onclick="displayPara('Tokyo', 'blue', this)">Tokyo</button>
+	<button class="tablink" onclick="displayPara('Oslo', 'orange', this)">Oslo</button>
+</body>
+</html>

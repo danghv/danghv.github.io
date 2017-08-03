@@ -1,0 +1,35 @@
+* {
+	box-sizing: border-box;
+}
+button.tablinks {
+	 height: 50px;
+	 cursor: pointer;
+}
+button.tablinks.active {
+	background-color: grey;
+}
+
+div#Paris {
+    display: none;
+}
+
+div#Tokyo {
+    display: none;
+}
+
+.tab button {
+    border: none;
+    font-size: 25px;
+}
+.tab {
+    background-color: gainsboro;
+     height: 50px;
+}
+
+body {
+    border: 1px solid gainsboro;
+}
+
+button.tablinks:hover {
+    background-color: grey;
+}
