@@ -3,8 +3,379 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	
 </head>
 <body>
-	<h1>Hello world!</h1>
+	<div class="banner">
+		<div class="logo"><img src="src/images/logo.jpg" alt=""></div>
+		<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
+		<p><i class="fa fa-phone"></i>01646 197 752</p>
+		
+	</div>	<!-- end of banner -->
+	
+	<div class="topnav" id="myTopnav">
+		<a href="">Trang chủ</a>
+		<a href="">Cây</a>
+		<a href="">Sản Phẩm</a>
+		<a href="">Cẩm Nang - Tin Tức</a>
+		<a onclick="toggleMenu()" class="menu-icon">&#9776;</a>
+	</div>	<!-- end of navbar -->
+
+
+	<div class="main-slideshow">
+		<div class="my-slides slide-fade">
+			<div class="slide-numbertext">1 / 3</div>
+			<img src="http://via.placeholder.com/900x500" alt="" style="width: 100%">
+			<div class="slide-text">Caption Text</div>
+		</div>
+		<div class="my-slides slide-fade">
+			<div class="slide-numbertext">2 / 3</div>
+			<img src="http://via.placeholder.com/900x500" alt="" style="width: 100%">
+			<div class="slide-text">Caption two</div>
+		</div>
+		<div class="my-slides slide-fade">
+			<div class="slide-numbertext">3 / 3</div>
+			<img src="http://via.placeholder.com/900x500" alt="" style="width: 100%">
+			<div class="slide-text">Caption three</div>
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		<br>
+
+
+		<div style="text-align: center">
+			<span class="slide-dot" onclick="currentSlide(1)"></span>	
+			<span class="slide-dot" onclick="currentSlide(2)"></span>
+			<span class="slide-dot" onclick="currentSlide(3)"></span>
+		</div>
+	</div>		<!-- end of slides -->
+	
+	<h1>Hot trends</h1>
+	<hr>
+	<div class="row-hottrends">
+		<div class="tab">
+			<button id="openDefault" class="tablinks" onclick="openContent(event, 'tab1')">Mới và Nổi Bật</button>
+			<button class="tablinks" onclick="openContent(event, 'tab2')">Bán Chạy</button>
+			<button class="tablinks" onclick="openContent(event, 'tab3')">Giảm giá</button>
+		</div>
+		<div id="tab1" class="tabcontent">
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+				</div>
+			</div>
+			
+		</div>
+		<div id="tab2" class="tabcontent">
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh 2</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh 2</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh 2</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			
+		</div>
+
+		<div id="tab3" class="tabcontent">
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh 3</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh 3</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh 3</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		
+	</div>		<!-- end of hot trends -->
+
+	<h1>Cây Xanh Vườn Nhà</h1>
+	<hr>
+	<div class="row-hottrends-garden">
+		<div class="tab">
+			<button id="openDefaultGarden" class="tablinks-garden" onclick="openContentGarden(event, 'tab1-garden')">Mới và Nổi Bật</button>
+			<button class="tablinks-garden" onclick="openContentGarden(event, 'tab2-garden')">Bán Chạy</button>
+			<button class="tablinks-garden" onclick="openContentGarden(event, 'tab3-garden')">Giảm giá</button>
+		</div>
+		<div id="tab1-garden" class="tabcontent-garden">
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			
+		</div>
+		<div id="tab2-garden" class="tabcontent-garden">
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh 2</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh 2</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh 2</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			
+		</div>
+
+		<div id="tab3-garden" class="tabcontent-garden">
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh 3</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh 3</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh 3</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		
+	</div>		<!-- End of cay xanh vuon nha -->
+
+	<h1>Sản Phẩm Hỗ Trợ</h1>
+	<hr>
+	<div class="row-hottrends-support">
+		<div class="tab">
+			<button id="openDefaultSupport" class="tablinks-support" onclick="openContentSupport(event, 'tab1-support')">Mới và Nổi Bật</button>
+			<button class="tablinks-support" onclick="openContentSupport(event, 'tab2-support')">Bán Chạy</button>
+			<button class="tablinks-support" onclick="openContentSupport(event, 'tab3-support')">Giảm giá</button>
+		</div>
+		<div id="tab1-support" class="tabcontent-support">
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			
+		</div>
+		<div id="tab2-support" class="tabcontent-support">
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh 2</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh 2</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh 2</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			
+		</div>
+
+		<div id="tab3-support" class="tabcontent-support">
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh 3</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh 3</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh 3</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			
+		</div>
+	</div>		<!-- end of san pham ho tro -->
+	<br>
+
+	<div class="info">
+		<div class="info-quality">
+			<h2>Cam kết chất lượng</h2>
+			<div class="info-quality-box">
+				<i class="fa fa-check"></i>
+				<div>
+					<h3>100% ĐÃ KIỂM TRA</h3>
+					<p>Chuyên Nghiệp Theo Quy Trình</p>
+				</div>
+			</div>
+		</div>
+		<div class="info-order">
+			<h2>Hướng dẫn đặt hàng</h2>
+			<div class="info-order-box">
+				<i class="fa fa-phone"></i>
+				<div>
+					<h3>đặt hàng online</h3>
+					<p>Phone: 01646 197 752</p>
+				</div>
+			</div>
+		</div>
+		<div class="info-ship">
+			<h2>Vận chuyển</h2>
+			<div class="info-ship-box">
+				<i class="fa fa-dollar"></i>
+				<div>
+					<h3>mua hàng tiết kiệm</h3>
+					<p>miễn phí vận chuyển</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-row">
+		<div id="contact" class="footer-column">
+			<h1>Thông Tin Liên Hệ</h1>
+			<br>
+			<i class="fa fa-map-marker"></i>Đ/c: 14 ngõ 4 Nguyễn Đình Chiểu, Hai Bà Trưng, Hà Nội
+			<br>
+			<i class="fa fa-phone"></i>Hotline: 01646 197 752.
+			<br>
+			<i class="fa fa-envelope"></i>Email: hadangktmt@gmail.com.
+		</div>
+		<div id="open-time" class="footer-column">
+			<h1>Thời Gian Mở Cửa</h1>
+			<p>Thứ 2 - thứ 6: 8AM - 10PM</p>
+			<br>
+			<p>Thứ 7: 9AM - 8PM</p>
+			<br>
+			<p>Nghỉ Chủ Nhật và các ngày Lễ Tết</p>
+		</div>
+		<div id="support-customer" class="footer-column">
+			<h1>Hỗ Trợ Khách Hàng</h1>
+		</div>
+		<div id="social-network" class="footer-column">
+			<h1>Mạng Xã Hội</h1>
+		</div>
+
+		<div class="social-button">
+			<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-twitter"></a>
+			<a href="#" class="fa fa-google"></a>
+			<a href="#" class="fa fa-linkedin"></a>
+			<a href="#" class="fa fa-youtube"></a>
+		</div>
+	</div>			<!-- end of footer -->
+
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+.slideshow-container {
+    position: relative;
+}
+
+.numbertext {
+    position: absolute;
+}
+
+.mySlides div.text {
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+a.prev, a.next {
+    position: absolute;
+    top:  50%;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+a.next {
+    right: 5px;
+}
+.mySlides  {
+    display: none;
+}
