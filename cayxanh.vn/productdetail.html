@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="banner">
+		<div class="logo"><img src="src/images/logo.jpg" alt=""></div>
+		<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
+		<p><i class="fa fa-phone"></i>01646 197 752</p>
+		
+	</div>	<!-- end of banner -->
+	
+	<div class="topnav" id="myTopnav">
+		<a href="">Trang chủ</a>
+		<a href="">Cây</a>
+		<a href="">Sản Phẩm</a>
+		<a href="">Cẩm Nang - Tin Tức</a>
+		<a onclick="toggleMenu()" class="menu-icon">&#9776;</a>
+	</div>	<!-- end of navbar -->
+	
+	<div class="product-content">
+		<div class="product-breadcrumb">
+			<ul class="breadcrumb">
+				<li><a href="">Trang chủ</a></li>
+				<li><a href="">Cây</a></li>
+				<li>Cây kim ngân</li>
+			</ul> <!-- end of breadcrumb -->
+
+			<div class="box-items-product">
+				<div class="box-item-images">
+					<div class="main-product-slideshow">
+						<div class="product-slides product-slide-fade">	
+								<img src="src/images/kim-ngan-slide1.jpg" alt="" style="width: 100%">	
+						</div>
+						<div class="product-slides product-slide-fade">
+					
+								<img src="src/images/kim-ngan-slide2.jpg" alt="" style="width: 100%">
+								
+						</div>
+						<div class="product-slides product-slide-fade">
+							
+								<img src="src/images/kim-ngan-slide3.jpg" alt="" style="width: 100%">
+								
+						</div>
+						<br>
+						<div class="product-image-list">
+								<img onclick="currentProductSlide(1)" id="openDefaultImage" src="src/images/kim-ngan-slide1.jpg">
+								<img onclick="currentProductSlide(2)" src="src/images/kim-ngan-slide2.jpg">
+								<img onclick="currentProductSlide(3)" src="src/images/kim-ngan-slide3.jpg">
+						</div>
+					</div>
+				</div>
+
+
+				<div class="box-item-detail">
+					<h2>Cây Kim Ngân</h2>
+					<div>
+						<span>Giá Bán</span>
+						<span>120.000Đ</span>
+					</div>
+					<p>Tên thường gọi: Cây kim ngân, cây bím tóc, cây thắt bím</p>
+					<p>Tên tiếng anh: Money tree</p>
+					<p>Tên khoa học: Pachia aquatica</p>
+					<p>Họ: Malvaceae (Cẩm quỳ)</p>
+					<p>Phân họ: Bombacaceae (Gòn/Gạo)</p>
+					<p>Chiều cao : 20 – 30 cm (Tính cả chiều cao chậu)</p>
+					<p>Nguồn gốc xuất xứ: Mexico, Brazill Nam Mỹ và đầm lầy Trung Mỹ.</p>
+					<p>Công dụng: Cây kim ngân được xem là rất tốt về phong thủy, mang đến cho gia chủ sự may mắn và thịnh vượng. Nên được nhiều người sử dụng chưng bày trong văn phòng làm việc công ty, tiền sảnh nhà hàng, khách sạn…. Và sử dụng chậu nhỏ để ngay trên bàn làm việc.</p>
+
+					<div class="box-cart">
+						<div class="box-cart-quantity">1</div>
+						<div class="box-cart-addtocart">Thêm vào giỏ</div>
+					</div>
+					<p>Danh mục: Cây cảnh, Cây để bàn.</p>
+					<p>Tags: bán cây kim ngân, cây để bàn, cây để bàn Kim Ngân, Cây Kim ngân, cây kim ngân để bàn, cây kim ngân may mắn, cây kim ngân nhỏ, cho thuê cây kim ngân.</p>
+				</div>
+
+			</div>		<!-- end of box-items-product -->
+
+			<hr>
+
+			<div class="product-tab">
+				<div class="button-tab">
+					<button class="tablink-product" onclick="openProductTab(event, 'product-detail')">Mô Tả - Chi Tiết</button>
+					<button class="tablink-product" onclick="openProductTab(event, 'product-vote')">Đánh Giá</button>
+				</div>
+				<div id="product-detail" class="tabcontent-product detail">
+					<h1>content 1</h1>
+				</div>
+				<div id="product-vote" class="tabcontent-product vote">
+					<h1>content 2</h1>
+				</div>
+			</div>
+
+		</div>
+		<div class="product-list-items">
+			<div class="search-box">
+				<input type="" placeholder="Nhập từ khóa bạn muốn tìm kiếm" name="">
+				<button>Tìm kiếm</button>
+			</div>
+			<div class="list-items-detail">
+				<h1>Danh mục sản phẩm</h1>
+				<div class="list-tree1">
+					<h3>Cây trồng chậu</h3>
+					<ul>
+						<li>cây 1</li>
+						<li>cây 2</li>
+						<li>cây 3
+							<ul>
+								<li>cây 3.1</li>
+								<li>cây 3.2</li>
+								<li>cây 3.3</li>
+							</ul>
+						</li>
+						<li>cây 4</li>
+						<li>cây 5</li>
+					</ul>
+				</div>
+				<div class="list-tree1">
+					<h3>Cây trồng chậu</h3>
+					<ul>
+						<li>cây 1</li>
+						<li>cây 2</li>
+						<li>cây 3
+							<ul>
+								<li>cây 3.1</li>
+								<li>cây 3.2</li>
+								<li>cây 3.3</li>
+							</ul>
+						</li>
+						<li>cây 4</li>
+						<li>cây 5</li>
+					</ul>
+				</div>
+				<div class="list-tree1">
+					<h3>Cây trồng chậu</h3>
+					<ul>
+						<li>cây 1</li>
+						<li>cây 2</li>
+						<li>cây 3
+							<ul>
+								<li>cây 3.1</li>
+								<li>cây 3.2</li>
+								<li>cây 3.3</li>
+							</ul>
+						</li>
+						<li>cây 4</li>
+						<li>cây 5</li>
+					</ul>
+				</div>
+					
+			</div>
+		</div>
+	</div>		<!-- end of product content -->
+	
+	<hr>
+
+	<h1>Sản Phẩm Liên Quan</h1>
+	<hr>
+		<div id="tab1" class="tabcontent">
+			<div class="card">
+				<img src="src/images/kim-ngan.jpg" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="src/images/kim-ngan.jpg" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="src/images/kim-ngan.jpg" alt="bug">
+				<div class="new-content">
+					<h4>Cay Xanh</h4>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+				</div>
+			</div>
+			
+		</div>		<!-- end of san pham lien quan -->
+
+		<div class="info">
+		<div class="info-quality">
+			<h2>Cam kết chất lượng</h2>
+			<div class="info-quality-box">
+				<i class="fa fa-check"></i>
+				<div>
+					<h3>100% ĐÃ KIỂM TRA</h3>
+					<p>Chuyên Nghiệp Theo Quy Trình</p>
+				</div>
+			</div>
+		</div>
+		<div class="info-order">
+			<h2>Hướng dẫn đặt hàng</h2>
+			<div class="info-order-box">
+				<i class="fa fa-phone"></i>
+				<div>
+					<h3>đặt hàng online</h3>
+					<p>Phone: 01646 197 752</p>
+				</div>
+			</div>
+		</div>
+		<div class="info-ship">
+			<h2>Vận chuyển</h2>
+			<div class="info-ship-box">
+				<i class="fa fa-dollar"></i>
+				<div>
+					<h3>mua hàng tiết kiệm</h3>
+					<p>miễn phí vận chuyển</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-row">
+		<div id="contact" class="footer-column">
+			<h1>Thông Tin Liên Hệ</h1>
+			<br>
+			<i class="fa fa-map-marker"></i>Đ/c: 14 ngõ 4 Nguyễn Đình Chiểu, Hai Bà Trưng, Hà Nội
+			<br>
+			<i class="fa fa-phone"></i>Hotline: 01646 197 752.
+			<br>
+			<i class="fa fa-envelope"></i>Email: hadangktmt@gmail.com.
+		</div>
+		<div id="open-time" class="footer-column">
+			<h1>Thời Gian Mở Cửa</h1>
+			<p>Thứ 2 - thứ 6: 8AM - 10PM</p>
+			<br>
+			<p>Thứ 7: 9AM - 8PM</p>
+			<br>
+			<p>Nghỉ Chủ Nhật và các ngày Lễ Tết</p>
+		</div>
+		<div id="support-customer" class="footer-column">
+			<h1>Hỗ Trợ Khách Hàng</h1>
+		</div>
+		<div id="social-network" class="footer-column">
+			<h1>Mạng Xã Hội</h1>
+		</div>
+
+		<div class="social-button">
+			<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-twitter"></a>
+			<a href="#" class="fa fa-google"></a>
+			<a href="#" class="fa fa-linkedin"></a>
+			<a href="#" class="fa fa-youtube"></a>
+		</div>
+	</div>			<!-- end of footer -->
+
+
+
+	<script type="text/javascript" src="js/productdetail.js"></script>
+</body>
+</html>

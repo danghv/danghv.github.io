@@ -111,6 +111,14 @@ span.slide-dot:hover, span.slide-dot.active {
 	background-color: #717171;
 }
 
+/*styles of main-service*/
+
+.main-services {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+
 /*styles of tab*/
 
 button.tablinks {
@@ -362,4 +370,113 @@ ul.breadcrumb li+li:before {
 ul.breadcrumb li a:hover {
 	text-decoration: underline;
     color: #01447e;
+}
+
+/*styles of box-items*/
+
+.box-items {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.search-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 1px solid #eee;
+    /* margin: 0 10px; */
+    background-color: white;
+}
+
+.search-box input {
+    padding: 8px;
+}
+
+.search-box button {
+    margin: 0 140px;
+    border-radius: 5px;
+    background-color: green;
+    padding: 8px;
+}
+
+/*styles of cooperate link*/
+.cooperate-link {
+	margin-top: 100px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+/*styles of product detail*/
+
+.box-items-product {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+
+
+
+/*style of product slides*/
+.main-product-slideshow {
+    position: relative;
+    margin: auto;
+}
+
+.product-slides {
+    display: none;	
+    width: 300px;
+    height: 300px;
+}
+
+.product-slide-numbertext {
+    position: absolute;
+}
+
+.slide-text {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 60px;
+}
+
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+
+.product-image-list img {
+	width: 30px;
+	height: 30px;
+}
+.product-image-list {
+    margin-top: 90px;
+    margin-left: 100px;
+}
+
+/*styles of product tab*/
+
+.button-tab {
+	overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.button-tab button {
+	background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+.button-tab button:hover {
+	background-color: #ddd;
+}
+.button-tab button.active {
+    background-color: #ccc;
+}
+.product-tab .tabcontent-product {
+	display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
 }
