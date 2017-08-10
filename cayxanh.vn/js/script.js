@@ -13,6 +13,7 @@ function toggleMenu() {
 var slideIndex = 1;
 showSlides(slideIndex);
 
+
 function plusSlides(n) {
 	showSlides(slideIndex += n);
 	console.log(slideIndex);
@@ -40,6 +41,7 @@ function showSlides(n) {
 	}
 	slides[slideIndex - 1].style.display = 'block';
 	dots[slideIndex - 1].className += ' active';
+
 	console.log(slides[slideIndex - 1].className);
 }
 
@@ -96,28 +98,6 @@ function openContentSupport(evt, tabId) {
 
 document.getElementById('openDefaultSupport').click();
 
-// process slide product detail
 
-var slideIndex1 = 1;
-showProductSlides(slideIndex1);
-document.getElementById('openDefaultImage').click();
 
-function currentProductSlide(n) {
-	showProductSlides(slideIndex1 = n);
-}
 
-function showProductSlides(n) {
-	var j;
-	var productSlides = document.getElementsByClassName('product-slides');
-	if (n > productSlides.length) {
-		slideIndex1 = 1;
-	}
-	if (n<1) {
-		slideIndex1 = productSlides.length;
-	}
-	for (j = 0; j < productSlides.length; j++) {
-		productSlides[j].style.display = 'none';
-	}
-	productSlides[slideIndex1 - 1].style.display = 'block';
-	
-}

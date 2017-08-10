@@ -4,16 +4,73 @@
 }
 
 /*styles of banner*/
+.banner p {
+    margin-top: -16px;
+    text-align: left;
+}
+.banner p i {
+    font-size: 17px;
+}
 
+.banner2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+}
+
+.banner2 .search-box {
+	display: grid;
+	grid-template-columns: 1fr 50px;
+	grid-template-rows: 45px;
+	margin-top: 25px;
+}
+i.fa.fa-search.customize-search {
+    font-size: 20px;
+    padding: 0;
+}
 .banner {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	
+	grid-template-rows: 50px;
+	background-color: green;
+}
+.form-login-login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 59px;
+    margin-top: 33px;
 }
 
+.form-login-login div {
+	cursor: pointer;
+    font-size: 20px;
+    color: #1b5a1b;
+}
+.banner2 .shopping-cart {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 59px;
+    justify-content: center;
+    justify-items: center;
+}
+
+i.fa.fa-shopping-cart {
+	cursor: pointer;
+    font-size: 40px;
+    color: #0f460f;
+    margin-right: 20px;
+}
+
+.banner2 .shopping-cart div span {
+    font-size: 30px;
+    color: #50c750;
+}
+
+.banner2 .search-box button {
+    cursor: pointer;
+}
 /*style of navbar*/
 div#myTopnav {
-    background-color: #333;
+    /* background-color: #333; */
     overflow: hidden;
 }
 
@@ -23,7 +80,7 @@ div#myTopnav {
 
 .topnav a {
     text-decoration: none;
-    color: #f2f2f2;
+    color: #056061;
     display: block;
     float: left;
     padding: 15px;
@@ -67,7 +124,8 @@ div#myTopnav {
 }
 
 .my-slides {
-    display: none;	
+    display: none;
+
 }
 
 .slide-numbertext {
@@ -80,17 +138,15 @@ div#myTopnav {
     width: 100%;
     bottom: 60px;
 }
-
-.my-slides a.prev, .my-slides a.next {
-}
-
 a.prev, a.next {
     position: absolute;
     top: 50%;
+    margin-top: -50px;
     font-size: 25px;
     text-decoration: none;
     cursor: pointer;
     color: white;
+    transition: 0.6s ease;
 }
 a.next {
     right: 0;
@@ -111,6 +167,23 @@ span.slide-dot:hover, span.slide-dot.active {
 	background-color: #717171;
 }
 
+.slide-fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
 /*styles of main-service*/
 
 .main-services {
@@ -118,10 +191,41 @@ span.slide-dot:hover, span.slide-dot.active {
 	grid-template-columns: 1fr 1fr 1fr;
 }
 
+.main-service-seed {
+    /* display: grid; */
+    /* grid-template-columns: 1px; */
+}
 
+.main-service-seed a img {
+    border-radius: 0px 70px 0px 0px;
+}
+
+.main-service-online a img {
+    border-radius: 70px 0px 0px 0px;
+}
+
+.main-service-reference a img {
+    border-radius: 70px 70px 0px 0px;
+}
+
+.main-service-seed h2 {
+    color: #8e6969;
+    font-family: 'Handlee', cursive;
+}
+
+.main-service-reference h2 {
+    color: #8e6969;
+    font-family: 'Handlee', cursive;
+}
+
+.main-service-online h2 {
+    color: #8e6969;
+    font-family: 'Handlee', cursive;
+}
 /*styles of tab*/
 
 button.tablinks {
+    background-color: #c5d8bd;
     border: none;
     float: left;
     font-size: 25px;
@@ -136,11 +240,11 @@ button.tablinks {
 }
 
 .row-hottrends .tab button:hover {
-    background-color: #d1a4a4;
+    background-color: #35bd63;
 }
 
 .row-hottrends .tab button.tablinks.active {
-	/*background-color: #d1a4a4;*/
+	background-color: #c5d8bd;
 	border-bottom: 3px solid #0796ff;
 }
 .row-hottrends .tabcontent {
@@ -149,9 +253,24 @@ button.tablinks {
 
 /*styles of cards*/
 
+.tabcontent .card img {
+    border: 1px solid #eee;
+}
+
+h1 {
+    color: #548c01;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.card .new-content h4 {
+    color: #333;
+}
 .tabcontent .card {
     width: 33.333%;
     float: left;
+    text-align: center;
+    border: 1px solid #e8dcdc;
+    border-radius: 10px;
 }
 
 /*styles of cay xanh san vuon*/
@@ -172,7 +291,7 @@ button.tablinks-garden {
 }
 
 .row-hottrends-garden .tab button:hover {
-    background-color: #d1a4a4;
+    background-color: #35bd63;
 }
 
 .row-hottrends-garden .tab button.tablinks-garden.active {
@@ -189,9 +308,10 @@ button.tablinks-garden {
 	float: left;
 }
 
-/*styles of saÌ‰n phÃ¢Ì‰m hÃ´Ìƒ trÆ¡Ì£*/
+/*styles of saÃƒÅ’Ã¢â‚¬Â°n phÃƒÆ’Ã‚Â¢ÃƒÅ’Ã¢â‚¬Â°m hÃƒÆ’Ã‚Â´ÃƒÅ’Ã†â€™ trÃƒâ€ Ã‚Â¡ÃƒÅ’Ã‚Â£*/
 
 button.tablinks-support {
+	background-color: #c5d8bd;
     border: none;
     float: left;
     font-size: 25px;
@@ -201,16 +321,17 @@ button.tablinks-support {
 
 .tab {
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: #c5d8bd;
     border: 1px solid #ccc;
+    margin-bottom: 8px;
 }
 
 .row-hottrends-support .tab button:hover {
-    background-color: #d1a4a4;
+    background-color: #35bd63;
 }
 
 .row-hottrends-support .tab button.tablinks-support.active {
-	/*background-color: #d1a4a4;*/
+	
 	border-bottom: 3px solid #0796ff;
 }
 .row-hottrends-support .tabcontent-support {
@@ -225,7 +346,7 @@ button.tablinks-support {
 
 /*styles of footer*/
 .footer-row {
-	background-color: blue;
+	background-color: #222428;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	clear: left;
@@ -379,11 +500,10 @@ ul.breadcrumb li a:hover {
 	grid-template-columns: 1fr 1fr 1fr;
 }
 
-.search-box {
+/*.search-box {
     display: grid;
     grid-template-columns: 1fr;
     border: 1px solid #eee;
-    /* margin: 0 10px; */
     background-color: white;
 }
 
@@ -396,7 +516,7 @@ ul.breadcrumb li a:hover {
     border-radius: 5px;
     background-color: green;
     padding: 8px;
-}
+}*/
 
 /*styles of cooperate link*/
 .cooperate-link {
@@ -479,4 +599,21 @@ ul.breadcrumb li a:hover {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+}
+
+/*customize*/
+
+.card {}
+
+.tabcontent .card img {
+    border: 1px solid #eee;
+}
+
+h1 {
+    color: #548c01;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.card .new-content h4 {
+    color: #333;
 }

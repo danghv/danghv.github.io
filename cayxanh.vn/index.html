@@ -4,42 +4,63 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div class="banner">
-		<div class="logo"><img src="src/images/logo.jpg" alt=""></div>
-		<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
-		<p><i class="fa fa-phone"></i>01646 197 752</p>
+	<div>
+		<div class="banner">
+			<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
+			<p><i class="fa fa-phone"></i>01646 197 752</p>
 		
-	</div>	<!-- end of banner -->
-	
-	<div class="topnav" id="myTopnav">
-		<a href="">Trang chủ</a>
-		<a href="">Cây</a>
-		<a href="">Sản Phẩm</a>
-		<a href="">Cẩm Nang - Tin Tức</a>
-		<a onclick="toggleMenu()" class="menu-icon">&#9776;</a>
-	</div>	<!-- end of navbar -->
+		</div>	<!-- end of banner -->
+
+		<div class="banner2">
+			<div class="logo">
+				<img src="src/images/logo.png">
+			</div>
+			<div class="search-box">
+				<input type="text" class="search-box-input" placeholder="Nhập từ khóa bạn muốn tìm kiếm">
+				<button><i class="fa fa-search customize-search"></i></button>
+			</div>
+			<div class="shopping-cart">
+				<div><i class="fa fa-shopping-cart"></i><span>(0)</span></div>
+				
+			</div>
+			<div class="form-login">
+				<div class="form-login-login">
+					<div>Đăng Nhập</div>
+					<div>Đăng Ký</div>
+				</div>
+			</div>
+		</div>			<!-- end of banner2 -->
+		<div class="topnav" id="myTopnav">
+			<a href="">Trang chủ</a>
+			<a href="">Cây</a>
+			<a href="">Sản Phẩm</a>
+			<a href="">Cẩm Nang - Tin Tức</a>
+			<a onclick="toggleMenu()" class="menu-icon">&#9776;</a>
+		</div>	<!-- end of navbar -->
+	</div>
 
 
 	<div class="main-slideshow">
 		<div class="my-slides slide-fade">
 			<div class="slide-numbertext">1 / 3</div>
-			<img src="http://via.placeholder.com/900x500" alt="" style="width: 100%">
-			<div class="slide-text">Caption Text</div>
+			<img src="src/images/slider1.jpg" alt="" style="width: 100%">
+			<div class="slide-text"></div>
 		</div>
 		<div class="my-slides slide-fade">
 			<div class="slide-numbertext">2 / 3</div>
-			<img src="http://via.placeholder.com/900x500" alt="" style="width: 100%">
-			<div class="slide-text">Caption two</div>
+			<img src="src/images/slider2.jpg" alt="" style="width: 100%">
+			<div class="slide-text"></div>
 		</div>
 		<div class="my-slides slide-fade">
 			<div class="slide-numbertext">3 / 3</div>
-			<img src="http://via.placeholder.com/900x500" alt="" style="width: 100%">
-			<div class="slide-text">Caption three</div>
+			<img src="src/images/slider3.jpg" alt="" style="width: 100%">
+			<div class="slide-text"></div>
 		</div>
 
 		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -91,46 +112,85 @@
 			<div class="card">
 				<img src="src/images/kim-ngan.jpg" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+					<h4>Cây Thiết Mộc Lan</h4>
+					<div class="product-price">
+						<span class="new-price">500 000 vnđ</span><br>
+						<span class="old-price">750 000 vnđ</span>
+					</div>
+					<div class="product-review">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<button><span class="fa fa-shopping-cart"></span>Thêm Vào Giỏ Hàng</button>
+					<span class="banner-new">New</span>
 				</div>
 			</div>
 			<div class="card">
-				<img src="src/images/kim-ngan.jpg" alt="bug">
+				<img src="src/images/kim-ngan.jpg.jpg" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Thiết Mộc Lan</h4>
+					<div class="product-price">
+						<span class="new-price">500 000 vnđ</span><br>
+						<span class="old-price">750 000 vnđ</span>
+					</div>
+					<div class="product-review">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<button><span class="fa fa-shopping-cart"></span>Thêm Vào Giỏ Hàng</button>
+					<span class="banner-new">New</span>
 				</div>
 			</div>
 			<div class="card">
-				<img src="src/images/kim-ngan.jpg" alt="bug">
+				<img src="src/images/product3.jpg" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+					<h4>Cây Thiết Mộc Lan</h4>
+					<div class="product-price">
+						<span class="new-price">500 000 vnđ</span><br>
+						<span class="old-price">750 000 vnđ</span>
+					</div>
+					<div class="product-review">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<button><span class="fa fa-shopping-cart"></span>Thêm Vào Giỏ Hàng</button>
+					<span class="banner-new">New</span>
 				</div>
 			</div>
 			
 		</div>
 		<div id="tab2" class="tabcontent">
 			<div class="card">
-				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<img src="src/images/product1.jpg" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh 2</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Kim Tiền</h4>
+					<span>Giá: 500K</span>
+					<button>Thêm Vào Giỏ Hàng</button>
 				</div>
 			</div>
 			<div class="card">
-				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<img src="src/images/kim-ngan.jpg" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh 2</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Kim Tiền</h4>
+					<span>Giá: 500K</span>
+					<button>Thêm Vào Giỏ Hàng</button>
 				</div>
 			</div>
 			<div class="card">
-				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<img src="src/images/product3.jpg" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh 2</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Kim Tiền</h4>
+					<span>Giá: 500K</span>
+					<button>Thêm Vào Giỏ Hàng</button>
 				</div>
 			</div>
 			
@@ -140,22 +200,25 @@
 			<div class="card">
 				<img src="http://via.placeholder.com/300x300" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh 3</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Kim Tiền</h4>
+					<span>Giá: 500K</span>
+					<button>Thêm Vào Giỏ Hàng</button>
 				</div>
 			</div>
 			<div class="card">
 				<img src="http://via.placeholder.com/300x300" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh 3</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Kim Tiền</h4>
+					<span>Giá: 500K</span>
+					<button>Thêm Vào Giỏ Hàng</button>
 				</div>
 			</div>
 			<div class="card">
 				<img src="http://via.placeholder.com/300x300" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh 3</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Kim Tiền</h4>
+					<span>Giá: 500K</span>
+					<button>Thêm Vào Giỏ Hàng</button>
 				</div>
 			</div>
 			
@@ -175,24 +238,60 @@
 		</div>
 		<div id="tab1-garden" class="tabcontent-garden">
 			<div class="card">
-				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<img src="src/images/product1.jpg" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Thiết Mộc Lan</h4>
+					<div class="product-price">
+						<span class="new-price">500 000 vnđ</span><br>
+						<span class="old-price">750 000 vnđ</span>
+					</div>
+					<div class="product-review">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<button><span class="fa fa-shopping-cart"></span>Thêm Vào Giỏ Hàng</button>
+					<span class="banner-new">New</span>
 				</div>
 			</div>
 			<div class="card">
-				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<img src="src/images/kim-ngan.jpg" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Thiết Mộc Lan</h4>
+					<div class="product-price">
+						<span class="new-price">500 000 vnđ</span><br>
+						<span class="old-price">750 000 vnđ</span>
+					</div>
+					<div class="product-review">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<button><span class="fa fa-shopping-cart"></span>Thêm Vào Giỏ Hàng</button>
+					<span class="banner-new">New</span>
 				</div>
 			</div>
 			<div class="card">
-				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<img src="src/images/product3.jpg" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Thiết Mộc Lan</h4>
+					<div class="product-price">
+						<span class="new-price">500 000 vnđ</span><br>
+						<span class="old-price">750 000 vnđ</span>
+					</div>
+					<div class="product-review">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<button><span class="fa fa-shopping-cart"></span>Thêm Vào Giỏ Hàng</button>
+					<span class="banner-new">New</span>
 				</div>
 			</div>
 			
@@ -201,22 +300,25 @@
 			<div class="card">
 				<img src="http://via.placeholder.com/300x300" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh 2</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Kim Tiền</h4>
+					<span>Giá: 500K</span>
+					<button>Thêm Vào Giỏ Hàng</button>
 				</div>
 			</div>
 			<div class="card">
 				<img src="http://via.placeholder.com/300x300" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh 2</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Kim Tiền</h4>
+					<span>Giá: 500K</span>
+					<button>Thêm Vào Giỏ Hàng</button>
 				</div>
 			</div>
 			<div class="card">
 				<img src="http://via.placeholder.com/300x300" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh 2</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Kim Tiền</h4>
+					<span>Giá: 500K</span>
+					<button>Thêm Vào Giỏ Hàng</button>
 				</div>
 			</div>
 			
@@ -226,22 +328,25 @@
 			<div class="card">
 				<img src="http://via.placeholder.com/300x300" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh 3</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Kim Tiền</h4>
+					<span>Giá: 500K</span>
+					<button>Thêm Vào Giỏ Hàng</button>
 				</div>
 			</div>
 			<div class="card">
 				<img src="http://via.placeholder.com/300x300" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh 3</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Kim Tiền</h4>
+					<span>Giá: 500K</span>
+					<button>Thêm Vào Giỏ Hàng</button>
 				</div>
 			</div>
 			<div class="card">
 				<img src="http://via.placeholder.com/300x300" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh 3</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Kim Tiền</h4>
+					<span>Giá: 500K</span>
+					<button>Thêm Vào Giỏ Hàng</button>
 				</div>
 			</div>
 			
@@ -261,24 +366,60 @@
 		</div>
 		<div id="tab1-support" class="tabcontent-support">
 			<div class="card">
-				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<img src="src/images/product1.jpg" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Thiết Mộc Lan</h4>
+					<div class="product-price">
+						<span class="new-price">500 000 vnđ</span><br>
+						<span class="old-price">750 000 vnđ</span>
+					</div>
+					<div class="product-review">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<button><span class="fa fa-shopping-cart"></span>Thêm Vào Giỏ Hàng</button>
+					<span class="banner-new">New</span>
 				</div>
 			</div>
 			<div class="card">
-				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<img src="src/images/kim-ngan.jpg" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Thiết Mộc Lan</h4>
+					<div class="product-price">
+						<span class="new-price">500 000 vnđ</span><br>
+						<span class="old-price">750 000 vnđ</span>
+					</div>
+					<div class="product-review">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<button><span class="fa fa-shopping-cart"></span>Thêm Vào Giỏ Hàng</button>
+					<span class="banner-new">New</span>
 				</div>
 			</div>
 			<div class="card">
-				<img src="http://via.placeholder.com/300x300" alt="bug">
+				<img src="src/images/product3.jpg" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Thiết Mộc Lan</h4>
+					<div class="product-price">
+						<span class="new-price">500 000 vnđ</span><br>
+						<span class="old-price">750 000 vnđ</span>
+					</div>
+					<div class="product-review">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<button><span class="fa fa-shopping-cart"></span>Thêm Vào Giỏ Hàng</button>
+					<span class="banner-new">New</span>
 				</div>
 			</div>
 			
@@ -287,22 +428,25 @@
 			<div class="card">
 				<img src="http://via.placeholder.com/300x300" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh 2</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Kim Tiền</h4>
+					<span>Giá: 500K</span>
+					<button>Thêm Vào Giỏ Hàng</button>
 				</div>
 			</div>
 			<div class="card">
 				<img src="http://via.placeholder.com/300x300" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh 2</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Kim Tiền</h4>
+					<span>Giá: 500K</span>
+					<button>Thêm Vào Giỏ Hàng</button>
 				</div>
 			</div>
 			<div class="card">
 				<img src="http://via.placeholder.com/300x300" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh 2</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Kim Tiền</h4>
+					<span>Giá: 500K</span>
+					<button>Thêm Vào Giỏ Hàng</button>
 				</div>
 			</div>
 			
@@ -312,22 +456,26 @@
 			<div class="card">
 				<img src="http://via.placeholder.com/300x300" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh 3</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Kim Tiền</h4>
+					<span>Giá: 500K</span>
+					<button>Thêm Vào Giỏ Hàng</button>
 				</div>
 			</div>
 			<div class="card">
 				<img src="http://via.placeholder.com/300x300" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh 3</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Kim Tiền</h4>
+					<span>Giá: 500K</span>
+					<button>Thêm Vào Giỏ Hàng</button>
 				</div>
 			</div>
 			<div class="card">
 				<img src="http://via.placeholder.com/300x300" alt="bug">
 				<div class="new-content">
-					<h4>Cay Xanh 3</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4>Cây Kim Tiền</h4>
+					<span>Giá: 500K</span>
+					<br>
+					<button>Thêm Vào Giỏ Hàng</button>
 				</div>
 			</div>
 			
