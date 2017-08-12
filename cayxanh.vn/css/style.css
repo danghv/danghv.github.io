@@ -5,11 +5,13 @@
 
 /*styles of banner*/
 .banner p {
-    margin-top: -16px;
+    margin-top: 15px;
     text-align: left;
 }
 .banner p i {
     font-size: 17px;
+    padding: 0;
+    margin: 0;
 }
 
 .banner2 {
@@ -69,6 +71,20 @@ i.fa.fa-shopping-cart {
     cursor: pointer;
 }
 /*style of navbar*/
+
+.topnav.fix-topnav {
+	z-index: 69;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: green;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	width: 100%;
+}
+.topnav.fix-topnav a {
+	color: white;
+}
 div#myTopnav {
     /* background-color: #333; */
     overflow: hidden;
@@ -121,6 +137,7 @@ div#myTopnav {
 .main-slideshow {
     position: relative;
     margin: auto;
+    margin-bottom: 45px;
 }
 
 .my-slides {
@@ -231,6 +248,7 @@ button.tablinks {
     font-size: 25px;
     padding: 15px;
     cursor: pointer;
+    outline: none;
 }
 
 .tab {
@@ -244,7 +262,7 @@ button.tablinks {
 }
 
 .row-hottrends .tab button.tablinks.active {
-	background-color: #c5d8bd;
+	/*background-color: #c5d8bd;*/
 	border-bottom: 3px solid #0796ff;
 }
 .row-hottrends .tabcontent {
@@ -254,7 +272,7 @@ button.tablinks {
 /*styles of cards*/
 
 .tabcontent .card img {
-    border: 1px solid #eee;
+    /*border: 1px solid #eee;*/
 }
 
 h1 {
@@ -271,6 +289,7 @@ h1 {
     text-align: center;
     border: 1px solid #e8dcdc;
     border-radius: 10px;
+    position: relative;
 }
 
 /*styles of cay xanh san vuon*/
@@ -282,6 +301,7 @@ button.tablinks-garden {
     padding: 15px;
     cursor: pointer;
     background-color: inherit;
+    outline: none;
 }
 
 .tab {
@@ -308,7 +328,7 @@ button.tablinks-garden {
 	float: left;
 }
 
-/*styles of saÃƒÅ’Ã¢â‚¬Â°n phÃƒÆ’Ã‚Â¢ÃƒÅ’Ã¢â‚¬Â°m hÃƒÆ’Ã‚Â´ÃƒÅ’Ã†â€™ trÃƒâ€ Ã‚Â¡ÃƒÅ’Ã‚Â£*/
+/*styles of saÃƒÆ’Ã…â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â°n phÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã…â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â°m hÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â´ÃƒÆ’Ã…â€™Ãƒâ€ Ã¢â‚¬â„¢ trÃƒÆ’Ã¢â‚¬Â Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã…â€™Ãƒâ€šÃ‚Â£*/
 
 button.tablinks-support {
 	background-color: #c5d8bd;
@@ -317,6 +337,7 @@ button.tablinks-support {
     font-size: 25px;
     padding: 15px;
     cursor: pointer;
+    outline: none;
 }
 
 .tab {
@@ -344,21 +365,70 @@ button.tablinks-support {
 	float: left;
 }
 
+.product-price span.old-price {
+    text-decoration: line-through;
+}
+
+.product-price span {
+    color: #075007;
+}
+
+.new-content .product-review i {
+    font-size: 18px;
+    margin: -12px;
+    padding: 32px 19px;
+    color: #eaea0d;
+}
+
+.new-content span.banner-status {
+    position: absolute;
+    top: 0;
+    right: 69px;
+    background-color: #f7f70a;
+}
+.new-content button {
+	padding: 14px 16px;
+    text-align: center;
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 15px;
+    box-shadow: 0 9px #999;
+    font-size: 18px;
+    outline: none;
+}
+
+.new-content button:hover {
+    background-color: #3e8e41;
+}
+
+.new-content button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
 /*styles of footer*/
 .footer-row {
 	background-color: #222428;
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	clear: left;
+	grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+.social-button {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 40px;
 }
 
 .fa {
-  padding: 20px;
+  padding: 20px 40px 40px 20px;
   font-size: 30px;
   width: 30px;
   text-align: center;
   text-decoration: none;
-  margin: 5px 2px;
+  margin: 0px 5px;
   border-radius: 50%;
 }
 
@@ -402,6 +472,7 @@ button.tablinks-support {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 45px;
+    padding-top: 65px;
 }
 .info-quality .info-quality-box {
     display: grid;
@@ -424,16 +495,19 @@ button.tablinks-support {
     text-transform: uppercase;
     font-style: italic;
     border-bottom: 2px solid #548c01;
+    color: #177b25;
 }
 .info .info-order h2 {
     text-transform: uppercase;
     font-style: italic;
     border-bottom: 2px solid #548c01;
+    color: #177b25;
 }
 .info .info-ship h2 {
     text-transform: uppercase;
     font-style: italic;
     border-bottom: 2px solid #548c01;
+    color: #177b25;
 }
 .info-quality-box i.fa.fa-check {
 	font-size: 50px;
@@ -445,13 +519,26 @@ button.tablinks-support {
 	font-size: 50px;
 }
 .info-quality-box div h3, .info-quality-box div p {
-    text-transform: capitalize;
+    text-transform: uppercase;
+    font-family: 'Rajdhani', sans-serif;
 }
 .info-order-box div h3, .info-order-box div p {
-    text-transform: capitalize;
+    text-transform: uppercase;
+    font-family: 'Rajdhani', sans-serif;
 }
 .info-ship-box div h3, .info-ship-box div p {
-    text-transform: capitalize;
+    text-transform: uppercase;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+div#contact {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.footer-row #contact p i {
+    font-size: 17px;
+    padding: 8px;
 }
 
 /*styles of products.html*/
@@ -529,6 +616,7 @@ ul.breadcrumb li a:hover {
 /*styles of product detail*/
 
 .box-items-product {
+	justify-items: center;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
@@ -577,22 +665,24 @@ ul.breadcrumb li a:hover {
 .button-tab {
 	overflow: hidden;
     border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    background-color: #c5d8bd;
 }
 .button-tab button {
-	background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
+	background-color: #c5d8bd;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	font-size: 25px;
+	transition: 0.3s;
 }
 .button-tab button:hover {
 	background-color: #ddd;
 }
 .button-tab button.active {
     background-color: #ccc;
+    border-bottom: 3px solid #0796ff;
 }
 .product-tab .tabcontent-product {
 	display: none;
@@ -603,17 +693,115 @@ ul.breadcrumb li a:hover {
 
 /*customize*/
 
-.card {}
-
-.tabcontent .card img {
-    border: 1px solid #eee;
+.card {
+	border: 1px solid #e8dcdc;
+    border-radius: 8px;
+    text-align: center;
 }
 
-h1 {
+.tabcontent .card img {
+    /*border: 1px solid #eee;*/
+}
+
+body h1 {
     color: #548c01;
     font-family: 'Titillium Web', sans-serif;
+    clear: left;
+    /*padding-top: 75px;*/
 }
 
 .card .new-content h4 {
-    color: #333;
+    color: #0b8844;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    margin: 4px;
+}
+
+
+.box-items-product .box-item-detail {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.box-items-product .box-item-detail h {}
+
+.box-items-product .box-item-detail h3 {
+    color: #10ec89;
+    font-size: 29px;
+}
+
+.box-item-.product-detail-review {}
+
+.product-detail-review {
+    display: grid;
+    grid-template-columns: 17px 17px 17px 17px 17px 1fr;
+    grid-gap: 10px;
+}
+
+.i.fa.fa-star {}
+
+.product-detail-review i {
+    font-size: 17px;
+    padding: 0;
+    margin: 0px 0px;
+    color: #e2e22b;
+}
+
+.border-bottom {
+    border-bottom: 2px solid #eee;
+}
+
+.box-item-detail p {
+    color: #bfadad;
+    font-family: 'Saira', sans-serif;
+}
+
+span.product-detail-oldprice {
+    text-decoration: line-through;
+    color: red;
+}
+
+.product-detail-price span {
+    font-family: 'Saira', sans-serif;
+}
+
+.product-detail-buy button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #10ec89;
+    color: #7b6a0d;
+    font-size: 18px;
+}
+
+.product-detail-buy span {
+    padding: 11px;
+    background-color: #10ec89;
+    margin: 0px 0px 0px 25px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.product-detail-buy span i {
+    font-size: 25px;
+    margin: 0;
+    color: white;
+    padding: 0px 0px;
+}
+
+.product-slides img {
+    border-radius: 5px;
+}
+
+.product-detail-buy {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+p.product-detail-quantity span {
+    border: 1px solid #eee;
+    padding: 12px;
+    cursor: pointer;
+    color: black;
+}
+.list-items-detail {
+    padding-left: 50px;
 }

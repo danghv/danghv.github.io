@@ -3,23 +3,45 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div class="banner">
-		<div class="logo"><img src="src/images/logo.jpg" alt=""></div>
-		<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
-		<p><i class="fa fa-phone"></i>01646 197 752</p>
+	<div>
+		<div class="banner">
+			<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
+			<p><i class="fa fa-phone"></i>01646 197 752</p>
 		
-	</div>	<!-- end of banner -->
-	
-	<div class="topnav" id="myTopnav">
-		<a href="">Trang chủ</a>
-		<a href="">Cây</a>
-		<a href="">Sản Phẩm</a>
-		<a href="">Cẩm Nang - Tin Tức</a>
-		<a onclick="toggleMenu()" class="menu-icon">&#9776;</a>
-	</div>	<!-- end of navbar -->
+		</div>	<!-- end of banner -->
+
+		<div class="banner2">
+			<div class="logo">
+				<img src="src/images/logo.png">
+			</div>
+			<div class="search-box">
+				<input type="text" class="search-box-input" placeholder="Nhập từ khóa bạn muốn tìm kiếm">
+				<button><i class="fa fa-search customize-search"></i></button>
+			</div>
+			<div class="shopping-cart">
+				<div><i class="fa fa-shopping-cart"></i><span>(0)</span></div>
+				
+			</div>
+			<div class="form-login">
+				<div class="form-login-login">
+					<div>Đăng Nhập</div>
+					<div>Đăng Ký</div>
+				</div>
+			</div>
+		</div>			<!-- end of banner2 -->
+		<div class="topnav" id="myTopnav">
+			<a href="index.html">Trang chủ</a>
+			<a href="">Cây</a>
+			<a href="">Sản Phẩm</a>
+			<a href="">Cẩm Nang - Tin Tức</a>
+			<a onclick="toggleMenu()" class="menu-icon">&#9776;</a>
+		</div>	<!-- end of navbar -->
+	</div>
 	
 	<div class="product-content">
 		<div class="product-breadcrumb">
@@ -33,49 +55,53 @@
 				<div class="box-item-images">
 					<div class="main-product-slideshow">
 						<div class="product-slides product-slide-fade">	
-								<img src="src/images/kim-ngan-slide1.jpg" alt="" style="width: 100%">	
+								<img src="src/images/kim-ngan-1.jpg" alt="" style="width: 100%">	
 						</div>
 						<div class="product-slides product-slide-fade">
 					
-								<img src="src/images/kim-ngan-slide2.jpg" alt="" style="width: 100%">
+								<img src="src/images/kn2.jpg" alt="" style="width: 100%">
 								
 						</div>
 						<div class="product-slides product-slide-fade">
 							
-								<img src="src/images/kim-ngan-slide3.jpg" alt="" style="width: 100%">
+								<img src="src/images/kn1.jpg" alt="" style="width: 100%">
 								
 						</div>
 						<br>
 						<div class="product-image-list">
-								<img onclick="currentProductSlide(1)" id="openDefaultImage" src="src/images/kim-ngan-slide1.jpg">
-								<img onclick="currentProductSlide(2)" src="src/images/kim-ngan-slide2.jpg">
-								<img onclick="currentProductSlide(3)" src="src/images/kim-ngan-slide3.jpg">
+								<img onclick="currentProductSlide(1)" id="openDefaultImage" src="src/images/kim-ngan-1.jpg">
+								<img onclick="currentProductSlide(2)" src="src/images/kn2.jpg">
+								<img onclick="currentProductSlide(3)" src="src/images/kn1.jpg">
 						</div>
 					</div>
 				</div>
 
 
 				<div class="box-item-detail">
-					<h2>Cây Kim Ngân</h2>
-					<div>
-						<span>Giá Bán</span>
-						<span>120.000Đ</span>
+					<h3>Cây Kim Ngân</h3>
+					<div class="product-detail-review">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
 					</div>
-					<p>Tên thường gọi: Cây kim ngân, cây bím tóc, cây thắt bím</p>
-					<p>Tên tiếng anh: Money tree</p>
-					<p>Tên khoa học: Pachia aquatica</p>
-					<p>Họ: Malvaceae (Cẩm quỳ)</p>
-					<p>Phân họ: Bombacaceae (Gòn/Gạo)</p>
-					<p>Chiều cao : 20 – 30 cm (Tính cả chiều cao chậu)</p>
-					<p>Nguồn gốc xuất xứ: Mexico, Brazill Nam Mỹ và đầm lầy Trung Mỹ.</p>
-					<p>Công dụng: Cây kim ngân được xem là rất tốt về phong thủy, mang đến cho gia chủ sự may mắn và thịnh vượng. Nên được nhiều người sử dụng chưng bày trong văn phòng làm việc công ty, tiền sảnh nhà hàng, khách sạn…. Và sử dụng chậu nhỏ để ngay trên bàn làm việc.</p>
-
-					<div class="box-cart">
-						<div class="box-cart-quantity">1</div>
-						<div class="box-cart-addtocart">Thêm vào giỏ</div>
+					<div class="border-bottom"></div>
+					<p>Xuất Xứ: <span>Việt Nam</span></p>
+					<p>Tồn kho: <span>Còn Hàng</span></p>
+					<div class="product-detail-price">
+						<span class="product-detail-oldprice">750 000 vnđ</span>
+						<span class="product-detail-newprice">500 000 vnđ</span>
 					</div>
-					<p>Danh mục: Cây cảnh, Cây để bàn.</p>
-					<p>Tags: bán cây kim ngân, cây để bàn, cây để bàn Kim Ngân, Cây Kim ngân, cây kim ngân để bàn, cây kim ngân may mắn, cây kim ngân nhỏ, cho thuê cây kim ngân.</p>
+					<p class="product-detail-quantity">Số Lượng
+						<span>+</span>
+						<span>1</span>
+						<span>-</span>
+					</p>
+					<div class="product-detail-buy">
+						<button>Thêm Vào Giỏ Hàng</button>
+						<!-- <span><i class="fa fa-heart"></i></span> -->
+					</div>
 				</div>
 
 			</div>		<!-- end of box-items-product -->
@@ -95,12 +121,136 @@
 				</div>
 			</div>
 
-		</div>
-		<div class="product-list-items">
-			<div class="search-box">
-				<input type="" placeholder="Nhập từ khóa bạn muốn tìm kiếm" name="">
-				<button>Tìm kiếm</button>
+			<h1>Sản Phẩm Liên Quan</h1>
+	
+		<div id="tab1" class="tabcontent">
+			<div class="card">
+				<img src="src/images/product98.png" alt="bug">
+				<div class="new-content">
+					<h4>Cây Thiết Mộc Lan</h4>
+					<div class="product-price">
+						<span class="new-price">500 000 vnđ</span><br>
+						<span class="old-price">750 000 vnđ</span>
+					</div>
+					<div class="product-review">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<button>Thêm Vào Giỏ Hàng</button>
+					<!-- <span class="banner-status">Sale</span> -->
+				</div>
 			</div>
+			<div class="card">
+				<img src="src/images/product98.png" alt="bug">
+				<div class="new-content">
+					<h4>Cây Thiết Mộc Lan</h4>
+					<div class="product-price">
+						<span class="new-price">500 000 vnđ</span><br>
+						<span class="old-price">750 000 vnđ</span>
+					</div>
+					<div class="product-review">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<button>Thêm Vào Giỏ Hàng</button>
+					<!-- <span class="banner-status">Sale</span> -->
+				</div>
+			</div>
+			<div class="card">
+				<img src="src/images/product98.png" alt="bug">
+				<div class="new-content">
+					<h4>Cây Thiết Mộc Lan</h4>
+					<div class="product-price">
+						<span class="new-price">500 000 vnđ</span><br>
+						<span class="old-price">750 000 vnđ</span>
+					</div>
+					<div class="product-review">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<button>Thêm Vào Giỏ Hàng</button>
+					<!-- <span class="banner-status">Sale</span> -->
+				</div>
+			</div>
+
+			<div class="card">
+				<img src="src/images/product98.png" alt="bug">
+				<div class="new-content">
+					<h4>Cây Thiết Mộc Lan</h4>
+					<div class="product-price">
+						<span class="new-price">500 000 vnđ</span><br>
+						<span class="old-price">750 000 vnđ</span>
+					</div>
+					<div class="product-review">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<button>Thêm Vào Giỏ Hàng</button>
+					<!-- <span class="banner-status">Sale</span> -->
+				</div>
+			</div>
+
+			<div class="card">
+				<img src="src/images/product98.png" alt="bug">
+				<div class="new-content">
+					<h4>Cây Thiết Mộc Lan</h4>
+					<div class="product-price">
+						<span class="new-price">500 000 vnđ</span><br>
+						<span class="old-price">750 000 vnđ</span>
+					</div>
+					<div class="product-review">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<button>Thêm Vào Giỏ Hàng</button>
+					<!-- <span class="banner-status">Sale</span> -->
+				</div>
+			</div>
+
+			<div class="card">
+				<img src="src/images/product98.png" alt="bug">
+				<div class="new-content">
+					<h4>Cây Thiết Mộc Lan</h4>
+					<div class="product-price">
+						<span class="new-price">500 000 vnđ</span><br>
+						<span class="old-price">750 000 vnđ</span>
+					</div>
+					<div class="product-review">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<button>Thêm Vào Giỏ Hàng</button>
+					<!-- <span class="banner-status">Sale</span> -->
+				</div>
+			</div>
+			
+		</div>		<!-- end of san pham lien quan -->
+
+		</div>
+
+
+
+	
+		<div class="product-list-items">
+			
 			<div class="list-items-detail">
 				<h1>Danh mục sản phẩm</h1>
 				<div class="list-tree1">
@@ -156,36 +306,11 @@
 		</div>
 	</div>		<!-- end of product content -->
 	
-	<hr>
 
-	<h1>Sản Phẩm Liên Quan</h1>
-	<hr>
-		<div id="tab1" class="tabcontent">
-			<div class="card">
-				<img src="src/images/kim-ngan.jpg" alt="bug">
-				<div class="new-content">
-					<h4>Cay Xanh</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-				</div>
-			</div>
-			<div class="card">
-				<img src="src/images/kim-ngan.jpg" alt="bug">
-				<div class="new-content">
-					<h4>Cay Xanh</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-				</div>
-			</div>
-			<div class="card">
-				<img src="src/images/kim-ngan.jpg" alt="bug">
-				<div class="new-content">
-					<h4>Cay Xanh</h4>
-					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-				</div>
-			</div>
-			
-		</div>		<!-- end of san pham lien quan -->
 
-		<div class="info">
+		<br>
+
+	<div class="info">
 		<div class="info-quality">
 			<h2>Cam kết chất lượng</h2>
 			<div class="info-quality-box">
@@ -219,16 +344,13 @@
 	</div>
 	<div class="footer-row">
 		<div id="contact" class="footer-column">
-			<h1>Thông Tin Liên Hệ</h1>
-			<br>
-			<i class="fa fa-map-marker"></i>Đ/c: 14 ngõ 4 Nguyễn Đình Chiểu, Hai Bà Trưng, Hà Nội
-			<br>
-			<i class="fa fa-phone"></i>Hotline: 01646 197 752.
-			<br>
-			<i class="fa fa-envelope"></i>Email: hadangktmt@gmail.com.
+			<h4>Thông Tin Liên Hệ</h4>
+			<p><i class="fa fa-map-marker"></i>Đ/c: 14 ngõ 4 Nguyễn Đình Chiểu, Hai Bà Trưng, Hà Nội</p>
+			<p><i class="fa fa-phone"></i>Hotline: 01646 197 752.</p>
+			<p><i class="fa fa-envelope"></i>Email: hadangktmt@gmail.com.</p>
 		</div>
 		<div id="open-time" class="footer-column">
-			<h1>Thời Gian Mở Cửa</h1>
+			<h4>Thời Gian Mở Cửa</h4>
 			<p>Thứ 2 - thứ 6: 8AM - 10PM</p>
 			<br>
 			<p>Thứ 7: 9AM - 8PM</p>
@@ -236,19 +358,20 @@
 			<p>Nghỉ Chủ Nhật và các ngày Lễ Tết</p>
 		</div>
 		<div id="support-customer" class="footer-column">
-			<h1>Hỗ Trợ Khách Hàng</h1>
+			<h4>Hỗ Trợ Khách Hàng</h4>
 		</div>
 		<div id="social-network" class="footer-column">
-			<h1>Mạng Xã Hội</h1>
-		</div>
-
-		<div class="social-button">
+			<h4>Mạng Xã Hội</h4>
+			<div class="social-button">
 			<a href="#" class="fa fa-facebook"></a>
 			<a href="#" class="fa fa-twitter"></a>
 			<a href="#" class="fa fa-google"></a>
 			<a href="#" class="fa fa-linkedin"></a>
 			<a href="#" class="fa fa-youtube"></a>
 		</div>
+		</div>
+
+		
 	</div>			<!-- end of footer -->
 
 
