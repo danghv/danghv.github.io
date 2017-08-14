@@ -7,6 +7,53 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 </head>
 <body>
+	<div id="modalId" class="modal">
+			<div class="modal-tab-button">
+				<button id="modal-button1" class="modal-tablinks" onclick="openModal(event, 'login-modal')">Đăng Nhập</button>
+				<button id="modal-button2" class="modal-tablinks" onclick="openModal(event, 'signup-modal')">Đăng Ký</button>
+			</div>	
+	  		<div id="login-modal" class="modal-login modal-style">
+		  		<form class="modal-content animate">
+
+				    <div class="container">
+				      <label><b>Username</b></label>
+				      <input type="text" placeholder="Enter Username" name="uname" required>
+
+				      <label><b>Password</b></label>
+				      <input type="password" placeholder="Enter Password" name="psw" required>
+				        
+				      <button type="submit">Login</button>
+				      <input type="checkbox" checked="checked"> Remember me
+				    </div>
+
+				    <div class="container" style="background-color:#f1f1f1">
+				      <button type="button" onclick="document.getElementById('modalId').style.display='none'" class="cancelbtn">Cancel</button>
+				      <span class="psw">Forgot <a href="#">password?</a></span>
+				    </div>
+		  		</form>
+	  		</div>
+	  		<div id="signup-modal" class="modal-logout modal-style">
+			  	<form class="modal-content animate">
+				    <div class="container">
+				      <label><b>Email</b></label>
+				      <input type="text" placeholder="Enter Email" name="email" required>
+
+				      <label><b>Password</b></label>
+				      <input type="password" placeholder="Enter Password" name="psw" required>
+
+				      <label><b>Repeat Password</b></label>
+				      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+				      <input type="checkbox" checked="checked"> Remember me
+				      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+				      <div class="clearfix">
+				        <button type="button" onclick="document.getElementById('modalId').style.display='none'" class="cancelbtn">Cancel</button>
+				        <button type="submit" class="signupbtn">Sign Up</button>
+				      </div>
+				    </div>
+		  		</form>
+	  		</div>
+		</div>
 	<div>
 		<div class="banner">
 			<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
@@ -28,8 +75,8 @@
 			</div>
 			<div class="form-login">
 				<div class="form-login-login">
-					<div>Đăng Nhập</div>
-					<div>Đăng Ký</div>
+					<div onclick="displayModal('modal-button1')">Đăng Nhập</div>
+					<div onclick="displayModal('modal-button2')">Đăng Ký</div>
 				</div>
 			</div>
 		</div>			<!-- end of banner2 -->
@@ -50,7 +97,7 @@
 
 			<div class="box-items">
 				<div class="card">
-				<img src="src/images/product99.jpg" alt="bug">
+				<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
 				<div class="new-content">
 					<h4>Cây Thiết Mộc Lan</h4>
 					<div class="product-price">
@@ -69,7 +116,7 @@
 				</div>
 			</div>
 				<div class="card">
-				<img src="src/images/product99.jpg" alt="bug">
+				<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
 				<div class="new-content">
 					<h4>Cây Thiết Mộc Lan</h4>
 					<div class="product-price">
@@ -88,7 +135,7 @@
 				</div>
 			</div>
 				<div class="card">
-				<img src="src/images/product99.jpg" alt="bug">
+				<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
 				<div class="new-content">
 					<h4>Cây Thiết Mộc Lan</h4>
 					<div class="product-price">
@@ -107,7 +154,7 @@
 				</div>
 			</div>
 				<div class="card">
-				<img src="src/images/product99.jpg" alt="bug">
+				<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
 				<div class="new-content">
 					<h4>Cây Thiết Mộc Lan</h4>
 					<div class="product-price">
@@ -126,7 +173,7 @@
 				</div>
 			</div>
 				<div class="card">
-				<img src="src/images/product99.jpg" alt="bug">
+				<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
 				<div class="new-content">
 					<h4>Cây Thiết Mộc Lan</h4>
 					<div class="product-price">
@@ -145,7 +192,7 @@
 				</div>
 			</div>
 				<div class="card">
-				<img src="src/images/product99.jpg" alt="bug">
+				<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
 				<div class="new-content">
 					<h4>Cây Thiết Mộc Lan</h4>
 					<div class="product-price">

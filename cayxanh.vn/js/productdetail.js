@@ -50,3 +50,4 @@ function openProductTab(evt, nameTab) {
 	document.getElementById(nameTab).style.display = 'block';
 	evt.currentTarget.className += ' active';
 }
+document.getElementById("defaultOpenProductReview").click();

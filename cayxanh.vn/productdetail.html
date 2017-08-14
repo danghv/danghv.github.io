@@ -8,6 +8,54 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	
+	<div id="modalId" class="modal">
+			<div class="modal-tab-button">
+				<button id="modal-button1" class="modal-tablinks" onclick="openModal(event, 'login-modal')">Đăng Nhập</button>
+				<button id="modal-button2" class="modal-tablinks" onclick="openModal(event, 'signup-modal')">Đăng Ký</button>
+			</div>	
+	  		<div id="login-modal" class="modal-login modal-style">
+		  		<form class="modal-content animate">
+
+				    <div class="container">
+				      <label><b>Username</b></label>
+				      <input type="text" placeholder="Enter Username" name="uname" required>
+
+				      <label><b>Password</b></label>
+				      <input type="password" placeholder="Enter Password" name="psw" required>
+				        
+				      <button type="submit">Login</button>
+				      <input type="checkbox" checked="checked"> Remember me
+				    </div>
+
+				    <div class="container" style="background-color:#f1f1f1">
+				      <button type="button" onclick="document.getElementById('modalId').style.display='none'" class="cancelbtn">Cancel</button>
+				      <span class="psw">Forgot <a href="#">password?</a></span>
+				    </div>
+		  		</form>
+	  		</div>
+	  		<div id="signup-modal" class="modal-logout modal-style">
+			  	<form class="modal-content animate">
+				    <div class="container">
+				      <label><b>Email</b></label>
+				      <input type="text" placeholder="Enter Email" name="email" required>
+
+				      <label><b>Password</b></label>
+				      <input type="password" placeholder="Enter Password" name="psw" required>
+
+				      <label><b>Repeat Password</b></label>
+				      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+				      <input type="checkbox" checked="checked"> Remember me
+				      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+				      <div class="clearfix">
+				        <button type="button" onclick="document.getElementById('modalId').style.display='none'" class="cancelbtn">Cancel</button>
+				        <button type="submit" class="signupbtn">Sign Up</button>
+				      </div>
+				    </div>
+		  		</form>
+	  		</div>
+		</div>
 	<div>
 		<div class="banner">
 			<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
@@ -29,8 +77,8 @@
 			</div>
 			<div class="form-login">
 				<div class="form-login-login">
-					<div>Đăng Nhập</div>
-					<div>Đăng Ký</div>
+					<div onclick="displayModal('modal-button1')">Đăng Nhập</div>
+					<div onclick="displayModal('modal-button2')">Đăng Ký</div>
 				</div>
 			</div>
 		</div>			<!-- end of banner2 -->
@@ -110,14 +158,36 @@
 
 			<div class="product-tab">
 				<div class="button-tab">
-					<button class="tablink-product" onclick="openProductTab(event, 'product-detail')">Mô Tả - Chi Tiết</button>
-					<button class="tablink-product" onclick="openProductTab(event, 'product-vote')">Đánh Giá</button>
+					<button id="defaultOpenProductReview" class="tablink-product" onclick="openProductTab(event, 'product-detail')">Mô Tả - Chi Tiết</button>
+					<button class="tablink-product" onclick="openProductTab(event, 'product-vote')">Đánh Giá<span>(2)</span></button>
 				</div>
 				<div id="product-detail" class="tabcontent-product detail">
-					<h1>content 1</h1>
+					<h3>Mô tả sản phẩm</h3>
+					<p>Tên thường gọi: <span>Cây Kim Ngân</span></p>
+					<p>Tên khoa học: <span><em>Pachira aquatica</em></span></p>
+					<p>Họ: <span><em>Bombacaceae </em></span></p>
+					<p>Chiều cao: <span>30 – 40cm</span></p>
+					<p><strong>Công dụng: </strong><span>Cây Kim Ngân là một trong những cây được cho là tốt nhất trong phong thuỷ, thường được dùng trang trí làm cây để bàn hoặc làm cây nội thất trang trí trong nhà. Cây Kim Ngân còn là một món quà sang trọng và có ý nghĩa phong thuỷ rất tốt dùng để tặng bạn bè người thân và trong những dịp lễ đặc biệt.</span></p>
+					<p><strong>Đặc tính: <span>Cây Kim Ngân thích nghi với mọi điều kiện thời tiết nóng lạnh khác nhau, có thể trồng trực tiếp cây trong chậu hoặc ngoài đất vườn, cây có thể thích nghi tốt với điều kiện ánh sáng hoặc bóng râm.</span></strong></p>
+					<p><strong>Ý nghĩa: <span>Cây Kim Ngân với dáng vẻ sang trọng và thanh lịch, được cho là mang lại may mắn và tiền tài cho chủ nhân. Trong quan niệm phương Tây, Kim Ngân được gọi là Money tree, thân của Kim Ngân còn được dùng làm bột giấy in tiền tại một số nước phát triển.</span></strong></p>
 				</div>
 				<div id="product-vote" class="tabcontent-product vote">
-					<h1>content 2</h1>
+					<h3>Đánh giá</h3>
+					<span>Có <span>2 </span>đánh giá về sản phẩm này</span>
+					<br>
+					<div class="comment-container">
+					  <img src="src/images/taylor.jpg" alt="Avatar" style="width:90px">
+					  <p><span>Taylor Swift.</span> Hot singer in the world.</p>
+					  <p>A good service ever</p>
+					</div>
+
+					<div class="comment-container">
+					  <img src="src/images/elon-musk.jpg" alt="Avatar" style="width:90px">
+					  <p><span >Elon Mush.</span> CEO at Boring company.</p>
+					  <p>Nothing is better than this.</p>
+					</div>
+
+					
 				</div>
 			</div>
 
@@ -254,19 +324,99 @@
 			<div class="list-items-detail">
 				<h1>Danh mục sản phẩm</h1>
 				<div class="list-tree1">
-					<h3>Cây trồng chậu</h3>
+					<h3>Cây</h3>
 					<ul>
-						<li>cây 1</li>
-						<li>cây 2</li>
-						<li>cây 3
+						<li>cây ăn quả</li>
+						<li>cây chậu treo</li>
+						<li>cây công trình
 							<ul>
-								<li>cây 3.1</li>
-								<li>cây 3.2</li>
-								<li>cây 3.3</li>
+								<li>cây bóng mát</li>
+								<li>cây có hoa</li>
+								<li>cây dây leo</li>
+								<li>cây trồng hàng rào</li>
+								<li>cây lá màu</li>
+								<li>cây xanh đô thị</li>
+								<li>cỏ các loại</li>
+
 							</ul>
 						</li>
-						<li>cây 4</li>
-						<li>cây 5</li>
+						<li>cây để bàn</li>
+						<li>cây lọc không khí</li>
+						<li>cây may mắn</li>
+						<li>cây nội thất - cây văn phòng</li>
+						<li>cây thủy sinh</li>
+						<li>cây trồng trong nước</li>
+					</ul>
+					<h3>Chậu</h3>
+					<ul>
+						<li>chậu gốm sứ mỹ nghệ</li>
+						<li>chậu gốm / chậu đất nung</li>
+						<li>chậu nhựa</li>
+						<li>chậu sứ</li>
+						<li>chậu thủy tinh</li>
+						<li>chậu treo</li>
+						<li>chậu handmade</li>
+					</ul>
+					<h3>Đồ trang trí</h3>
+					<ul>
+						<li>Bàn ghế sân vườn</li>
+						<li>Bánh xe bò</li>
+						<li>Chế tác bánh xe bò</li>
+						<li>Đá granite</li>
+						<li>Đá ốp tường</li>
+						<li>Đá tảng</li>
+						<li> Đèn trang trí
+							<ul>
+								<li>Đèn cắm cỏ</li>
+								<li>Đèn năng lượng mặt trời</li>
+								<li>Đèn sân vườn</li>
+							</ul>
+						</li>
+						<li>Đồ trang trí sự kiện
+							<ul>
+								<li>Đồ trang trí tết</li>
+								<li>Trang trí giáng sinh</li>
+								<li>Trang trí trung thu</li>
+
+							</ul>
+						</li>
+						<li>Mây tre lá</li>
+						<li>Phù Điêu</li>
+						<li>Sỏi - Đá cuội</li>
+						<li>Thủ công mỹ nghệ</li>
+
+
+					</ul>
+					<h3>Hoa chậu</h3>
+					<ul>
+						<li>Hoa đá - xương rồng</li>
+						<li>Hoa lan - orchid
+							<ul>
+								<li>Lan dendrobium</li>
+								<li>Lan hồ điệp</li>
+								<li>Lan vandar</li>
+								<li>Lan ghép gốc cây</li>
+								<li>Lan mokara</li>
+
+							</ul>
+						</li>
+						<li>Hoa trạng nguyên</li>
+						<li>Hoa tulip</li>
+						<li>Hoa treo
+							<ul>
+								<li>Hoa dã yến thảo</li>
+								<li>Hoa dừa cạn</li>
+							</ul>
+						</li>
+
+					</ul>
+					<h3>Vật tư nông nghiệp</h3>
+					<ul>
+						<li>Cây giống - hạt giống cây trồng các loại</li>
+						<li>Dụng cụ làm vườn</li>
+						<li>Đất trồng cây</li>
+						<li>Phân bón</li>
+						<li>Máy đo hỗ trợ nông nghiệp</li>
 					</ul>
 				</div>
 				<div class="list-tree1">
@@ -377,5 +527,6 @@
 
 
 	<script type="text/javascript" src="js/productdetail.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
