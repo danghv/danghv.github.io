@@ -8,39 +8,361 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div>
-		<div class="banner">
-			<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
-			<p><i class="fa fa-phone"></i>01646 197 752</p>
-		
-		</div>	<!-- end of banner -->
+	<div id="modalId" class="modal">
+		<div class="modal-tab-button">
+			<button id="modal-button1" class="modal-tablinks" onclick="openModal(event, 'login-modal')">Đăng Nhập</button>
+			<button id="modal-button2" class="modal-tablinks" onclick="openModal(event, 'signup-modal')">Đăng Ký</button>
+		</div>	
+		<div id="login-modal" class="modal-login modal-style">
+			<form class="modal-content animate">
 
-		<div class="banner2">
-			<div class="logo">
-				<img src="src/images/logo.png">
-			</div>
-			<div class="search-box">
-				<input type="text" class="search-box-input" placeholder="Nhập từ khóa bạn muốn tìm kiếm">
-				<button><i class="fa fa-search customize-search"></i></button>
-			</div>
-			<div class="shopping-cart">
-				<div><i class="fa fa-shopping-cart"></i><span>(0)</span></div>
-				
-			</div>
-			<div class="form-login">
-				<div class="form-login-login">
-					<div>Đăng Nhập</div>
-					<div>Đăng Ký</div>
+				<div class="container">
+					<label><b>Username</b></label>
+					<input type="text" placeholder="Enter Username" name="uname" required>
+
+					<label><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="psw" required>
+
+					<button type="submit">Login</button>
+					<input type="checkbox" checked="checked"> Remember me
 				</div>
-			</div>
-		</div>			<!-- end of banner2 -->
-		<div class="topnav" id="myTopnav">
-			<a href="">Trang chủ</a>
-			<a href="products.html">Cây</a>
-			<a href="products.html">Sản Phẩm</a>
-			<a href="">Cẩm Nang - Tin Tức</a>
-			<a onclick="toggleMenu()" class="menu-icon">&#9776;</a>
-		</div>	<!-- end of navbar -->
+
+				<div class="container" style="background-color:#f1f1f1">
+					<button type="button" onclick="document.getElementById('modalId').style.display='none'" class="cancelbtn">Cancel</button>
+					<span class="psw">Forgot <a href="#">password?</a></span>
+				</div>
+			</form>
+		</div>
+		<div id="signup-modal" class="modal-logout modal-style">
+			<form class="modal-content animate">
+				<div class="container">
+					<label><b>Email</b></label>
+					<input type="text" placeholder="Enter Email" name="email" required>
+
+					<label><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="psw" required>
+
+					<label><b>Repeat Password</b></label>
+					<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+					<input type="checkbox" checked="checked"> Remember me
+					<p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+					<div class="clearfix">
+						<button type="button" onclick="document.getElementById('modalId').style.display='none'" class="cancelbtn">Cancel</button>
+						<button type="submit" class="signupbtn">Sign Up</button>
+					</div>
+				</div>
+			</form>
+		</div>
 	</div>
+	<div class="banner">
+		<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
+		<p><i class="fa fa-phone"></i>01646 197 752</p>
+
+	</div>	<!-- end of banner -->
+
+	<div class="banner2">
+		<div class="logo">
+			<img src="src/images/logo.png">
+		</div>
+		<div class="search-box">
+			<input type="text" class="search-box-input" placeholder="Nhập từ khóa bạn muốn tìm kiếm">
+			<button><i class="fa fa-search customize-search"></i></button>
+		</div>
+		<div class="shopping-cart">
+			<div><i class="fa fa-shopping-cart"></i><span>(0)</span></div>
+
+		</div>
+		<div class="form-login">
+			<div class="form-login-login">
+				<div onclick="displayModal('modal-button1')">Đăng Nhập</div>
+				<div onclick="displayModal('modal-button1')">Đăng Ký</div>
+			</div>
+		</div>
+	</div>			<!-- end of banner2 -->
+	<div class="topnav" id="myTopnav">
+		<a href="">Trang chủ</a>
+		<a href="products.html">Cây</a>
+		<a href="products.html">Sản Phẩm</a>
+		<a href="">Cẩm Nang - Tin Tức</a>
+		<a onclick="toggleMenu()" class="menu-icon">&#9776;</a>
+	</div>	<!-- end of navbar -->
+</div>
+<div class="blog-container">
+	<div class="blog-breadcrumb">
+		<ul class="breadcrumb">
+			<li><a href="">Trang chủ</a></li>
+			<li><a href="">Blog</a></li>
+		</ul> <!-- end of breadcrumb -->
+	</div>
+	<div class="blog-content">
+		<div class="blog-content-news">
+			<div class="article">
+				<article>
+					<div class="featured-image">
+						<a href="blogdetail.html">
+							<img src="src/images/blog-image1.jpg">
+						</a>
+					</div>
+					<div class="entry-content">
+						<header>
+							<h2>
+								<a href="blogdetail.html">Cây Hoa Sứ Trắng Trồng Sân Vườn, Công Viên, Đường Phố</a>
+							</h2>
+						</header>
+						<p>Cây hoa sứ trắng trồng sân vườn, công viên, đường phố Cây hoa sứ trắng là một loại cây cảnh được trồng nhiều ở Việt Nam.
+							<a href="blogdetail.html">Xem chi tiết</a>
+						</p>
+					</div>
+				</article>
+				<article>
+					<div class="featured-image">
+						<a href="blogdetail.html">
+							<img src="src/images/blog-image1.jpg">
+						</a>
+					</div>
+					<div class="entry-content">
+						<header>
+							<h2>
+								<a href="blogdetail.html">Cây Hoa Sứ Trắng Trồng Sân Vườn, Công Viên, Đường Phố</a>
+							</h2>
+						</header>
+						<p>Cây hoa sứ trắng trồng sân vườn, công viên, đường phố Cây hoa sứ trắng là một loại cây cảnh được trồng nhiều ở Việt Nam. Chúng ta có thể bắt gặp chúng ở rất nhiều nơi như: Trong khuôn viên khu dân cư, đô thị Trong các sân sinh hoạt vui chơi của trường học Trong công viên Thường gặp nhiều nhất ở trong các đình chùa. Cây hoa sứ trắng trồng sân vườn, công viên, đường phố là lựa chọn hợp lý vì: Cây hoa sứ trắng có xuất xứ từ châu Mỹ.Cây hoa sứ trắng trồng sân vườn, công viên, đường phố Cây hoa sứ trắng là một loại cây cảnh được trồng nhiều ở Việt Nam. Chúng ta có thể bắt gặp chúng ở rất nhiều nơi như: Trong khuôn viên khu dân cư, đô thị Trong các sân sinh hoạt vui chơi của trường học Trong công viên Thường gặp nhiều nhất ở trong các đình chùa. Cây hoa sứ trắng trồng sân vườn, công viên, đường phố là lựa chọn hợp lý vì: Cây hoa sứ trắng có xuất xứ từ châu Mỹ.Cây hoa sứ trắng trồng sân vườn, công viên, đường phố Cây hoa sứ trắng là một loại cây cảnh được trồng nhiều ở Việt Nam. Chúng ta có thể bắt gặp chúng ở rất nhiều nơi như: Trong khuôn viên khu dân cư, đô thị Trong các sân sinh hoạt vui chơi của trường học Trong công viên Thường gặp nhiều nhất ở trong các đình chùa. Cây hoa sứ trắng trồng sân vườn, công viên, đường phố là lựa chọn hợp lý vì: Cây hoa sứ trắng có xuất xứ từ châu Mỹ.
+							<a href="blogdetail.html">Xem chi tiết</a>
+						</p>
+					</div>
+				</article>
+				<article>
+					<div class="featured-image">
+						<a href="blogdetail.html">
+							<img src="src/images/blog-image1.jpg">
+						</a>
+					</div>
+					<div class="entry-content">
+						<header>
+							<h2>
+								<a href="blogdetail.html">Cây Hoa Sứ Trắng Trồng Sân Vườn, Công Viên, Đường Phố</a>
+							</h2>
+						</header>
+						<p>Cây hoa sứ trắng trồng sân vườn, công viên, đường phố Cây hoa sứ trắng là một loại cây cảnh được trồng nhiều ở Việt Nam. Chúng ta có thể bắt gặp chúng ở rất nhiều nơi như: Trong khuôn viên khu dân cư, đô thị Trong các sân sinh hoạt vui chơi của trường học Trong công viên Thường gặp nhiều nhất ở trong các đình chùa. Cây hoa sứ trắng trồng sân vườn, công viên, đường phố là lựa chọn hợp lý vì: Cây hoa sứ trắng có xuất xứ từ châu Mỹ.
+							<a href="blogdetail.html">Xem chi tiết</a>
+						</p>
+					</div>
+				</article>
+				<article>
+					<div class="featured-image">
+						<a href="blogdetail.html">
+							<img src="src/images/blog-image1.jpg">
+						</a>
+					</div>
+					<div class="entry-content">
+						<header>
+							<h2>
+								<a href="blogdetail.html">Cây Hoa Sứ Trắng Trồng Sân Vườn, Công Viên, Đường Phố</a>
+							</h2>
+						</header>
+						<p>Cây hoa sứ trắng trồng sân vườn, công viên, đường phố Cây hoa sứ trắng là một loại cây cảnh được trồng nhiều ở Việt Nam. Chúng ta có thể bắt gặp chúng ở rất nhiều nơi như: Trong khuôn viên khu dân cư, đô thị Trong các sân sinh hoạt vui chơi của trường học Trong công viên Thường gặp nhiều nhất ở trong các đình chùa. Cây hoa sứ trắng trồng sân vườn, công viên, đường phố là lựa chọn hợp lý vì: Cây hoa sứ trắng có xuất xứ từ châu Mỹ.
+							<a href="blogdetail.html">Xem chi tiết</a>
+						</p>
+					</div>
+				</article>
+				<article>
+					<div class="featured-image">
+						<a href="blogdetail.html">
+							<img src="src/images/blog-image1.jpg">
+						</a>
+					</div>
+					<div class="entry-content">
+						<header>
+							<h2>
+								<a href="blogdetail.html">Cây Hoa Sứ Trắng Trồng Sân Vườn, Công Viên, Đường Phố</a>
+							</h2>
+						</header>
+						<p>Cây hoa sứ trắng trồng sân vườn, công viên, đường phố Cây hoa sứ trắng là một loại cây cảnh được trồng nhiều ở Việt Nam. Chúng ta có thể bắt gặp chúng ở rất nhiều nơi như: Trong khuôn viên khu dân cư, đô thị Trong các sân sinh hoạt vui chơi của trường học Trong công viên Thường gặp nhiều nhất ở trong các đình chùa. Cây hoa sứ trắng trồng sân vườn, công viên, đường phố là lựa chọn hợp lý vì: Cây hoa sứ trắng có xuất xứ từ châu Mỹ.
+							<a href="blogdetail.html">Xem chi tiết</a>
+						</p>
+					</div>
+				</article>
+				<article>
+					<div class="featured-image">
+						<a href="blogdetail.html">
+							<img src="src/images/blog-image1.jpg">
+						</a>
+					</div>
+					<div class="entry-content">
+						<header>
+							<h2>
+								<a href="blogdetail.html">Cây Hoa Sứ Trắng Trồng Sân Vườn, Công Viên, Đường Phố</a>
+							</h2>
+						</header>
+						<p>Cây hoa sứ trắng trồng sân vườn, công viên, đường phố Cây hoa sứ trắng là một loại cây cảnh được trồng nhiều ở Việt Nam. Chúng ta có thể bắt gặp chúng ở rất nhiều nơi như: Trong khuôn viên khu dân cư, đô thị Trong các sân sinh hoạt vui chơi của trường học Trong công viên Thường gặp nhiều nhất ở trong các đình chùa. Cây hoa sứ trắng trồng sân vườn, công viên, đường phố là lựa chọn hợp lý vì: Cây hoa sứ trắng có xuất xứ từ châu Mỹ.Cây hoa sứ trắng trồng sân vườn, công viên, đường phố Cây hoa sứ trắng là một loại cây cảnh được trồng nhiều ở Việt Nam. Chúng ta có thể bắt gặp chúng ở rất nhiều nơi như: Trong khuôn viên khu dân cư, đô thị Trong các sân sinh hoạt vui chơi của trường học Trong công viên Thường gặp nhiều nhất ở trong các đình chùa. Cây hoa sứ trắng trồng sân vườn, công viên, đường phố là lựa chọn hợp lý vì: Cây hoa sứ trắng có xuất xứ từ châu Mỹ.
+							<a href="blogdetail.html">Xem chi tiết</a>
+						</p>
+					</div>
+				</article>
+
+			</div>
+		</div>
+		<div class="blog-content-list">
+
+			<ul>
+				<li class="header-list-news">
+					<h2>Danh mục bài viết</h2>
+				</li>
+				<li>
+					<a href=""><h4>Cẩm nang chăm sóc cây</h4></a>
+				</li>
+				<li>
+					<a href=""><h4>Cây phong thủy</h4></a>
+				</li>
+				<li>
+					<a href=""><h4>Xu hướng</h4></a>
+				</li>
+				<li>
+					<a href=""><h4>Cây may mắn, tài lộc</h4></a>
+				</li>
+				<li>
+					<a href=""><h4>Ý nghĩa các loài cây</h4></a>
+				</li>
+				<li class="header-list-news">
+					<h2>Bài viết gần đây</h2>
+
+				</li>
+				<li>
+					<a href="">
+						<h4 class="title-list">22 loại cây cảnh gia tăng tài lộc trên bàn làm việc</h4>
+					</a>
+
+				</li>
+				<li>
+					<a href="">
+						<h4 class="title-list">7 Loại cây cảnh nên trồng tại văn phòng làm việc</h4>
+					</a>
+
+				</li>
+				<li>
+					<a href="">
+						<h4 class="title-list">Chọn loại cây gì để trồng trong sân vườn?</h4>
+					</a>
+
+				</li>
+				<li>
+					<a href="">
+						<h4 class="title-list">Những loại cây nên trồng trước nhà để đón tài lộc, xua tà khí </h4>
+					</a>
+
+				</li>
+				<li>
+					<a href="">
+						<h4 class="title-list">Cách trồng và chăm sóc cây cảnh trong chậu đúng cách nhất </h4>
+					</a>
+
+				</li>
+				<li class="header-list-news">
+					<h2>Bog tag</h2>
+				</li>
+
+				<ul class="blog-tag">
+					<li>
+						<a href="">
+							cây văn phòng
+						</a>
+					</li>
+					<li>
+						<a href="">
+							cây phong thủy
+						</a>
+					</li>
+					<li>
+						<a href="">
+							cây vườn nhà
+						</a>
+					</li>
+					<li>
+						<a href="">
+							cây may mắn
+						</a>
+					</li>
+					<li>
+						<a href="">
+							dụng cụ làm vườn
+						</a>
+					</li>
+					<li>
+						<a href="">
+							cây thiết mộc lan
+						</a>
+					</li>
+				</ul>
+			</ul>
+		</div>
+	</div>	<!-- end of blog-content -->
+</div>		<!-- end of blog-container -->
+
+<div class="info">
+	<div class="info-quality">
+		<h2>Cam kết chất lượng</h2>
+		<div class="info-quality-box">
+			<i class="fa fa-check"></i>
+			<div>
+				<h3>100% ĐÃ KIỂM TRA</h3>
+				<p>Chuyên Nghiệp Theo Quy Trình</p>
+			</div>
+		</div>
+	</div>
+	<div class="info-order">
+		<h2>Hướng dẫn đặt hàng</h2>
+		<div class="info-order-box">
+			<i class="fa fa-phone"></i>
+			<div>
+				<h3>đặt hàng online</h3>
+				<p>Phone: 01646 197 752</p>
+			</div>
+		</div>
+	</div>
+	<div class="info-ship">
+		<h2>Vận chuyển</h2>
+		<div class="info-ship-box">
+			<i class="fa fa-dollar"></i>
+			<div>
+				<h3>mua hàng tiết kiệm</h3>
+				<p>miễn phí vận chuyển</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer-row">
+	<div id="contact" class="footer-column">
+		<h4>Thông Tin Liên Hệ</h4>
+		<p><i class="fa fa-map-marker"></i>Đ/c: 14 ngõ 4 Nguyễn Đình Chiểu, Hai Bà Trưng, Hà Nội</p>
+		<p><i class="fa fa-phone"></i>Hotline: 01646 197 752.</p>
+		<p><i class="fa fa-envelope"></i>Email: hadangktmt@gmail.com.</p>
+	</div>
+	<div id="open-time" class="footer-column">
+		<h4>Thời Gian Mở Cửa</h4>
+		<p>Thứ 2 - thứ 6: 8AM - 10PM</p>
+		<br>
+		<p>Thứ 7: 9AM - 8PM</p>
+		<br>
+		<p>Nghỉ Chủ Nhật và các ngày Lễ Tết</p>
+	</div>
+	<div id="support-customer" class="footer-column">
+		<h4>Hỗ Trợ Khách Hàng</h4>
+	</div>
+	<div id="social-network" class="footer-column">
+		<h4>Mạng Xã Hội</h4>
+		<div class="social-button">
+			<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-twitter"></a>
+			<a href="#" class="fa fa-google"></a>
+			<a href="#" class="fa fa-linkedin"></a>
+			<a href="#" class="fa fa-youtube"></a>
+		</div>
+	</div>
+
+
+</div>			<!-- end of footer -->
+
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

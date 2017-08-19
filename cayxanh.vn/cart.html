@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cart</title>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="modalId" class="modal">
+		<div class="modal-tab-button">
+			<button id="modal-button1" class="modal-tablinks" onclick="openModal(event, 'login-modal')">Đăng Nhập</button>
+			<button id="modal-button2" class="modal-tablinks" onclick="openModal(event, 'signup-modal')">Đăng Ký</button>
+		</div>	
+		<div id="login-modal" class="modal-login modal-style">
+			<form class="modal-content animate">
+
+				<div class="container">
+					<label><b>Username</b></label>
+					<input type="text" placeholder="Enter Username" name="uname" required>
+
+					<label><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="psw" required>
+
+					<button type="submit">Login</button>
+					<input type="checkbox" checked="checked"> Remember me
+				</div>
+
+				<div class="container" style="background-color:#f1f1f1">
+					<button type="button" onclick="document.getElementById('modalId').style.display='none'" class="cancelbtn">Cancel</button>
+					<span class="psw">Forgot <a href="#">password?</a></span>
+				</div>
+			</form>
+		</div>
+		<div id="signup-modal" class="modal-logout modal-style">
+			<form class="modal-content animate">
+				<div class="container">
+					<label><b>Email</b></label>
+					<input type="text" placeholder="Enter Email" name="email" required>
+
+					<label><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="psw" required>
+
+					<label><b>Repeat Password</b></label>
+					<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+					<input type="checkbox" checked="checked"> Remember me
+					<p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+					<div class="clearfix">
+						<button type="button" onclick="document.getElementById('modalId').style.display='none'" class="cancelbtn">Cancel</button>
+						<button type="submit" class="signupbtn">Sign Up</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="banner">
+		<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
+		<p><i class="fa fa-phone"></i>01646 197 752</p>
+
+	</div>	<!-- end of banner -->
+
+	<div class="banner2">
+		<div class="logo">
+			<img src="src/images/logo.png">
+		</div>
+		<div class="search-box">
+			<input type="text" class="search-box-input" placeholder="Nhập từ khóa bạn muốn tìm kiếm">
+			<button><i class="fa fa-search customize-search"></i></button>
+		</div>
+		<div class="shopping-cart">
+			<div><i class="fa fa-shopping-cart"></i><span>(0)</span></div>
+
+		</div>
+		<div class="form-login">
+			<div class="form-login-login">
+				<div onclick="displayModal('modal-button1')">Đăng Nhập</div>
+				<div onclick="displayModal('modal-button1')">Đăng Ký</div>
+			</div>
+		</div>
+	</div>			<!-- end of banner2 -->
+	<div class="topnav" id="myTopnav">
+		<a href="">Trang chủ</a>
+		<a href="products.html">Cây</a>
+		<a href="products.html">Sản Phẩm</a>
+		<a href="">Cẩm Nang - Tin Tức</a>
+		<a onclick="toggleMenu()" class="menu-icon">&#9776;</a>
+	</div>	<!-- end of navbar -->
+</div>
+<div class="blog-container">
+	<div class="blog-breadcrumb">
+		<ul class="breadcrumb">
+			<li><a href="">Trang chủ</a></li>
+			<li><a href="">Blog</a></li>
+		</ul> <!-- end of breadcrumb -->
+	</div>
+
+	<div class="cart-container">
+		<div class="cart-content">
+			<div class="cart-content-detail">
+				<div class="cart-header">
+					<span>Sản phẩm</span>
+					<span>Tên Sản phẩm</span>
+					<span>Đơn Giá</span>
+					<span>Số Lượng</span>
+					<span>Thành Tiền</span>
+					<span></span>
+				</div>
+				<div class="cart-data-row1">
+					<span class="row1-product-image">
+						<a href="productdetail.html">
+							<img src="src/images/product2.jpg">
+						</a>
+					</span>
+					<span>Thiết Mộc Lan</span>
+					<span class="row-money row1-price">1.000.000</span>
+					<span class="row1-product-quantity">
+						<button>-</button>
+						<input type="text" name="" value="1">
+						<button>+</button>
+					</span>
+					<span class="row-money row1-total">1.000.000</span>
+					<span class="fa fa-trash-o"></span>
+				</div>
+				<div class="cart-data-row2">
+					<span class="row1-product-image">
+						<a href="productdetail.html">
+							<img src="src/images/product2.jpg">
+						</a>
+					</span>
+					<span>Thiết Mộc Lan</span>
+					<span class="row-money row2-price">1.000.000</span>
+					<span class="row1-product-quantity">
+						<button>-</button>
+						<input type="text" name="quantity" value="1">
+						<button>+</button>
+					</span>
+					<span class="row-money row2-total">1.000.000</span>
+					<span class="fa fa-trash-o"></span>
+				</div>
+				<div class="row-button">
+					<button class="delete-button">Xóa Toàn Bộ</button>
+					<button class="buy-button">Tiếp Tục Mua Hàng</button>
+				</div>
+			</div>
+
+		</div>		<!-- end of cart-content -->
+		<div class="cart-payment">
+			<div class="cart-coupon">
+				<h3>Mã giảm giá</h3>
+				<input type="text" name="" placeholder="Nhập mã giảm giá">
+				<button class="apply-coupon">Áp dụng mã giảm giá</button>
+			</div>
+			<div class="cart-total">
+				<h3>Tổng Tiền</h3>
+				<div class=".cart-subtotal">
+					<span>Tạm tính</span>
+					<span class="">7.600.000</span>
+				</div>
+				<div class=".cart-discount">
+					<span>Giảm giá</span>
+					<span>0</span>
+				</div>
+				<div class="cart-oder-total">
+					<span>Tổng tiền</span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>		<!-- end of blog-container -->
+
+<div class="info">
+	<div class="info-quality">
+		<h2>Cam kết chất lượng</h2>
+		<div class="info-quality-box">
+			<i class="fa fa-check"></i>
+			<div>
+				<h3>100% ĐÃ KIỂM TRA</h3>
+				<p>Chuyên Nghiệp Theo Quy Trình</p>
+			</div>
+		</div>
+	</div>
+	<div class="info-order">
+		<h2>Hướng dẫn đặt hàng</h2>
+		<div class="info-order-box">
+			<i class="fa fa-phone"></i>
+			<div>
+				<h3>đặt hàng online</h3>
+				<p>Phone: 01646 197 752</p>
+			</div>
+		</div>
+	</div>
+	<div class="info-ship">
+		<h2>Vận chuyển</h2>
+		<div class="info-ship-box">
+			<i class="fa fa-dollar"></i>
+			<div>
+				<h3>mua hàng tiết kiệm</h3>
+				<p>miễn phí vận chuyển</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer-row">
+	<div id="contact" class="footer-column">
+		<h4>Thông Tin Liên Hệ</h4>
+		<p><i class="fa fa-map-marker"></i>Đ/c: 14 ngõ 4 Nguyễn Đình Chiểu, Hai Bà Trưng, Hà Nội</p>
+		<p><i class="fa fa-phone"></i>Hotline: 01646 197 752.</p>
+		<p><i class="fa fa-envelope"></i>Email: hadangktmt@gmail.com.</p>
+	</div>
+	<div id="open-time" class="footer-column">
+		<h4>Thời Gian Mở Cửa</h4>
+		<p>Thứ 2 - thứ 6: 8AM - 10PM</p>
+		<br>
+		<p>Thứ 7: 9AM - 8PM</p>
+		<br>
+		<p>Nghỉ Chủ Nhật và các ngày Lễ Tết</p>
+	</div>
+	<div id="support-customer" class="footer-column">
+		<h4>Hỗ Trợ Khách Hàng</h4>
+	</div>
+	<div id="social-network" class="footer-column">
+		<h4>Mạng Xã Hội</h4>
+		<div class="social-button">
+			<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-twitter"></a>
+			<a href="#" class="fa fa-google"></a>
+			<a href="#" class="fa fa-linkedin"></a>
+			<a href="#" class="fa fa-youtube"></a>
+		</div>
+	</div>
+
+
+</div>			<!-- end of footer -->
+
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

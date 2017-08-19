@@ -8,57 +8,57 @@
 </head>
 <body>
 	<div id="modalId" class="modal">
-			<div class="modal-tab-button">
-				<button id="modal-button1" class="modal-tablinks" onclick="openModal(event, 'login-modal')">Đăng Nhập</button>
-				<button id="modal-button2" class="modal-tablinks" onclick="openModal(event, 'signup-modal')">Đăng Ký</button>
-			</div>	
-	  		<div id="login-modal" class="modal-login modal-style">
-		  		<form class="modal-content animate">
+		<div class="modal-tab-button">
+			<button id="modal-button1" class="modal-tablinks" onclick="openModal(event, 'login-modal')">Đăng Nhập</button>
+			<button id="modal-button2" class="modal-tablinks" onclick="openModal(event, 'signup-modal')">Đăng Ký</button>
+		</div>	
+		<div id="login-modal" class="modal-login modal-style">
+			<form class="modal-content animate">
 
-				    <div class="container">
-				      <label><b>Username</b></label>
-				      <input type="text" placeholder="Enter Username" name="uname" required>
+				<div class="container">
+					<label><b>Username</b></label>
+					<input type="text" placeholder="Enter Username" name="uname" required>
 
-				      <label><b>Password</b></label>
-				      <input type="password" placeholder="Enter Password" name="psw" required>
-				        
-				      <button type="submit">Login</button>
-				      <input type="checkbox" checked="checked"> Remember me
-				    </div>
+					<label><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="psw" required>
 
-				    <div class="container" style="background-color:#f1f1f1">
-				      <button type="button" onclick="document.getElementById('modalId').style.display='none'" class="cancelbtn">Cancel</button>
-				      <span class="psw">Forgot <a href="#">password?</a></span>
-				    </div>
-		  		</form>
-	  		</div>
-	  		<div id="signup-modal" class="modal-logout modal-style">
-			  	<form class="modal-content animate">
-				    <div class="container">
-				      <label><b>Email</b></label>
-				      <input type="text" placeholder="Enter Email" name="email" required>
+					<button type="submit">Login</button>
+					<input type="checkbox" checked="checked"> Remember me
+				</div>
 
-				      <label><b>Password</b></label>
-				      <input type="password" placeholder="Enter Password" name="psw" required>
-
-				      <label><b>Repeat Password</b></label>
-				      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-				      <input type="checkbox" checked="checked"> Remember me
-				      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-
-				      <div class="clearfix">
-				        <button type="button" onclick="document.getElementById('modalId').style.display='none'" class="cancelbtn">Cancel</button>
-				        <button type="submit" class="signupbtn">Sign Up</button>
-				      </div>
-				    </div>
-		  		</form>
-	  		</div>
+				<div class="container" style="background-color:#f1f1f1">
+					<button type="button" onclick="document.getElementById('modalId').style.display='none'" class="cancelbtn">Cancel</button>
+					<span class="psw">Forgot <a href="#">password?</a></span>
+				</div>
+			</form>
 		</div>
+		<div id="signup-modal" class="modal-logout modal-style">
+			<form class="modal-content animate">
+				<div class="container">
+					<label><b>Email</b></label>
+					<input type="text" placeholder="Enter Email" name="email" required>
+
+					<label><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="psw" required>
+
+					<label><b>Repeat Password</b></label>
+					<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+					<input type="checkbox" checked="checked"> Remember me
+					<p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+					<div class="clearfix">
+						<button type="button" onclick="document.getElementById('modalId').style.display='none'" class="cancelbtn">Cancel</button>
+						<button type="submit" class="signupbtn">Sign Up</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
 	<div>
 		<div class="banner">
 			<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
 			<p><i class="fa fa-phone"></i>01646 197 752</p>
-		
+
 		</div>	<!-- end of banner -->
 
 		<div class="banner2">
@@ -82,418 +82,421 @@
 		</div>			<!-- end of banner2 -->
 		<div class="topnav" id="myTopnav">
 			<a href="index.html">Trang chủ</a>
-			<a href="">Cây</a>
-			<a href="">Sản Phẩm</a>
-			<a href="">Cẩm Nang - Tin Tức</a>
+			<a href="products.html">Cây</a>
+			<a href="products.html">Sản Phẩm</a>
+			<a href="blog.html">Cẩm Nang - Tin Tức</a>
 			<a onclick="toggleMenu()" class="menu-icon">&#9776;</a>
 		</div>	<!-- end of navbar -->
 
-	<div class="product-content">
-		<div class="product-breadcrumb">
-			<ul class="breadcrumb">
-				<li><a href="">Trang chủ</a></li>
-				<li><a href="">Cây</a></li>
-			</ul> <!-- end of breadcrumb -->
+		<div class="product-content">
+			<div class="product-breadcrumb">
+				<ul class="breadcrumb">
+					<li><a href="index.html">Trang chủ</a></li>
+					<li><a href="">Cây</a></li>
+				</ul> <!-- end of breadcrumb -->
 
-			<div class="box-items">
-				<div class="card">
-				<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
-				<div class="new-content">
-					<h4>Cây Thiết Mộc Lan</h4>
-					<div class="product-price">
-						<span class="new-price">500 000 vnđ</span><br>
-						<span class="old-price">750 000 vnđ</span>
+				<div class="box-items">
+					<div class="card">
+						<div class="card-detail">
+							<div class="photo">
+								<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
+							</div>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+							</div>
+						</div>
 					</div>
-					<div class="product-review">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star-half-o"></i>
+					<div class="card">
+						<a href="productdetail.html"><img src="src/images/product98.png" alt="bug"></a>
+						<div class="new-content">
+							<h4>Cây Thiết Mộc Lan</h4>
+							<div class="product-price">
+								<span class="new-price">500 000 vnđ</span><br>
+								<span class="old-price">750 000 vnđ</span>
+							</div>
+							<div class="product-review">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-half-o"></i>
+							</div>
+							<button>Thêm Vào Giỏ Hàng</button>
+							<!-- <span class="banner-status">New</span> -->
+						</div>
 					</div>
-					<button>Thêm Vào Giỏ Hàng</button>
-					<!-- <span class="banner-status">New</span> -->
+					<div class="card">
+						<a href="productdetail.html"><img src="src/images/product97.jpg" alt="bug"></a>
+						<div class="new-content">
+							<h4>Cây Thiết Mộc Lan</h4>
+							<div class="product-price">
+								<span class="new-price">500 000 vnđ</span><br>
+								<span class="old-price">750 000 vnđ</span>
+							</div>
+							<div class="product-review">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-half-o"></i>
+							</div>
+							<button>Thêm Vào Giỏ Hàng</button>
+							<!-- <span class="banner-status">New</span> -->
+						</div>
+					</div>
+					<div class="card">
+						<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
+						<div class="new-content">
+							<h4>Cây Thiết Mộc Lan</h4>
+							<div class="product-price">
+								<span class="new-price">500 000 vnđ</span><br>
+								<span class="old-price">750 000 vnđ</span>
+							</div>
+							<div class="product-review">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-half-o"></i>
+							</div>
+							<button>Thêm Vào Giỏ Hàng</button>
+							<!-- <span class="banner-status">New</span> -->
+						</div>
+					</div>
+					<div class="card">
+						<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
+						<div class="new-content">
+							<h4>Cây Thiết Mộc Lan</h4>
+							<div class="product-price">
+								<span class="new-price">500 000 vnđ</span><br>
+								<span class="old-price">750 000 vnđ</span>
+							</div>
+							<div class="product-review">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-half-o"></i>
+							</div>
+							<button>Thêm Vào Giỏ Hàng</button>
+							<!-- <span class="banner-status">New</span> -->
+						</div>
+					</div>
+					<div class="card">
+						<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
+						<div class="new-content">
+							<h4>Cây Thiết Mộc Lan</h4>
+							<div class="product-price">
+								<span class="new-price">500 000 vnđ</span><br>
+								<span class="old-price">750 000 vnđ</span>
+							</div>
+							<div class="product-review">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-half-o"></i>
+							</div>
+							<button>Thêm Vào Giỏ Hàng</button>
+							<!-- <span class="banner-status">New</span> -->
+						</div>
+					</div>
+
+					<div class="card">
+						<img src="src/images/product99.jpg" alt="bug">
+						<div class="new-content">
+							<h4>Cây Thiết Mộc Lan</h4>
+							<div class="product-price">
+								<span class="new-price">500 000 vnđ</span><br>
+								<span class="old-price">750 000 vnđ</span>
+							</div>
+							<div class="product-review">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-half-o"></i>
+							</div>
+							<button>Thêm Vào Giỏ Hàng</button>
+							<!-- <span class="banner-status">New</span> -->
+						</div>
+					</div>
+
+					<div class="card">
+						<img src="src/images/product99.jpg" alt="bug">
+						<div class="new-content">
+							<h4>Cây Thiết Mộc Lan</h4>
+							<div class="product-price">
+								<span class="new-price">500 000 vnđ</span><br>
+								<span class="old-price">750 000 vnđ</span>
+							</div>
+							<div class="product-review">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-half-o"></i>
+							</div>
+							<button>Thêm Vào Giỏ Hàng</button>
+							<!-- <span class="banner-status">New</span> -->
+						</div>
+					</div>
+
+					<div class="card">
+						<img src="src/images/product99.jpg" alt="bug">
+						<div class="new-content">
+							<h4>Cây Thiết Mộc Lan</h4>
+							<div class="product-price">
+								<span class="new-price">500 000 vnđ</span><br>
+								<span class="old-price">750 000 vnđ</span>
+							</div>
+							<div class="product-review">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-half-o"></i>
+							</div>
+							<button>Thêm Vào Giỏ Hàng</button>
+							<!-- <span class="banner-status">New</span> -->
+						</div>
+					</div>
 				</div>
+
 			</div>
-				<div class="card">
-				<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
-				<div class="new-content">
-					<h4>Cây Thiết Mộc Lan</h4>
-					<div class="product-price">
-						<span class="new-price">500 000 vnđ</span><br>
-						<span class="old-price">750 000 vnđ</span>
-					</div>
-					<div class="product-review">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star-half-o"></i>
-					</div>
-					<button>Thêm Vào Giỏ Hàng</button>
-					<!-- <span class="banner-status">New</span> -->
-				</div>
-			</div>
-				<div class="card">
-				<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
-				<div class="new-content">
-					<h4>Cây Thiết Mộc Lan</h4>
-					<div class="product-price">
-						<span class="new-price">500 000 vnđ</span><br>
-						<span class="old-price">750 000 vnđ</span>
-					</div>
-					<div class="product-review">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star-half-o"></i>
-					</div>
-					<button>Thêm Vào Giỏ Hàng</button>
-					<!-- <span class="banner-status">New</span> -->
-				</div>
-			</div>
-				<div class="card">
-				<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
-				<div class="new-content">
-					<h4>Cây Thiết Mộc Lan</h4>
-					<div class="product-price">
-						<span class="new-price">500 000 vnđ</span><br>
-						<span class="old-price">750 000 vnđ</span>
-					</div>
-					<div class="product-review">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star-half-o"></i>
-					</div>
-					<button>Thêm Vào Giỏ Hàng</button>
-					<!-- <span class="banner-status">New</span> -->
-				</div>
-			</div>
-				<div class="card">
-				<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
-				<div class="new-content">
-					<h4>Cây Thiết Mộc Lan</h4>
-					<div class="product-price">
-						<span class="new-price">500 000 vnđ</span><br>
-						<span class="old-price">750 000 vnđ</span>
-					</div>
-					<div class="product-review">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star-half-o"></i>
-					</div>
-					<button>Thêm Vào Giỏ Hàng</button>
-					<!-- <span class="banner-status">New</span> -->
-				</div>
-			</div>
-				<div class="card">
-				<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
-				<div class="new-content">
-					<h4>Cây Thiết Mộc Lan</h4>
-					<div class="product-price">
-						<span class="new-price">500 000 vnđ</span><br>
-						<span class="old-price">750 000 vnđ</span>
-					</div>
-					<div class="product-review">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star-half-o"></i>
-					</div>
-					<button>Thêm Vào Giỏ Hàng</button>
-					<!-- <span class="banner-status">New</span> -->
-				</div>
-			</div>
+			<div class="product-list-items">
 
-				<div class="card">
-				<img src="src/images/product99.jpg" alt="bug">
-				<div class="new-content">
-					<h4>Cây Thiết Mộc Lan</h4>
-					<div class="product-price">
-						<span class="new-price">500 000 vnđ</span><br>
-						<span class="old-price">750 000 vnđ</span>
-					</div>
-					<div class="product-review">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star-half-o"></i>
-					</div>
-					<button>Thêm Vào Giỏ Hàng</button>
-					<!-- <span class="banner-status">New</span> -->
-				</div>
-			</div>
+				<div class="list-items-detail">
+					<h1>Danh mục sản phẩm</h1>
+					<div class="list-tree1">
+						<h3>Cây</h3>
+						<ul>
+							<li>cây ăn quả</li>
+							<li>cây chậu treo</li>
+							<li>cây công trình
+								<ul>
+									<li>cây bóng mát</li>
+									<li>cây có hoa</li>
+									<li>cây dây leo</li>
+									<li>cây trồng hàng rào</li>
+									<li>cây lá màu</li>
+									<li>cây xanh đô thị</li>
+									<li>cỏ các loại</li>
 
-				<div class="card">
-				<img src="src/images/product99.jpg" alt="bug">
-				<div class="new-content">
-					<h4>Cây Thiết Mộc Lan</h4>
-					<div class="product-price">
-						<span class="new-price">500 000 vnđ</span><br>
-						<span class="old-price">750 000 vnđ</span>
-					</div>
-					<div class="product-review">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star-half-o"></i>
-					</div>
-					<button>Thêm Vào Giỏ Hàng</button>
-					<!-- <span class="banner-status">New</span> -->
-				</div>
-			</div>
+								</ul>
+							</li>
+							<li>cây để bàn</li>
+							<li>cây lọc không khí</li>
+							<li>cây may mắn</li>
+							<li>cây nội thất - cây văn phòng</li>
+							<li>cây thủy sinh</li>
+							<li>cây trồng trong nước</li>
+						</ul>
+						<h3>Chậu</h3>
+						<ul>
+							<li>chậu gốm sứ mỹ nghệ</li>
+							<li>chậu gốm / chậu đất nung</li>
+							<li>chậu nhựa</li>
+							<li>chậu sứ</li>
+							<li>chậu thủy tinh</li>
+							<li>chậu treo</li>
+							<li>chậu handmade</li>
+						</ul>
+						<h3>Đồ trang trí</h3>
+						<ul>
+							<li>Bàn ghế sân vườn</li>
+							<li>Bánh xe bò</li>
+							<li>Chế tác bánh xe bò</li>
+							<li>Đá granite</li>
+							<li>Đá ốp tường</li>
+							<li>Đá tảng</li>
+							<li> Đèn trang trí
+								<ul>
+									<li>Đèn cắm cỏ</li>
+									<li>Đèn năng lượng mặt trời</li>
+									<li>Đèn sân vườn</li>
+								</ul>
+							</li>
+							<li>Đồ trang trí sự kiện
+								<ul>
+									<li>Đồ trang trí tết</li>
+									<li>Trang trí giáng sinh</li>
+									<li>Trang trí trung thu</li>
 
-				<div class="card">
-				<img src="src/images/product99.jpg" alt="bug">
-				<div class="new-content">
-					<h4>Cây Thiết Mộc Lan</h4>
-					<div class="product-price">
-						<span class="new-price">500 000 vnđ</span><br>
-						<span class="old-price">750 000 vnđ</span>
-					</div>
-					<div class="product-review">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star-half-o"></i>
-					</div>
-					<button>Thêm Vào Giỏ Hàng</button>
-					<!-- <span class="banner-status">New</span> -->
-				</div>
-			</div>
-			</div>
-
-		</div>
-		<div class="product-list-items">
-			
-			<div class="list-items-detail">
-				<h1>Danh mục sản phẩm</h1>
-				<div class="list-tree1">
-					<h3>Cây</h3>
-					<ul>
-						<li>cây ăn quả</li>
-						<li>cây chậu treo</li>
-						<li>cây công trình
-							<ul>
-								<li>cây bóng mát</li>
-								<li>cây có hoa</li>
-								<li>cây dây leo</li>
-								<li>cây trồng hàng rào</li>
-								<li>cây lá màu</li>
-								<li>cây xanh đô thị</li>
-								<li>cỏ các loại</li>
-
-							</ul>
-						</li>
-						<li>cây để bàn</li>
-						<li>cây lọc không khí</li>
-						<li>cây may mắn</li>
-						<li>cây nội thất - cây văn phòng</li>
-						<li>cây thủy sinh</li>
-						<li>cây trồng trong nước</li>
-					</ul>
-					<h3>Chậu</h3>
-					<ul>
-						<li>chậu gốm sứ mỹ nghệ</li>
-						<li>chậu gốm / chậu đất nung</li>
-						<li>chậu nhựa</li>
-						<li>chậu sứ</li>
-						<li>chậu thủy tinh</li>
-						<li>chậu treo</li>
-						<li>chậu handmade</li>
-					</ul>
-					<h3>Đồ trang trí</h3>
-					<ul>
-						<li>Bàn ghế sân vườn</li>
-						<li>Bánh xe bò</li>
-						<li>Chế tác bánh xe bò</li>
-						<li>Đá granite</li>
-						<li>Đá ốp tường</li>
-						<li>Đá tảng</li>
-						<li> Đèn trang trí
-							<ul>
-								<li>Đèn cắm cỏ</li>
-								<li>Đèn năng lượng mặt trời</li>
-								<li>Đèn sân vườn</li>
-							</ul>
-						</li>
-						<li>Đồ trang trí sự kiện
-							<ul>
-								<li>Đồ trang trí tết</li>
-								<li>Trang trí giáng sinh</li>
-								<li>Trang trí trung thu</li>
-
-							</ul>
-						</li>
-						<li>Mây tre lá</li>
-						<li>Phù Điêu</li>
-						<li>Sỏi - Đá cuội</li>
-						<li>Thủ công mỹ nghệ</li>
+								</ul>
+							</li>
+							<li>Mây tre lá</li>
+							<li>Phù Điêu</li>
+							<li>Sỏi - Đá cuội</li>
+							<li>Thủ công mỹ nghệ</li>
 
 
-					</ul>
-					<h3>Hoa chậu</h3>
-					<ul>
-						<li>Hoa đá - xương rồng</li>
-						<li>Hoa lan - orchid
-							<ul>
-								<li>Lan dendrobium</li>
-								<li>Lan hồ điệp</li>
-								<li>Lan vandar</li>
-								<li>Lan ghép gốc cây</li>
-								<li>Lan mokara</li>
+						</ul>
+						<h3>Hoa chậu</h3>
+						<ul>
+							<li>Hoa đá - xương rồng</li>
+							<li>Hoa lan - orchid
+								<ul>
+									<li>Lan dendrobium</li>
+									<li>Lan hồ điệp</li>
+									<li>Lan vandar</li>
+									<li>Lan ghép gốc cây</li>
+									<li>Lan mokara</li>
 
-							</ul>
-						</li>
-						<li>Hoa trạng nguyên</li>
-						<li>Hoa tulip</li>
-						<li>Hoa treo
-							<ul>
-								<li>Hoa dã yến thảo</li>
-								<li>Hoa dừa cạn</li>
-							</ul>
-						</li>
+								</ul>
+							</li>
+							<li>Hoa trạng nguyên</li>
+							<li>Hoa tulip</li>
+							<li>Hoa treo
+								<ul>
+									<li>Hoa dã yến thảo</li>
+									<li>Hoa dừa cạn</li>
+								</ul>
+							</li>
 
-					</ul>
-					<h3>Vật tư nông nghiệp</h3>
-					<ul>
-						<li>Cây giống - hạt giống cây trồng các loại</li>
-						<li>Dụng cụ làm vườn</li>
-						<li>Đất trồng cây</li>
-						<li>Phân bón</li>
-						<li>Máy đo hỗ trợ nông nghiệp</li>
-					</ul>
-				</div>
-				<div class="list-tree1">
-					<h3>Cây trồng chậu</h3>
-					<ul>
-						<li>cây 1</li>
-						<li>cây 2</li>
-						<li>cây 3
-							<ul>
-								<li>cây 3.1</li>
-								<li>cây 3.2</li>
-								<li>cây 3.3</li>
-							</ul>
-						</li>
-						<li>cây 4</li>
-						<li>cây 5</li>
-					</ul>
-				</div>
-				<div class="list-tree1">
-					<h3>Cây trồng chậu</h3>
-					<ul>
-						<li>cây 1</li>
-						<li>cây 2</li>
-						<li>cây 3
-							<ul>
-								<li>cây 3.1</li>
-								<li>cây 3.2</li>
-								<li>cây 3.3</li>
-							</ul>
-						</li>
-						<li>cây 4</li>
-						<li>cây 5</li>
-					</ul>
-				</div>
+						</ul>
+						<h3>Vật tư nông nghiệp</h3>
+						<ul>
+							<li>Cây giống - hạt giống cây trồng các loại</li>
+							<li>Dụng cụ làm vườn</li>
+							<li>Đất trồng cây</li>
+							<li>Phân bón</li>
+							<li>Máy đo hỗ trợ nông nghiệp</li>
+						</ul>
+					</div>
+					<div class="list-tree1">
+						<h3>Cây trồng chậu</h3>
+						<ul>
+							<li>cây 1</li>
+							<li>cây 2</li>
+							<li>cây 3
+								<ul>
+									<li>cây 3.1</li>
+									<li>cây 3.2</li>
+									<li>cây 3.3</li>
+								</ul>
+							</li>
+							<li>cây 4</li>
+							<li>cây 5</li>
+						</ul>
+					</div>
+					<div class="list-tree1">
+						<h3>Cây trồng chậu</h3>
+						<ul>
+							<li>cây 1</li>
+							<li>cây 2</li>
+							<li>cây 3
+								<ul>
+									<li>cây 3.1</li>
+									<li>cây 3.2</li>
+									<li>cây 3.3</li>
+								</ul>
+							</li>
+							<li>cây 4</li>
+							<li>cây 5</li>
+						</ul>
+					</div>
 					
+				</div>
 			</div>
-		</div>
-	</div>		<!-- end of product content -->
+		</div>		<!-- end of product content -->
 
-	<div class="cooperate-link">
-		<div class="link1">
-			<img src="src/images/link1.jpg">
-		</div>
-		<div class="link2">
-			<img src="src/images/link2.jpg">
-		</div>
-		<div class="link3">
-			<img src="src/images/link3.png">
-		</div>
-		<div class="link4">
-			<img src="src/images/link4.png">
-		</div>
-		<div class="link5">
-			
-		</div>
-	</div>		<!-- end of cooperate-link -->
+		<div class="cooperate-link">
+			<div class="link1">
+				<img src="src/images/link1.jpg">
+			</div>
+			<div class="link2">
+				<img src="src/images/link2.jpg">
+			</div>
+			<div class="link3">
+				<img src="src/images/link3.png">
+			</div>
+			<div class="link4">
+				<img src="src/images/link4.png">
+			</div>
+			<div class="link5">
 
-	<br>
+			</div>
+		</div>		<!-- end of cooperate-link -->
 
-	<div class="info">
-		<div class="info-quality">
-			<h2>Cam kết chất lượng</h2>
-			<div class="info-quality-box">
-				<i class="fa fa-check"></i>
-				<div>
-					<h3>100% ĐÃ KIỂM TRA</h3>
-					<p>Chuyên Nghiệp Theo Quy Trình</p>
+		<br>
+
+		<div class="info">
+			<div class="info-quality">
+				<h2>Cam kết chất lượng</h2>
+				<div class="info-quality-box">
+					<i class="fa fa-check"></i>
+					<div>
+						<h3>100% ĐÃ KIỂM TRA</h3>
+						<p>Chuyên Nghiệp Theo Quy Trình</p>
+					</div>
+				</div>
+			</div>
+			<div class="info-order">
+				<h2>Hướng dẫn đặt hàng</h2>
+				<div class="info-order-box">
+					<i class="fa fa-phone"></i>
+					<div>
+						<h3>đặt hàng online</h3>
+						<p>Phone: 01646 197 752</p>
+					</div>
+				</div>
+			</div>
+			<div class="info-ship">
+				<h2>Vận chuyển</h2>
+				<div class="info-ship-box">
+					<i class="fa fa-dollar"></i>
+					<div>
+						<h3>mua hàng tiết kiệm</h3>
+						<p>miễn phí vận chuyển</p>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="info-order">
-			<h2>Hướng dẫn đặt hàng</h2>
-			<div class="info-order-box">
-				<i class="fa fa-phone"></i>
-				<div>
-					<h3>đặt hàng online</h3>
-					<p>Phone: 01646 197 752</p>
+		<div class="footer-row">
+			<div id="contact" class="footer-column">
+				<h4>Thông Tin Liên Hệ</h4>
+				<p><i class="fa fa-map-marker"></i>Đ/c: 14 ngõ 4 Nguyễn Đình Chiểu, Hai Bà Trưng, Hà Nội</p>
+				<p><i class="fa fa-phone"></i>Hotline: 01646 197 752.</p>
+				<p><i class="fa fa-envelope"></i>Email: hadangktmt@gmail.com.</p>
+			</div>
+			<div id="open-time" class="footer-column">
+				<h4>Thời Gian Mở Cửa</h4>
+				<p>Thứ 2 - thứ 6: 8AM - 10PM</p>
+				<br>
+				<p>Thứ 7: 9AM - 8PM</p>
+				<br>
+				<p>Nghỉ Chủ Nhật và các ngày Lễ Tết</p>
+			</div>
+			<div id="support-customer" class="footer-column">
+				<h4>Hỗ Trợ Khách Hàng</h4>
+			</div>
+			<div id="social-network" class="footer-column">
+				<h4>Mạng Xã Hội</h4>
+				<div class="social-button">
+					<a href="#" class="fa fa-facebook"></a>
+					<a href="#" class="fa fa-twitter"></a>
+					<a href="#" class="fa fa-google"></a>
+					<a href="#" class="fa fa-linkedin"></a>
+					<a href="#" class="fa fa-youtube"></a>
 				</div>
 			</div>
-		</div>
-		<div class="info-ship">
-			<h2>Vận chuyển</h2>
-			<div class="info-ship-box">
-				<i class="fa fa-dollar"></i>
-				<div>
-					<h3>mua hàng tiết kiệm</h3>
-					<p>miễn phí vận chuyển</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="footer-row">
-		<div id="contact" class="footer-column">
-			<h4>Thông Tin Liên Hệ</h4>
-			<p><i class="fa fa-map-marker"></i>Đ/c: 14 ngõ 4 Nguyễn Đình Chiểu, Hai Bà Trưng, Hà Nội</p>
-			<p><i class="fa fa-phone"></i>Hotline: 01646 197 752.</p>
-			<p><i class="fa fa-envelope"></i>Email: hadangktmt@gmail.com.</p>
-		</div>
-		<div id="open-time" class="footer-column">
-			<h4>Thời Gian Mở Cửa</h4>
-			<p>Thứ 2 - thứ 6: 8AM - 10PM</p>
-			<br>
-			<p>Thứ 7: 9AM - 8PM</p>
-			<br>
-			<p>Nghỉ Chủ Nhật và các ngày Lễ Tết</p>
-		</div>
-		<div id="support-customer" class="footer-column">
-			<h4>Hỗ Trợ Khách Hàng</h4>
-		</div>
-		<div id="social-network" class="footer-column">
-			<h4>Mạng Xã Hội</h4>
-			<div class="social-button">
-			<a href="#" class="fa fa-facebook"></a>
-			<a href="#" class="fa fa-twitter"></a>
-			<a href="#" class="fa fa-google"></a>
-			<a href="#" class="fa fa-linkedin"></a>
-			<a href="#" class="fa fa-youtube"></a>
-		</div>
-		</div>
 
-		
-	</div>			<!-- end of footer -->
-	
+
+		</div>			<!-- end of footer -->
+
 		<script type="text/javascript" src="js/script.js"></script>
-</body>
-</html>
+	</body>
+	</html>
