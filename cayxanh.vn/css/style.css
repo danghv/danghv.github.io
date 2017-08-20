@@ -426,6 +426,7 @@ button.tablinks-support {
 	display: grid;
 	grid-template-columns: 2fr 1fr 1fr 1fr;
 	color: #fff;
+	margin-top: 68px;
 }
 
 .social-button {
@@ -486,21 +487,29 @@ button.tablinks-support {
     grid-gap: 45px;
     padding-top: 65px;
 }
+.info-quality, .info-order, .info-ship {
+    color: #fff;
+}
 .info-quality .info-quality-box {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    background: #93bae0;
+    border-radius: 10px;
 
 }
 
 .info-order .info-order-box {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    background: #d28888;
+    border-radius: 10px;
 }
 
 .info-ship .info-ship-box {
     display: grid;
     grid-template-columns: 1fr 3fr;
-
+	 border-radius: 10px;
+    background: #93dae0;
 }
 
 .info .info-quality h2 {
@@ -822,82 +831,47 @@ p.product-detail-quantity span {
 }
 
 /*styles of forms*/
-
 .modal {
-    width: 40%;
-    margin: auto;
-   	display: none;
-   	position: fixed;
-   	z-index: 1;
-   	top:150px;
-   	left: 35%;
-}
-.modal-tab-button button {
-    border: none;
-    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1050;
 }
 
-.container input[type="text"], .container input[type="password"] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
+.modal-container {
+    max-width: 300px;
+    margin: 80px auto;
 }
 
-.container button {
-    background-color: #4CAF50;
-    width: 100%;
-    margin: 8px 0;
-    padding: 14px 20px;
-    border: none;
-    cursor: pointer;
-    color: white;
-    font-size: 17px;
-
+.modal-container-content {
+    max-width: 300px;
+    position: relative;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.2);
 }
 
-.container button.cancelbtn {
-    background-color: #f44336;
-    width: auto;
-    margin-left: 8px;
-    padding: 10px 18px;
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-.container .clearfix {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.modal-tab-button button.active.modal-tablinks {
-    background-color: #7fcec5;
-    color: white;
-}
-
-.modal-tab-button button.modal-tablinks:hover {
-    background-color:  #5f5656;
-}
-.container button:hover {
-    opacity: 0.7;
-}
-#login-modal {
-	width: 100%;
-	height: 400px;
-	background-color: #dad2d2;
-}
-#signup-modal {
-	width: 100%;
-	height: 400px;
-	background-color: #eee;
-}
 .modal-tab-button {
-	display: grid;   
-	grid-template-columns: 1fr 1fr;
+    border: 0;
+}
+
+button#modal-button1, button#modal-button2 {
+    width: 50%;
+    text-align: center;
+    background: #ddd;
+    height: 48px;
+    float: left;
+}
+
+.modal-tab-content {
+    padding: 15px;
 }
 
 /*styles of list product*/
+
 
 .list-tree1 h3 {
     color: #184b50;
@@ -908,7 +882,9 @@ span.psw {
 .list-tree1 ul li {
     font-size: 18px;
     font-family: 'Teko', sans-serif;
+    padding: 8px 0;
     color: #478827;
+    text-transform: capitalize;
 }
 .list-tree1 ul li:hover {
     cursor: pointer;
@@ -959,7 +935,7 @@ span.psw {
 .card img:hover {
     
     box-shadow: 5px 0 5px grey;
-    width: 100%;
+    
 }
 .card img {
 	transition: all 0.5s;
@@ -1197,4 +1173,321 @@ button.buy-button:hover {
 button.delete-button:hover {
     background: #204d74;
     color: #fff;
+}
+.cart-payment {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+}
+
+.cart-coupon-container {
+    padding: 30px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.cart-total-container {
+    padding: 30px;
+    background: #fff;
+}
+
+.cart-coupon {
+}
+
+.cart-total {
+}
+
+.cart-coupon-container h3 {
+    color: #336699;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 15px;
+}
+
+.cart-coupon-container h3::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: #336699;
+}
+
+.cart-coupon-container input[type="text"] {
+    margin: 25px 0 10px;
+    font-size: 16px;
+    padding: 0 15px;
+    color: #777;
+    border: 1px solid #ccc;
+    height: 40px;
+}
+
+button.apply-coupon:hover {
+    color: #fff;
+    background: #449d44;
+    border-color: #398439;
+}
+
+button.apply-coupon {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.42857143;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    border-color: #4cae4c;
+    background: #5cb85c;
+    width: auto;
+}
+.cart-total-container h3 {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #336699;
+    position: relative;
+    padding-left: 15px;
+}
+
+.cart-total-container h3::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: #336699;
+    top: 0;
+}
+.cart-subtotal, .cart-oder-total, .cart-discount {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px 0;
+}
+.cart-subtotal span, .cart-discount span, .cart-oder-total span {
+    font-size: 17px;
+    padding: 6px;
+}
+.cart-total-container button {
+    color: #fff;
+    width: 100%;
+    background: #204d74;
+    border-color: #122b40;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+}
+.payment-container {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.payment-content {
+    margin: 40px 0;
+    padding: 40px 30px;
+}
+
+.payment-content-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+}
+
+.payment-tabs {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: 1px solid #e7e7e7;
+}
+
+.payment-tabs {}
+
+.payment-tabs h3 {
+    color: #336699;
+    font-weight: 500;
+    padding-left: 15px;
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.payment-tabs h3::before {
+    content: '';
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #336699;
+}
+
+.form-group.row {
+    margin-bottom: 7px;
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+}
+
+.form-group.row input {
+    padding: 6px 12px;
+    border-radius: 3px;
+    height: 34px;
+    color: #555;
+}
+
+.form-group.row select {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    height: 34px;
+    font-size: 13px;
+    line-height: 1.42;
+    color: #555;
+}
+
+.form-group.row span {
+    font-size: 11px;
+    font-style: italic;
+}
+
+.form-group.row label {
+    font-size: 12px;
+    padding-top: 7px;
+    font-weight: 700;
+    color: #333;
+}
+.radio-payment-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+label.reset-style input.delivery_address_type {
+    height: 22px;
+}
+
+input#delivery_address_type_1, input#delivery_address_type_2 {
+    height: auto;
+    margin-right: 5px;
+}
+.button-group-apply {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.button-group-apply button {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4285;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+button.btn-cancel:hover {
+    background: #d4d4d4;
+    color: #8c8c8c;
+}
+
+button.btn-cancel {
+    color: #333;
+    background: #fff;
+    border-color: #ccc;
+}
+
+button.btn-update {
+    color: #fff;
+    background: #269abc;
+    border-color: #1b6d85;
+}
+
+button.btn-update:hover {
+    background: #31b0d5;
+    border-color: #269abc;
+}
+.row1-image img, .row2-image img {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #e7e7e7;
+}
+
+.payment-info-row1, .payment-info-row2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+     padding: 15px 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.payment-final div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 8px 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.payment-info {
+    margin-top: 50px;
+}
+
+.row1-image, .row2-image {
+    position: relative;
+}
+
+.row1-image span.row1-image-quantity, .row2-image span.row2-image-quantity {
+     position: absolute;
+    top: 0px;
+    right: 100px;
+    width: 20px;
+    height: 20px;
+    background: #336699;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+}
+.payment-info-row1 h6, .payment-info-row2 h6 {
+    font-size: 14px;
+    color: #333;
+}
+
+.row1-price, .row2-price {
+    align-self: center;
+    color: #333;
+}
+
+.payment-final {
+    margin-top: 38px;
+}
+
+span.row-money {}
+
+.payment-final div span {
+    font-size: 17px;
+    color: #333;
+}
+
+.payment-final button {
+    width: 100%;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background: #204d74;
+    border: 1px solid transparent;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-color: #122b40;
+    line-height: 1.428;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.payment-final button:hover {
+    background: #286090;
+    border-color: #204d74;
 }
