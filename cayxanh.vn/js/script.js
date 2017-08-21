@@ -18,6 +18,16 @@ if(document.documentElement.scrollTop > 150){
 	topnav.classList.remove('fix-topnav');
 }
 });
+//open modal
+
+var modal = document.getElementById('loginModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("openLoginModal");
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
 
 function openModal(evt, modalName) {
 	var i, modals, modaltablinks;

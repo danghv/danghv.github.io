@@ -834,41 +834,175 @@ p.product-detail-quantity span {
 .modal {
     overflow-x: hidden;
     overflow-y: auto;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 1050;
+    
 }
 
 .modal-container {
-    max-width: 300px;
-    margin: 80px auto;
+
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 .modal-container-content {
-    max-width: 300px;
-    position: relative;
+   	position: relative;
+    background-color: #f8f8f8;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 500px;
+}
+button.close {
+	outline: none;
+    position: absolute;
+    top: -17px;
+    right: -17px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 17px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.modal-body {
+    padding: 10px;
     background: #fff;
-    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 5px;
 }
 
-.modal-tab-button {
-    border: 0;
+.modal-content-detail tab {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-button#modal-button1, button#modal-button2 {
-    width: 50%;
+.modal-content-detail .tab {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: none;
+}
+
+.modal-content-detail .tab button {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    background: #fff;
+    color: #ccc;
+    font-size: 16px;
+    font-weight: 300;
+}
+.modal-content-detail .tab button.button-login {
+	border-bottom: 3px solid #1ba8ff;color: #1ba8ff;
+}
+
+.modal-content-detail form {
+    margin: 35px;
+}
+
+.form-modal-login {
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    border-color: #fff;
+}
+
+input#login-email {}
+
+.form-modal-login input {
+    height: 34px;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-modal-login label {
+    font-size: 13px;
+    color: #333;
+    font-weight: 400;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    align-self: center;
+}
+
+p.reset {
+    font-size: 12px;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    margin: 24px 0 15px 0;
+}
+
+p.reset a {
+    color: #1ba8ff;
+    text-decoration: none;
+}
+
+button.button-login-form {
+    background: #f7d749;
+    border-color: #f7d749;
+    padding: 10px 12px;
+    border-radius: 4px;
+    color: #4a4a4a;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    margin-bottom: 5px;
+    cursor: pointer;
+    line-height: 1.428;
+}
+.form-modal-login a {
+    text-decoration: none;
+}
+
+i.fa.fa-facebook.customize-login, i.fa.fa-google.customize-login {
+    font-size: 1.6em;
+    border-radius: 0;
+    line-height: 34px;
     text-align: center;
-    background: #ddd;
-    height: 48px;
-    float: left;
+    height: 39px;
+    padding: 3px 0 0 0;
+    border-right: 1px solid rgba(0,0,0,.2);
 }
 
-.modal-tab-content {
-    padding: 15px;
+.form-modal-login a.facebook {
+    text-decoration: none;
+    background-color: #3b5998;
+    border-radius: 4px;
+
 }
+.form-modal-login a.google {
+	text-decoration: none;
+    background-color: #df4a32;
+    border-radius: 4px;
+}
+a.facebook span, a.google span {
+    color: #fff;
+}
+button.button-registry-form {
+    padding: 6px 12px;
+    color: #fff;
+    border-radius: 4px;
+    background: #336699;
+    border: 1px solid transparent;
+    line-height: 1.428;
+}
+
+.tab button.button-login.registry-form {
+    border: none;
+    color: #ccc;
+}
+
+tab button.button-registry.registry-form {
+    border-bottom: 3px solid #336699;
+}
+
+.tab button.button-registry.registry-form {
+    border-bottom: 3px solid #1ba8ff;
+}
+
 
 /*styles of list product*/
 

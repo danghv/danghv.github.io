@@ -10,19 +10,100 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
-	<div class="modal">
-		<div class="modal-container">
+	<!-- login box -->
+	
+		<div id="loginModal" class="modal-container">
 			<div class="modal-container-content">
-				<button class="close">x</button>
-				<div class="modal-body">
+				<button onclick="document.getElementById('loginModal').style.display='none'" class="close">x</button>
+				<div class=	"modal-body">
 					<div class="modal-body-content">
-						
+						<div class="modal-content-detail">
+							<div class="tab">
+								<button onclick="document.getElementById('loginModal').style.display='block'" class="button-login">Đăng nhập</button>
+								<button onclick="document.getElementById('registryModal').style.display='block'" class="button-registry">Đăng ký</button>
+							</div>
+							<form>
+								<div class="form-modal-login">
+									<label for="login-email">Email / SĐT</label>
+									<input type="text" id="login-email" placeholder="Nhập Email hoặc Số điện thoại" name="">
+								</div>
+								<div class="form-modal-login">
+									<label for="login-password">Mật khẩu</label>
+									<input type="text" id="login-password" placeholder="Mật khẩu từ 6 đến 32 ký tự" name="">
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<p class="reset">Quên mật khẩu? Nhấn vào 
+										<a href="">đây</a>
+									</p>
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<button class="button-login-form">Đăng nhập</button>
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<a class="facebook" href="">
+										<i class="fa fa-facebook customize-login"></i>
+										<span>Đăng nhập bằng Facebook</span>
+									</a>
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<a class="google" href="">
+										<i class="fa fa-google customize-login"></i>
+										<span>Đăng nhập bằng Google</span>
+									</a>
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<button class="button-login-form">Đăng nhập bằng zalo</button>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		<!-- end of login box -->
+
+		<!-- registry box -->
+		<div id="registryModal" class="modal-container">
+			<div class="modal-container-content">
+				<button onclick="document.getElementById('registryModal').style.display='none'" class="close">x</button>
+				<div class=	"modal-body">
+					<div class="modal-body-content">
+						<div class="modal-content-detail">
+							<div class="tab">
+								<button class="button-login registry-form">Đăng nhập</button>
+								<button class="button-registry registry-form">Đăng ký</button>
+							</div>
+							<form>
+								<div class="form-modal-login">
+									<label for="registry-name">Họ tên</label>
+									<input type="text" id="registry-name" placeholder="Nhập họ tên" name="">
+								</div>
+								<div class="form-modal-login">
+									<label for="login-email">Email / SĐT</label>
+									<input type="text" id="login-email" placeholder="Nhập Email hoặc Số điện thoại" name="">
+								</div>
+								<div class="form-modal-login">
+									<label for="login-password">Mật khẩu</label>
+									<input type="text" id="login-password" placeholder="Mật khẩu từ 6 đến 32 ký tự" name="">
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<button class="button-registry-form">Đăng ký</button>
+								</div>
+								
+
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	
 	<div class="banner">
 		<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
 		<p><i class="fa fa-phone"></i>01646 197 752</p>
@@ -45,8 +126,8 @@
 		</div>
 		<div class="form-login">
 			<div class="form-login-login">
-				<div onclick="displayModal('modal-button1')">Đăng Nhập</div>
-				<div onclick="displayModal('modal-button2')">Đăng Ký</div>
+				<div id="openLoginModal">Đăng Nhập</div>
+				<div onclick="document.getElementById('registryModal').style.display='block'">Đăng Ký</div>
 			</div>
 		</div>
 	</div>			<!-- end of banner2 -->
