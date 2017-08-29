@@ -147,8 +147,8 @@ i.fa.fa-shopping-cart {
     color: white;
 }
 div#myTopnav {
- background-color: #fefefe; 
- overflow: hidden;
+   background-color: #fefefe; 
+   overflow: hidden;
 }
 
 .topnav a.menu-icon {
@@ -366,17 +366,17 @@ h1 {
     background: #fff;
 }
 .tab a#justify-button {
- font-size: 13px;
- color: #189eff;
- border: 1px solid;
- padding: 5px 16px;
- border-radius: 5px;
- position: absolute;
- right: 12px;
- top: 17px;
- text-decoration: none;
- text-shadow: none;
- font-weight: 400;
+   font-size: 13px;
+   color: #189eff;
+   border: 1px solid;
+   padding: 5px 16px;
+   border-radius: 5px;
+   position: absolute;
+   right: 12px;
+   top: 17px;
+   text-decoration: none;
+   text-shadow: none;
+   font-weight: 400;
 }
 .tab a#justify-button-garden {
     font-size: 13px;
@@ -831,25 +831,25 @@ ul.breadcrumb li a:hover {
 
     /*styles of cooperate link*/
     .cooperate-link {
-       margin-top: 100px;
-       display: grid;
-       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-   }
+     margin-top: 100px;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+ }
 
 
-   /*styles of product detail*/
+ /*styles of product detail*/
 
-   .box-items-product {
-       display: grid;
-       grid-template-columns: 3fr 1fr;
-       grid-column-gap: 18px;
-   }
-
-
+ .box-items-product {
+     display: grid;
+     grid-template-columns: 3fr 1fr;
+     grid-column-gap: 18px;
+ }
 
 
-   /*style of product slides*/
-   .main-product-slideshow {
+
+
+ /*style of product slides*/
+ .main-product-slideshow {
     position: relative;
     justify-self: center;
 }
@@ -1472,7 +1472,7 @@ span.row1-product-quantity {
     padding: 8px;
 }
 span.row-money::after {
-    content: "vnÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¹Ãƒâ€¦Ã¢â‚¬Å“";
+    content: "vnd“";
 }
 .row-button {
     display: grid;
@@ -1785,15 +1785,15 @@ button.btn-update:hover {
 }
 
 .row1-image span.row1-image-quantity, .row2-image span.row2-image-quantity {
-   position: absolute;
-   top: 0px;
-   right: 100px;
-   width: 20px;
-   height: 20px;
-   background: #336699;
-   border-radius: 50%;
-   text-align: center;
-   color: #fff;
+ position: absolute;
+ top: 0px;
+ right: 100px;
+ width: 20px;
+ height: 20px;
+ background: #336699;
+ border-radius: 50%;
+ text-align: center;
+ color: #fff;
 }
 .payment-info-row1 h6, .payment-info-row2 h6 {
     font-size: 14px;
@@ -2045,8 +2045,95 @@ i.fa.fa-shopping-cart.customize-cart {
             div#social-network {
                 display: none;
             }
+            .container {
+                width: 360px;
+            }
         }
 
         .card-detail {
             text-align: center;
         }
+        .shopping-cart div a {
+            justify-self: center;
+            align-self: center;
+            text-decoration: none;
+        }
+        .confirm-modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+        .confirm-modal-container {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 50%; /* Could be more or less, depending on screen size */
+        }
+        /* Add Zoom Animation */
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {-webkit-transform: scale(0)} 
+            to {-webkit-transform: scale(1)}
+        }
+
+        @keyframes animatezoom {
+            from {transform: scale(0)} 
+            to {transform: scale(1)}
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+             display: block;
+             float: none;
+         }
+         .cancelbtn {
+             width: 100%;
+         }
+     }
+
+     .confirm-container-content p {
+    text-align: center;
+    color: #336699;
+    font-size: 16px;
+    padding: 12px;
+}
+
+.confirm-container-content div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 88px;
+}
+
+.confirm-container-content div button {
+    padding: 6px 12px;
+    border-radius: 4px;
+    line-height: 1.428;
+    font-weight: 400;
+    font-size: 14px;
+}
+button.confirm-cart {
+    color: #fff;
+    background: blue;
+    border: 1px solid transparent;
+}
+
+button.confirm-cart:hover {
+    opacity: 0.7;
+}
+button.cancel-cart:hover {
+    color: #fff;
+    background: black;
+}

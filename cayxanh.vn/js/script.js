@@ -50,3 +50,11 @@ function openTabForm(evt, tabId) {
 	document.getElementById(tabId).style.display = 'block';
 	evt.currentTarget.className += ' active';
 }
+function confirmToCart() {
+
+	var x = document.getElementById('number-product');
+	x.innerHTML = Number(x.innerHTML) + 1;
+	document.getElementById('confirmModal').style.display = 'none';
+}
+
+

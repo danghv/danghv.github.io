@@ -11,6 +11,21 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	<!-- confirm-modal -->
+
+	<div id="confirmModal" class="confirm-modal">
+		<div class="confirm-modal-container animate">
+			<div class="confirm-container-content">
+				<p>Bạn muốn thêm sản phẩm này vào giỏ hàng?</p>
+				<br>
+				<div>
+					<button class="confirm-cart" onclick="confirmToCart()">Xác nhận</button>
+					<button class="cancel-cart" onclick="document.getElementById('confirmModal').style.display = 'none'">Hủy bỏ</button>
+				</div>
+			</div>
+		</div>
+		
+	</div>
 	<!-- login box -->
 	
 	<div id="loginModal" class="modal-container">
@@ -113,9 +128,13 @@
 		</div>
 		<div class="shopping-cart">
 			<div>
-				<i class="fa fa-shopping-cart customize-cart"></i>
-				<p>Giỏ hàng</p>
-				<span>(0)</span>
+				<a href="cart.html">
+					<i class="fa fa-shopping-cart customize-cart"></i>
+				</a>
+				<a href="cart.html"><p>Giỏ hàng</p></a>
+				<a class="cart-number" href="cart.html">
+					<span>(<span id="number-product">0</span>)</span>
+				</a>
 			</div>
 
 		</div>
@@ -240,7 +259,7 @@
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star-half-o"></i>
 								</div>
-								<button>Thêm Vào Giỏ Hàng</button>
+								<button onclick="document.getElementById('confirmModal').style.display = 'block'">Thêm Vào Giỏ Hàng</button>
 								<!-- <span class="banner-status">New</span> -->
 							</div>
 						</div>
@@ -263,7 +282,7 @@
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star-half-o"></i>
 								</div>
-								<button>Thêm Vào Giỏ Hàng</button>
+								<button onclick="document.getElementById('confirmModal').style.display = 'block'">Thêm Vào Giỏ Hàng</button>
 								<!-- <span class="banner-status">New</span> -->
 							</div>
 						</div>
@@ -286,7 +305,7 @@
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star-half-o"></i>
 								</div>
-								<button>Thêm Vào Giỏ Hàng</button>
+								<button onclick="document.getElementById('confirmModal').style.display = 'block'">Thêm Vào Giỏ Hàng</button>
 								<!-- <span class="banner-status">New</span> -->
 							</div>
 						</div>
@@ -309,7 +328,7 @@
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star-half-o"></i>
 								</div>
-								<button>Thêm Vào Giỏ Hàng</button>
+								<button onclick="document.getElementById('confirmModal').style.display = 'block'">Thêm Vào Giỏ Hàng</button>
 								<!-- <span class="banner-status">New</span> -->
 							</div>
 						</div>
@@ -332,7 +351,7 @@
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star-half-o"></i>
 								</div>
-								<button>Thêm Vào Giỏ Hàng</button>
+								<button onclick="document.getElementById('confirmModal').style.display = 'block'">Thêm Vào Giỏ Hàng</button>
 								<!-- <span class="banner-status">New</span> -->
 							</div>
 						</div>
@@ -355,7 +374,7 @@
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star-half-o"></i>
 								</div>
-								<button>Thêm Vào Giỏ Hàng</button>
+								<button onclick="document.getElementById('confirmModal').style.display = 'block'">Thêm Vào Giỏ Hàng</button>
 								<!-- <span class="banner-status">New</span> -->
 							</div>
 						</div>
@@ -378,7 +397,7 @@
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star-half-o"></i>
 								</div>
-								<button>Thêm Vào Giỏ Hàng</button>
+								<button onclick="document.getElementById('confirmModal').style.display = 'block'">Thêm Vào Giỏ Hàng</button>
 								<!-- <span class="banner-status">New</span> -->
 							</div>
 						</div>
@@ -401,7 +420,7 @@
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star-half-o"></i>
 								</div>
-								<button>Thêm Vào Giỏ Hàng</button>
+								<button onclick="document.getElementById('confirmModal').style.display = 'block'">Thêm Vào Giỏ Hàng</button>
 								<!-- <span class="banner-status">New</span> -->
 							</div>
 						</div>
@@ -426,7 +445,7 @@
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star-half-o"></i>
 								</div>
-								<button>Thêm Vào Giỏ Hàng</button>
+								<button onclick="document.getElementById('confirmModal').style.display = 'block'">Thêm Vào Giỏ Hàng</button>
 								<!-- <span class="banner-status">New</span> -->
 							</div>
 						</div>
@@ -449,7 +468,7 @@
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star-half-o"></i>
 								</div>
-								<button>Thêm Vào Giỏ Hàng</button>
+								<button onclick="document.getElementById('confirmModal').style.display = 'block'">Thêm Vào Giỏ Hàng</button>
 								<!-- <span class="banner-status">New</span> -->
 							</div>
 						</div>
@@ -1959,71 +1978,75 @@
 	</div>
 	<!-- footer -->
 
-	<div class="info">
-		<div class="info-quality">
-			<h2>Cam kết chất lượng</h2>
-			<div class="info-quality-box">
-				<i class="fa fa-check"></i>
-				<div>
-					<h3>100% ĐÃ KIỂM TRA</h3>
-					<p>Chuyên Nghiệp Theo Quy Trình</p>
+	<div class="container">
+		<div class="info">
+			<div class="info-quality">
+				<h2>Cam kết chất lượng</h2>
+				<div class="info-quality-box">
+					<i class="fa fa-check"></i>
+					<div>
+						<h3>100% ĐÃ KIỂM TRA</h3>
+						<p>Chuyên Nghiệp Theo Quy Trình</p>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="info-order">
-			<h2>Hướng dẫn đặt hàng</h2>
-			<div class="info-order-box">
-				<i class="fa fa-phone"></i>
-				<div>
-					<h3>đặt hàng online</h3>
-					<p>Phone: 01646 197 752</p>
+			<div class="info-order">
+				<h2>Hướng dẫn đặt hàng</h2>
+				<div class="info-order-box">
+					<i class="fa fa-phone"></i>
+					<div>
+						<h3>đặt hàng online</h3>
+						<p>Phone: 01646 197 752</p>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="info-ship">
-			<h2>Vận chuyển</h2>
-			<div class="info-ship-box">
-				<i class="fa fa-dollar"></i>
-				<div>
-					<h3>mua hàng tiết kiệm</h3>
-					<p>miễn phí vận chuyển</p>
+			<div class="info-ship">
+				<h2>Vận chuyển</h2>
+				<div class="info-ship-box">
+					<i class="fa fa-dollar"></i>
+					<div>
+						<h3>mua hàng tiết kiệm</h3>
+						<p>miễn phí vận chuyển</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- footer row-->
 
-	<div class="footer-row">
-		<div id="contact" class="footer-column">
-			<h4>Thông Tin Liên Hệ</h4>
-			<p><i class="fa fa-map-marker"></i>Đ/c: 14 ngõ 4 Nguyễn Đình Chiểu, Hai Bà Trưng, Hà Nội</p>
-			<p><i class="fa fa-phone"></i>Hotline: 01646 197 752.</p>
-			<p><i class="fa fa-envelope"></i>Email: hadangktmt@gmail.com.</p>
-		</div>
-		<div id="open-time" class="footer-column">
-			<h4>Thời Gian Mở Cửa</h4>
-			<p>Thứ 2 - thứ 6: 8AM - 10PM</p>
-			<br>
-			<p>Thứ 7: 9AM - 8PM</p>
-			<br>
-			<p>Nghỉ Chủ Nhật và các ngày Lễ Tết</p>
-		</div>
-		<div id="support-customer" class="footer-column">
-			<h4>Hỗ Trợ Khách Hàng</h4>
-		</div>
-		<div id="social-network" class="footer-column">
-			<h4>Mạng Xã Hội</h4>
-			<div class="social-button">
-				<a href="#" class="fa fa-facebook"></a>
-				<a href="#" class="fa fa-twitter"></a>
-				<a href="#" class="fa fa-google"></a>
-				<a href="#" class="fa fa-linkedin"></a>
-				<a href="#" class="fa fa-youtube"></a>
+	<div class="container">
+		<div class="footer-row">
+			<div id="contact" class="footer-column">
+				<h4>Thông Tin Liên Hệ</h4>
+				<p><i class="fa fa-map-marker"></i>Đ/c: 14 ngõ 4 Nguyễn Đình Chiểu, Hai Bà Trưng, Hà Nội</p>
+				<p><i class="fa fa-phone"></i>Hotline: 01646 197 752.</p>
+				<p><i class="fa fa-envelope"></i>Email: hadangktmt@gmail.com.</p>
 			</div>
-		</div>
+			<div id="open-time" class="footer-column">
+				<h4>Thời Gian Mở Cửa</h4>
+				<p>Thứ 2 - thứ 6: 8AM - 10PM</p>
+				<br>
+				<p>Thứ 7: 9AM - 8PM</p>
+				<br>
+				<p>Nghỉ Chủ Nhật và các ngày Lễ Tết</p>
+			</div>
+			<div id="support-customer" class="footer-column">
+				<h4>Hỗ Trợ Khách Hàng</h4>
+			</div>
+			<div id="social-network" class="footer-column">
+				<h4>Mạng Xã Hội</h4>
+				<div class="social-button">
+					<a href="#" class="fa fa-facebook"></a>
+					<a href="#" class="fa fa-twitter"></a>
+					<a href="#" class="fa fa-google"></a>
+					<a href="#" class="fa fa-linkedin"></a>
+					<a href="#" class="fa fa-youtube"></a>
+				</div>
+			</div>
 
 
-	</div>			<!-- end of footer -->
+		</div>			<!-- end of footer -->
+	</div>
 
 	<script type="text/javascript" src="js/slide.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
