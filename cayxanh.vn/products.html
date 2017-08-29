@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>product</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
@@ -12,121 +13,122 @@
 	<div id="loginModal" class="modal-container">
 		<div class="modal-container-content">
 			<button onclick="document.getElementById('loginModal').style.display='none'" class="close">x</button>
+			
 			<div class=	"modal-body">
 				<div class="modal-body-content">
 					<div class="modal-content-detail">
 						<div class="tab">
-							<button onclick="document.getElementById('loginModal').style.display='block'" class="button-login">Đăng nhập</button>
-							<button onclick="document.getElementById('registryModal').style.display='block'" class="button-registry">Đăng ký</button>
+							<button id="open-login" onclick="openTabForm(event, 'login-form-id')" class="button-form button-login">Đăng nhập</button>
+							<button id="open-registry" onclick="openTabForm(event, 'registry-form-id')" class="button-form button-registry">Đăng ký</button>
 						</div>
-						<form>
-							<div class="form-modal-login">
-								<label for="login-email">Email / SĐT</label>
-								<input type="text" id="login-email" placeholder="Nhập Email hoặc Số điện thoại" name="">
-							</div>
-							<div class="form-modal-login">
-								<label for="login-password">Mật khẩu</label>
-								<input type="text" id="login-password" placeholder="Mật khẩu từ 6 đến 32 ký tự" name="">
-							</div>
-							<div class="form-modal-login">
-								<div></div>
-								<p class="reset">Quên mật khẩu? Nhấn vào 
-									<a href="">đây</a>
-								</p>
-							</div>
-							<div class="form-modal-login">
-								<div></div>
-								<button class="button-login-form">Đăng nhập</button>
-							</div>
-							<div class="form-modal-login">
-								<div></div>
-								<a class="facebook" href="">
-									<i class="fa fa-facebook customize-login"></i>
-									<span>Đăng nhập bằng Facebook</span>
-								</a>
-							</div>
-							<div class="form-modal-login">
-								<div></div>
-								<a class="google" href="">
-									<i class="fa fa-google customize-login"></i>
-									<span>Đăng nhập bằng Google</span>
-								</a>
-							</div>
-							<div class="form-modal-login">
-								<div></div>
-								<button class="button-login-form">Đăng nhập bằng zalo</button>
-							</div>
+						<div id="login-form-id" class="form-container login-container">
+							<form>
+								<div class="form-modal-login">
+									<label for="login-email">Email / SĐT</label>
+									<input type="text" id="login-email" placeholder="Nhập Email hoặc Số điện thoại" name="">
+								</div>
+								<div class="form-modal-login">
+									<label for="login-password">Mật khẩu</label>
+									<input type="text" id="login-password" placeholder="Mật khẩu từ 6 đến 32 ký tự" name="">
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<p class="reset">Quên mật khẩu? Nhấn vào 
+										<a href="">đây</a>
+									</p>
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<button class="button-login-form">Đăng nhập</button>
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<a class="facebook" href="">
+										<i class="fa fa-facebook customize-login"></i>
+										<span>Đăng nhập bằng Facebook</span>
+									</a>
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<a class="google" href="">
+										<i class="fa fa-google customize-login"></i>
+										<span>Đăng nhập bằng Google</span>
+									</a>
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<button class="button-login-form">Đăng nhập bằng zalo</button>
+								</div>
 
-						</form>
+							</form>
+						</div>
+						<div id="registry-form-id" class="form-container registry-container">
+							<form>
+								<div class="form-modal-login">
+									<label for="registry-name">Họ tên</label>
+									<input type="text" id="registry-name" placeholder="Nhập họ tên" name="">
+								</div>
+								<div class="form-modal-login">
+									<label for="login-email">Email / SĐT</label>
+									<input type="text" id="login-email" placeholder="Nhập Email hoặc Số điện thoại" name="">
+								</div>
+								<div class="form-modal-login">
+									<label for="login-password">Mật khẩu</label>
+									<input type="text" id="login-password" placeholder="Mật khẩu từ 6 đến 32 ký tự" name="">
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<button class="button-registry-form">Đăng ký</button>
+								</div>
+
+
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>		<!-- end of login box -->
 
-	<!-- registry box -->
-	<div id="registryModal" class="modal-container">
-		<div class="modal-container-content">
-			<button onclick="document.getElementById('registryModal').style.display='none'" class="close">x</button>
-			<div class=	"modal-body">
-				<div class="modal-body-content">
-					<div class="modal-content-detail">
-						<div class="tab">
-							<button class="button-login registry-form">Đăng nhập</button>
-							<button class="button-registry registry-form">Đăng ký</button>
-						</div>
-						<form>
-							<div class="form-modal-login">
-								<label for="registry-name">Họ tên</label>
-								<input type="text" id="registry-name" placeholder="Nhập họ tên" name="">
-							</div>
-							<div class="form-modal-login">
-								<label for="login-email">Email / SĐT</label>
-								<input type="text" id="login-email" placeholder="Nhập Email hoặc Số điện thoại" name="">
-							</div>
-							<div class="form-modal-login">
-								<label for="login-password">Mật khẩu</label>
-								<input type="text" id="login-password" placeholder="Mật khẩu từ 6 đến 32 ký tự" name="">
-							</div>
-							<div class="form-modal-login">
-								<div></div>
-								<button class="button-registry-form">Đăng ký</button>
-							</div>
-
-
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<!-- banner -->
 	<div class="banner">
 		<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
 		<p><i class="fa fa-phone"></i>01646 197 752</p>
 
 	</div>	<!-- end of banner -->
 
+
+	<!-- banner 2 -->
 	<div class="banner2">
+		
 		<div class="logo">
-			<img src="src/images/logo.png">
+			<img src="src/images/logo88.png">
 		</div>
 		<div class="search-box">
 			<input type="text" class="search-box-input" placeholder="Nhập từ khóa bạn muốn tìm kiếm">
 			<button><i class="fa fa-search customize-search"></i></button>
 		</div>
 		<div class="shopping-cart">
-			<div><a href="cart.html"><i class="fa fa-shopping-cart"></i></a><span>(0)</span></div>
+			<div>
+				<i class="fa fa-shopping-cart customize-cart"></i>
+				<p>Giỏ hàng</p>
+				<span>(0)</span>
+			</div>
 
 		</div>
 		<div class="form-login">
 			<div class="form-login-login">
-				<div id="openLoginModal">Đăng Nhập</div>
-				<div onclick="document.getElementById('registryModal').style.display='block'">Đăng Ký</div>
+				<div id="openLoginForm" onclick="openModal('openLoginForm', 'login-form-id')">Đăng Nhập</div>
+				<div id="openRegistryForm" onclick="openModal('openRegistryForm', 'registry-form-id')">Đăng Ký</div>
 			</div>
 		</div>
+		
+
 	</div>			<!-- end of banner2 -->
+
+	<!-- topnav responsive -->
 	<div class="topnav" id="myTopnav">
-		<a href="index.html">Trang chủ</a>
+		<a href="">Trang chủ</a>
 		<a href="products.html">Cây</a>
 		<a href="products.html">Sản Phẩm</a>
 		<a href="blog.html">Cẩm Nang - Tin Tức</a>
@@ -139,13 +141,15 @@
 				<li><a href="index.html">Trang chủ</a></li>
 				<li><a href="">Cây</a></li>
 			</ul> <!-- end of breadcrumb -->
-
+		</div>	
+		
+		<div class="product-wrap">
 			<div class="box-items">
-				<div class="card">
+				<div class="product-card">
 					<div class="card-detail">
-						<div class="photo">
-							<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
-						</div>
+						
+						<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
+						
 						<div class="new-content">
 							<h4>Cây Thiết Mộc Lan</h4>
 							<div class="product-price">
@@ -163,302 +167,191 @@
 						</div>
 					</div>
 				</div>
-				<div class="card">
-					<a href="productdetail.html"><img src="src/images/product98.png" alt="bug"></a>
-					<div class="new-content">
-						<h4>Cây Thiết Mộc Lan</h4>
-						<div class="product-price">
-							<span class="new-price">500 000 vnđ</span><br>
-							<span class="old-price">750 000 vnđ</span>
+				<div class="product-card">
+					<div class="card-detail">
+						
+						<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
+						
+						<div class="new-content">
+							<h4>Cây Thiết Mộc Lan</h4>
+							<div class="product-price">
+								<span class="new-price">500 000 vnđ</span><br>
+								<span class="old-price">750 000 vnđ</span>
+							</div>
+							<div class="product-review">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-half-o"></i>
+							</div>
+							<button>Thêm Vào Giỏ Hàng</button>
 						</div>
-						<div class="product-review">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-o"></i>
-						</div>
-						<button>Thêm Vào Giỏ Hàng</button>
-						<!-- <span class="banner-status">New</span> -->
 					</div>
 				</div>
-				<div class="card">
-					<a href="productdetail.html"><img src="src/images/product97.jpg" alt="bug"></a>
-					<div class="new-content">
-						<h4>Cây Thiết Mộc Lan</h4>
-						<div class="product-price">
-							<span class="new-price">500 000 vnđ</span><br>
-							<span class="old-price">750 000 vnđ</span>
+				<div class="product-card">
+					<div class="card-detail">
+						
+						<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
+						
+						<div class="new-content">
+							<h4>Cây Thiết Mộc Lan</h4>
+							<div class="product-price">
+								<span class="new-price">500 000 vnđ</span><br>
+								<span class="old-price">750 000 vnđ</span>
+							</div>
+							<div class="product-review">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-half-o"></i>
+							</div>
+							<button>Thêm Vào Giỏ Hàng</button>
 						</div>
-						<div class="product-review">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-o"></i>
-						</div>
-						<button>Thêm Vào Giỏ Hàng</button>
-						<!-- <span class="banner-status">New</span> -->
 					</div>
 				</div>
-				<div class="card">
-					<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
-					<div class="new-content">
-						<h4>Cây Thiết Mộc Lan</h4>
-						<div class="product-price">
-							<span class="new-price">500 000 vnđ</span><br>
-							<span class="old-price">750 000 vnđ</span>
+				<div class="product-card">
+					<div class="card-detail">
+						
+						<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
+						
+						<div class="new-content">
+							<h4>Cây Thiết Mộc Lan</h4>
+							<div class="product-price">
+								<span class="new-price">500 000 vnđ</span><br>
+								<span class="old-price">750 000 vnđ</span>
+							</div>
+							<div class="product-review">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-half-o"></i>
+							</div>
+							<button>Thêm Vào Giỏ Hàng</button>
 						</div>
-						<div class="product-review">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-o"></i>
-						</div>
-						<button>Thêm Vào Giỏ Hàng</button>
-						<!-- <span class="banner-status">New</span> -->
 					</div>
 				</div>
-				<div class="card">
-					<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
-					<div class="new-content">
-						<h4>Cây Thiết Mộc Lan</h4>
-						<div class="product-price">
-							<span class="new-price">500 000 vnđ</span><br>
-							<span class="old-price">750 000 vnđ</span>
+				<div class="product-card">
+					<div class="card-detail">
+						
+						<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
+						
+						<div class="new-content">
+							<h4>Cây Thiết Mộc Lan</h4>
+							<div class="product-price">
+								<span class="new-price">500 000 vnđ</span><br>
+								<span class="old-price">750 000 vnđ</span>
+							</div>
+							<div class="product-review">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-half-o"></i>
+							</div>
+							<button>Thêm Vào Giỏ Hàng</button>
 						</div>
-						<div class="product-review">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-o"></i>
-						</div>
-						<button>Thêm Vào Giỏ Hàng</button>
-						<!-- <span class="banner-status">New</span> -->
 					</div>
 				</div>
-				<div class="card">
-					<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
-					<div class="new-content">
-						<h4>Cây Thiết Mộc Lan</h4>
-						<div class="product-price">
-							<span class="new-price">500 000 vnđ</span><br>
-							<span class="old-price">750 000 vnđ</span>
-						</div>
-						<div class="product-review">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-o"></i>
-						</div>
-						<button>Thêm Vào Giỏ Hàng</button>
-						<!-- <span class="banner-status">New</span> -->
-					</div>
-				</div>
-
-				<div class="card">
-					<img src="src/images/product99.jpg" alt="bug">
-					<div class="new-content">
-						<h4>Cây Thiết Mộc Lan</h4>
-						<div class="product-price">
-							<span class="new-price">500 000 vnđ</span><br>
-							<span class="old-price">750 000 vnđ</span>
-						</div>
-						<div class="product-review">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-o"></i>
-						</div>
-						<button>Thêm Vào Giỏ Hàng</button>
-						<!-- <span class="banner-status">New</span> -->
-					</div>
-				</div>
-
-				<div class="card">
-					<img src="src/images/product99.jpg" alt="bug">
-					<div class="new-content">
-						<h4>Cây Thiết Mộc Lan</h4>
-						<div class="product-price">
-							<span class="new-price">500 000 vnđ</span><br>
-							<span class="old-price">750 000 vnđ</span>
-						</div>
-						<div class="product-review">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-o"></i>
-						</div>
-						<button>Thêm Vào Giỏ Hàng</button>
-						<!-- <span class="banner-status">New</span> -->
-					</div>
-				</div>
-
-				<div class="card">
-					<img src="src/images/product99.jpg" alt="bug">
-					<div class="new-content">
-						<h4>Cây Thiết Mộc Lan</h4>
-						<div class="product-price">
-							<span class="new-price">500 000 vnđ</span><br>
-							<span class="old-price">750 000 vnđ</span>
-						</div>
-						<div class="product-review">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-o"></i>
-						</div>
-						<button>Thêm Vào Giỏ Hàng</button>
-						<!-- <span class="banner-status">New</span> -->
-					</div>
-				</div>
-			</div>
-
-		</div>
-		<div class="product-list-items">
-
-			<div class="list-items-detail">
-				<h1>Danh mục sản phẩm</h1>
-				<div class="list-tree1">
-					<h3>Cây</h3>
-					<ul>
-						<li>cây ăn quả</li>
-						<li>cây chậu treo</li>
-						<li>cây công trình
-							<ul>
-								<li>cây bóng mát</li>
-								<li>cây có hoa</li>
-								<li>cây dây leo</li>
-								<li>cây trồng hàng rào</li>
-								<li>cây lá màu</li>
-								<li>cây xanh đô thị</li>
-								<li>cỏ các loại</li>
-
-							</ul>
-						</li>
-						<li>cây để bàn</li>
-						<li>cây lọc không khí</li>
-						<li>cây may mắn</li>
-						<li>cây nội thất - cây văn phòng</li>
-						<li>cây thủy sinh</li>
-						<li>cây trồng trong nước</li>
-					</ul>
-					<h3>Chậu</h3>
-					<ul>
-						<li>chậu gốm sứ mỹ nghệ</li>
-						<li>chậu gốm / chậu đất nung</li>
-						<li>chậu nhựa</li>
-						<li>chậu sứ</li>
-						<li>chậu thủy tinh</li>
-						<li>chậu treo</li>
-						<li>chậu handmade</li>
-					</ul>
-					<h3>Đồ trang trí</h3>
-					<ul>
-						<li>Bàn ghế sân vườn</li>
-						<li>Bánh xe bò</li>
-						<li>Chế tác bánh xe bò</li>
-						<li>Đá granite</li>
-						<li>Đá ốp tường</li>
-						<li>Đá tảng</li>
-						<li> Đèn trang trí
-							<ul>
-								<li>Đèn cắm cỏ</li>
-								<li>Đèn năng lượng mặt trời</li>
-								<li>Đèn sân vườn</li>
-							</ul>
-						</li>
-						<li>Đồ trang trí sự kiện
-							<ul>
-								<li>Đồ trang trí tết</li>
-								<li>Trang trí giáng sinh</li>
-								<li>Trang trí trung thu</li>
-
-							</ul>
-						</li>
-						<li>Mây tre lá</li>
-						<li>Phù Điêu</li>
-						<li>Sỏi - Đá cuội</li>
-						<li>Thủ công mỹ nghệ</li>
-
-
-					</ul>
-					<h3>Hoa chậu</h3>
-					<ul>
-						<li>Hoa đá - xương rồng</li>
-						<li>Hoa lan - orchid
-							<ul>
-								<li>Lan dendrobium</li>
-								<li>Lan hồ điệp</li>
-								<li>Lan vandar</li>
-								<li>Lan ghép gốc cây</li>
-								<li>Lan mokara</li>
-
-							</ul>
-						</li>
-						<li>Hoa trạng nguyên</li>
-						<li>Hoa tulip</li>
-						<li>Hoa treo
-							<ul>
-								<li>Hoa dã yến thảo</li>
-								<li>Hoa dừa cạn</li>
-							</ul>
-						</li>
-
-					</ul>
-					<h3>Vật tư nông nghiệp</h3>
-					<ul>
-						<li>Cây giống - hạt giống cây trồng các loại</li>
-						<li>Dụng cụ làm vườn</li>
-						<li>Đất trồng cây</li>
-						<li>Phân bón</li>
-						<li>Máy đo hỗ trợ nông nghiệp</li>
-					</ul>
-				</div>
-				<div class="list-tree1">
-					<h3>Cây trồng chậu</h3>
-					<ul>
-						<li>cây 1</li>
-						<li>cây 2</li>
-						<li>cây 3
-							<ul>
-								<li>cây 3.1</li>
-								<li>cây 3.2</li>
-								<li>cây 3.3</li>
-							</ul>
-						</li>
-						<li>cây 4</li>
-						<li>cây 5</li>
-					</ul>
-				</div>
-				<div class="list-tree1">
-					<h3>Cây trồng chậu</h3>
-					<ul>
-						<li>cây 1</li>
-						<li>cây 2</li>
-						<li>cây 3
-							<ul>
-								<li>cây 3.1</li>
-								<li>cây 3.2</li>
-								<li>cây 3.3</li>
-							</ul>
-						</li>
-						<li>cây 4</li>
-						<li>cây 5</li>
-					</ul>
-				</div>
+				
 
 			</div>
-		</div>
-	</div>		<!-- end of product content -->
+			<div class="product-list-items">
 
-	<div class="cooperate-link">
+				<div class="list-items-detail">
+					<ul>
+						<li class="main-title">
+							<a href="products.html">
+								<h2>Danh mục sản phẩm</h2>
+							</a>
+						</li>
+						<li class="types-tree"><h3>Cây</h3>
+							
+							<ul class="styles-tree">
+								<li class="children">cây ăn quả</li>
+								<li class="children">cây chậu treo</li>
+								<li class="children check-point">cây công trình
+									<ul class="styles-grandson">
+										<li class="grandson">cây bóng mát</li>
+										<li class="grandson">cây có hoa</li>
+										<li class="grandson">cây dây leo</li>
+										<li class="grandson">cây trồng hàng rào</li>
+										<li class="grandson">cây lá màu</li>
+										<li class="grandson">cây xanh đô thị</li>
+										<li class="grandson">cỏ các loại</li>
+									</ul>
+								</li>
+								<li class="children">cây để bàn</li>
+								<li class="children">cây lọc không khí</li>
+								<li class="children">cây may mắn</li>
+								<li class="children">cây nội thất - cây văn phòng</li>
+								<li class="children">cây thủy sinh</li>
+								<li class="children">cây trồng trong nước</li>
+							</ul>
+						</li>
+						<li class="types-tree"><h3>Chậu</h3>
+							<ul class="styles-tree">
+								<li class="children">chậu gốm sứ mỹ nghệ</li>
+								<li class="children">chậu gốm / chậu đất nung</li>
+								<li class="children">chậu nhựa</li>
+								<li class="children">chậu sứ</li>
+								<li class="children">chậu thủy tinh</li>
+								<li class="children">chậu treo</li>
+								<li class="children">chậu handmade</li>
+							</ul>
+						</li>
+						<li class="types-tree"><h3>Đồ trang trí</h3>
+							<ul class="styles-tree">
+								<li class="children">Bàn ghế sân vườn</li>
+								<li class="children">Bánh xe bò</li>
+								<li class="children">Chế tác bánh xe bò</li>
+								<li class="children">Đá granite</li>
+								<li class="children">Đá ốp tường</li>
+								<li class="children">Đá tảng</li>
+								<li class="children check-point"> Đèn trang trí
+									<ul class="styles-grandson">
+										<li class="grandson">Đèn cắm cỏ</li>
+										<li class="grandson">Đèn năng lượng mặt trời</li>
+										<li class="grandson">Đèn sân vườn</li>
+									</ul>
+								</li>
+								<li class="children">Mây tre lá</li>
+								<li class="children">Phù Điêu</li>
+								<li class="children">Sỏi - Đá cuội</li>
+								<li class="children">Thủ công mỹ nghệ</li>
+							</ul>
+						</li>
+						
+						<li class="types-tree"><h3>Hoa chậu</h3>
+							<ul class="styles-tree">
+								<li class="children">Hoa đá - xương rồng</li>
+								<li class="children">Hoa lan - orchid</li>
+								<li class="children">Lan dendrobium</li>
+								<li class="children">Lan hồ điệp</li>
+								<li class="children">Lan vandar</li>
+								<li class="children">Lan ghép gốc cây</li>
+								<li class="children">Lan mokara</li>
+							</ul>
+						</li>
+						<li class="types-tree"><h3>Vật tư nông nghiệp</h3>
+							<ul class="styles-tree">
+								<li class="children">Cây giống - hạt giống cây trồng các loại</li>
+								<li class="children">Dụng cụ làm vườn</li>
+								<li class="children">Đất trồng cây</li>
+								<li class="children">Phân bón</li>
+								<li class="children">Máy đo hỗ trợ nông nghiệp</li>
+							</ul>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>		<!-- end of product content -->
+	</div>
+
+	<!-- <div class="cooperate-link">
 		<div class="link1">
 			<img src="src/images/link1.jpg">
 		</div>
@@ -474,7 +367,7 @@
 		<div class="link5">
 
 		</div>
-	</div>		<!-- end of cooperate-link -->
+	</div>		<!-- end of cooperate-link --> -->
 
 	<br>
 
@@ -510,6 +403,7 @@
 			</div>
 		</div>
 	</div>
+	<!-- footer -->
 	<div class="footer-row">
 		<div id="contact" class="footer-column">
 			<h4>Thông Tin Liên Hệ</h4>

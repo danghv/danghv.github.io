@@ -1,0 +1,80 @@
+body {
+	font-family: 'Roboto', 'Noto', sans-serif;
+}
+i.fa.fa-user {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+button.modal-login-button, button.modal-registry-button {
+    float: left;
+    width: 49.9999999%;
+    display: inline-block;
+    border: none;
+    background: transparent;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    outline: none;
+}	
+form input {
+    width: 100%;
+    color: #212121;
+    padding: 6px 12px;
+    outline: none;
+    margin-top: 35px;
+}
+button.submit-button-login {
+    width: 100%;
+    padding: 6px 12px;
+    background: #e63f3f;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    margin-top: 25px;
+        text-transform: uppercase;
+    color: #fff;
+}
+
+img {
+    width: 100%;
+}
+div#forgetPassword {
+    color: #1ba8ff;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 0.011em;
+    line-height: 20px;
+    margin-top: 14px;
+}
+button.modal-login-button.active, button.modal-registry-button.active {
+	border-bottom: 3px solid #336699;
+	color: #336699;
+}
+
+/*modal styles*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  
+}
+.modal-content {
+    background-color: #fefefe;
+    
+    border: 1px solid #888;
+    width: 100%; /* Could be more or less, depending on screen size */
+}

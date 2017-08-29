@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>forms</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="demoFormsTikiStyle.css">
+</head>
+<body>
+	<button onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-user"></i>Quản lý tài khoản</button>
+	<div id="id01" class="modal">
+		<div class="modal-content">
+			<div class="banner-image">
+				<img src="logo.png">
+			</div>
+			<div class="container">
+				<div class="tab-container">
+					<button id="openDefault" onclick="openForm('login-content', event)" class="modal-login-button tab-links">Đăng nhập</button>
+					<button onclick="openForm('registry-content', event)" class="modal-registry-button tab-links">Đăng ký</button>
+				</div>
+				<div id="login-content" class="tab-contents">
+					<form>
+						<input type="text" name="" placeholder="Email">
+						<input type="password" placeholder="Mật khẩu" name="">
+						<button class="submit-button-login">Đăng nhập</button>
+						<div id="forgetPassword">Quên mật khẩu</div>
+					</form>
+				</div>
+				<div id="registry-content" class="tab-contents">
+					<form>
+						<input type="text" name="" placeholder="Họ tên">
+						<input type="text" name="" placeholder="Email">
+						<input type="password" name="" placeholder="Mật khẩu">
+						<div class="gender">
+							<label for="male"><input type="radio" name="gender" id="male"> Nam</label>
+							<label for="female"><input type="radio" name="gender" id="female"> Nữ</label>
+						</div>
+						<button class="submit-button-create">Đăng ký</button>
+						<p class="rules">Khi đăng ký là bạn đã <a>điều khoản sử dụng</a></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="demoFormsTikiStyle.js"></script>
+</body>
+</html>

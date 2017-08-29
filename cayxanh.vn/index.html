@@ -2,26 +2,29 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	
 	
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Titilliu	m+Web" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<!-- login box -->
 	
-		<div id="loginModal" class="modal-container">
-			<div class="modal-container-content">
-				<button onclick="document.getElementById('loginModal').style.display='none'" class="close">x</button>
-				<div class=	"modal-body">
-					<div class="modal-body-content">
-						<div class="modal-content-detail">
-							<div class="tab">
-								<button onclick="document.getElementById('loginModal').style.display='block'" class="button-login">Đăng nhập</button>
-								<button onclick="document.getElementById('registryModal').style.display='block'" class="button-registry">Đăng ký</button>
-							</div>
+	<div id="loginModal" class="modal-container">
+		<div class="modal-container-content">
+			<button onclick="document.getElementById('loginModal').style.display='none'" class="close">x</button>
+			
+			<div class=	"modal-body">
+				<div class="modal-body-content">
+					<div class="modal-content-detail">
+						<div class="tab">
+							<button id="open-login" onclick="openTabForm(event, 'login-form-id')" class="button-form button-login">Đăng nhập</button>
+							<button id="open-registry" onclick="openTabForm(event, 'registry-form-id')" class="button-form button-registry">Đăng ký</button>
+						</div>
+						<div id="login-form-id" class="form-container login-container">
 							<form>
 								<div class="form-modal-login">
 									<label for="login-email">Email / SĐT</label>
@@ -62,22 +65,7 @@
 
 							</form>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>		<!-- end of login box -->
-
-		<!-- registry box -->
-		<div id="registryModal" class="modal-container">
-			<div class="modal-container-content">
-				<button onclick="document.getElementById('registryModal').style.display='none'" class="close">x</button>
-				<div class=	"modal-body">
-					<div class="modal-body-content">
-						<div class="modal-content-detail">
-							<div class="tab">
-								<button class="button-login registry-form">Đăng nhập</button>
-								<button class="button-registry registry-form">Đăng ký</button>
-							</div>
+						<div id="registry-form-id" class="form-container registry-container">
 							<form>
 								<div class="form-modal-login">
 									<label for="registry-name">Họ tên</label>
@@ -95,7 +83,7 @@
 									<div></div>
 									<button class="button-registry-form">Đăng ký</button>
 								</div>
-								
+
 
 							</form>
 						</div>
@@ -103,34 +91,45 @@
 				</div>
 			</div>
 		</div>
-	
+	</div>		<!-- end of login box -->
+
+	<!-- banner -->
 	<div class="banner">
 		<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
 		<p><i class="fa fa-phone"></i>01646 197 752</p>
-		
+
 	</div>	<!-- end of banner -->
 
 
-
+	<!-- banner 2 -->
 	<div class="banner2">
+		
 		<div class="logo">
-			<img src="src/images/logo.png">
+			<img src="src/images/logo88.png">
 		</div>
 		<div class="search-box">
 			<input type="text" class="search-box-input" placeholder="Nhập từ khóa bạn muốn tìm kiếm">
 			<button><i class="fa fa-search customize-search"></i></button>
 		</div>
 		<div class="shopping-cart">
-			<div><i class="fa fa-shopping-cart"></i><span>(0)</span></div>
+			<div>
+				<i class="fa fa-shopping-cart customize-cart"></i>
+				<p>Giỏ hàng</p>
+				<span>(0)</span>
+			</div>
 
 		</div>
 		<div class="form-login">
 			<div class="form-login-login">
-				<div id="openLoginModal">Đăng Nhập</div>
-				<div onclick="document.getElementById('registryModal').style.display='block'">Đăng Ký</div>
+				<div id="openLoginForm" onclick="openModal('openLoginForm', 'login-form-id')">Đăng Nhập</div>
+				<div id="openRegistryForm" onclick="openModal('openRegistryForm', 'registry-form-id')">Đăng Ký</div>
 			</div>
 		</div>
+		
+
 	</div>			<!-- end of banner2 -->
+
+	<!-- topnav responsive -->
 	<div class="topnav" id="myTopnav">
 		<a href="">Trang chủ</a>
 		<a href="products.html">Cây</a>
@@ -138,511 +137,1895 @@
 		<a href="blog.html">Cẩm Nang - Tin Tức</a>
 		<a onclick="toggleMenu()" class="menu-icon">&#9776;</a>
 	</div>	<!-- end of navbar -->
-</div>
+	<!-- slide show -->
+	<div class="main-slideshow">
+		<div class="my-slides slide-fade">
 
-
-<div class="main-slideshow">
-	<div class="my-slides slide-fade">
-		<div class="slide-numbertext">1 / 3</div>
-		<img src="src/images/slider1.jpg" alt="" style="width: 100%">
-		<div class="slide-text"></div>
-	</div>
-	<div class="my-slides slide-fade">
-		<div class="slide-numbertext">2 / 3</div>
-		<img src="src/images/slider2.jpg" alt="" style="width: 100%">
-		<div class="slide-text"></div>
-	</div>
-	<div class="my-slides slide-fade">
-		<div class="slide-numbertext">3 / 3</div>
-		<img src="src/images/slider3.jpg" alt="" style="width: 100%">
-		<div class="slide-text"></div>
-	</div>
-
-	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-	<a class="next" onclick="plusSlides(1)">&#10095;</a>
-	<br>
-
-
-	<div style="text-align: center">
-		<span class="slide-dot" onclick="currentSlide(1)"></span>	
-		<span class="slide-dot" onclick="currentSlide(2)"></span>
-		<span class="slide-dot" onclick="currentSlide(3)"></span>
-	</div>
-</div>		<!-- end of slides -->
-
-
-<div class="main-services">
-	<div class="main-service-seed">
-		<a href="">
-			<img src="src/images/main-service-seed.jpg">
-
-		</a>
-		<h2>Giống cây trồng</h2>
-	</div>
-	<div class="main-service-reference">
-		<a href="">
-			<img src="src/images/main-service-reference.jpg">
-
-		</a>
-		<h2>Tư vấn cảnh quan miễn phí</h2>
-	</div>
-	<div class="main-service-online">
-		<a href="">
-			<img src="src/images/main-service-online.jpg">
-
-		</a>
-		<h2>Giao dịch online, giao hàng nhanh</h2>
-	</div>
-</div>
-
-<h1>Hot trends</h1>
-<hr>
-<div class="row-hottrends">
-	<div class="tab">
-		<button id="openDefault" class="tablinks" onclick="openContent(event, 'tab1')">Mới và Nổi Bật</button>
-		<button class="tablinks" onclick="openContent(event, 'tab2')">Bán Chạy</button>
-		<button class="tablinks" onclick="openContent(event, 'tab3')">Giảm giá</button>
-	</div>
-	<div id="tab1" class="tabcontent">
-		<div class="card">
-			<img src="src/images/product99.jpg" alt="bug">
-			<div class="new-content">
-				<h4>Cây Thiết Mộc Lan</h4>
-				<div class="product-price">
-					<span class="new-price">500 000 vnđ</span><br>
-					<span class="old-price">750 000 vnđ</span>
-				</div>
-				<div class="product-review">
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star-half-o"></i>
-				</div>
-				<button>Thêm Vào Giỏ Hàng</button>
-				<!-- <span class="banner-status">New</span> -->
-			</div>
+			<img src="src/images/chau-tho.jpg" alt="" style="width: 100%">
+			<div class="slide-text"></div>
 		</div>
-		<div class="card">
-			<img src="src/images/product98.png" alt="bug">
-			<div class="new-content">
-				<h4>Cây Thiết Mộc Lan</h4>
-				<div class="product-price">
-					<span class="new-price">500 000 vnđ</span><br>
-					<span class="old-price">750 000 vnđ</span>
-				</div>
-				<div class="product-review">
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star-half-o"></i>
-				</div>
-				<button>Thêm Vào Giỏ Hàng</button>
-				<!-- <span class="banner-status">Sale</span> -->
-			</div>
+		<div class="my-slides slide-fade">
+
+			<img src="src/images/chau-tho-1.jpg" alt="" style="width: 100%">
+			<div class="slide-text"></div>
 		</div>
-		<div class="card">
-			<img src="src/images/product97.jpg" alt="bug">
-			<div class="new-content">
-				<h4>Cây Thiết Mộc Lan</h4>
-				<div class="product-price">
-					<span class="new-price">500 000 vnđ</span><br>
-					<span class="old-price">750 000 vnđ</span>
-				</div>
-				<div class="product-review">
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star-half-o"></i>
-				</div>
-				<button>Thêm Vào Giỏ Hàng</button>
-				<!-- <span class="banner-status">Hot</span> -->
-			</div>
+		<div class="my-slides slide-fade">
+
+			<img src="src/images/chau-tho-2.jpg" alt="" style="width: 100%">
+			<div class="slide-text"></div>
+		</div>
+		<div class="my-slides slide-fade">
+
+			<img src="src/images/chau-tho-3.jpg" alt="" style="width: 100%">
+			<div class="slide-text"></div>
 		</div>
 
-	</div>
-	<div id="tab2" class="tabcontent">
-		<div class="card">
-			<img src="src/images/product1.jpg" alt="bug">
-			<div class="new-content">
-				<h4>Cây Kim Tiền</h4>
-				<span>Giá: 500K</span>
-				<button>Thêm Vào Giỏ Hàng</button>
-			</div>
-		</div>
-		<div class="card">
-			<img src="src/images/kim-ngan.jpg" alt="bug">
-			<div class="new-content">
-				<h4>Cây Kim Tiền</h4>
-				<span>Giá: 500K</span>
-				<button>Thêm Vào Giỏ Hàng</button>
-			</div>
-		</div>
-		<div class="card">
-			<img src="src/images/product3.jpg" alt="bug">
-			<div class="new-content">
-				<h4>Cây Kim Tiền</h4>
-				<span>Giá: 500K</span>
-				<button>Thêm Vào Giỏ Hàng</button>
-			</div>
-		</div>
-
-	</div>
-
-	<div id="tab3" class="tabcontent">
-		<div class="card">
-			<img src="http://via.placeholder.com/300x300" alt="bug">
-			<div class="new-content">
-				<h4>Cây Kim Tiền</h4>
-				<span>Giá: 500K</span>
-				<button>Thêm Vào Giỏ Hàng</button>
-			</div>
-		</div>
-		<div class="card">
-			<img src="http://via.placeholder.com/300x300" alt="bug">
-			<div class="new-content">
-				<h4>Cây Kim Tiền</h4>
-				<span>Giá: 500K</span>
-				<button>Thêm Vào Giỏ Hàng</button>
-			</div>
-		</div>
-		<div class="card">
-			<img src="http://via.placeholder.com/300x300" alt="bug">
-			<div class="new-content">
-				<h4>Cây Kim Tiền</h4>
-				<span>Giá: 500K</span>
-				<button>Thêm Vào Giỏ Hàng</button>
-			</div>
-		</div>
-
-	</div>
-
-
-
-</div>		<!-- end of hot trends -->
-
-<h1>Cây Xanh Vườn Nhà</h1>
-<hr>
-<div class="row-hottrends-garden">
-	<div class="tab">
-		<button id="openDefaultGarden" class="tablinks-garden" onclick="openContentGarden(event, 'tab1-garden')">Mới và Nổi Bật</button>
-		<button class="tablinks-garden" onclick="openContentGarden(event, 'tab2-garden')">Bán Chạy</button>
-		<button class="tablinks-garden" onclick="openContentGarden(event, 'tab3-garden')">Giảm giá</button>
-	</div>
-	<div id="tab1-garden" class="tabcontent-garden">
-		<div class="card">
-			<img src="src/images/product1.jpg" alt="bug">
-			<div class="new-content">
-				<h4>Cây Thiết Mộc Lan</h4>
-				<div class="product-price">
-					<span class="new-price">500 000 vnđ</span><br>
-					<span class="old-price">750 000 vnđ</span>
-				</div>
-				<div class="product-review">
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star-half-o"></i>
-				</div>
-				<button>Thêm Vào Giỏ Hàng</button>
-				<!-- <span class="banner-new">New</span> -->
-			</div>
-		</div>
-		<div class="card">
-			<img src="src/images/kim-ngan.jpg" alt="bug">
-			<div class="new-content">
-				<h4>Cây Thiết Mộc Lan</h4>
-
-				<div class="product-price">
-					<span class="new-price">500 000 vnđ</span><br>
-					<span class="old-price">750 000 vnđ</span>
-				</div>
-				<div class="product-review">
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star-half-o"></i>
-				</div>
-				<button>Thêm Vào Giỏ Hàng</button>
-				<!-- <span class="banner-new">New</span> -->
-			</div>
-		</div>
-		<div class="card">
-			<img src="src/images/product3.jpg" alt="bug">
-			<div class="new-content">
-				<h4>Cây Thiết Mộc Lan</h4>
-				<div class="product-price">
-					<span class="new-price">500 000 vnđ</span><br>
-					<span class="old-price">750 000 vnđ</span>
-				</div>
-				<div class="product-review">
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star-half-o"></i>
-				</div>
-				<button>Thêm Vào Giỏ Hàng</button>
-				<!-- <span class="banner-new">New</span> -->
-			</div>
-		</div>
-
-	</div>
-	<div id="tab2-garden" class="tabcontent-garden">
-		<div class="card">
-			<img src="http://via.placeholder.com/300x300" alt="bug">
-			<div class="new-content">
-				<h4>Cây Kim Tiền</h4>
-				<span>Giá: 500K</span>
-				<button>Thêm Vào Giỏ Hàng</button>
-			</div>
-		</div>
-		<div class="card">
-			<img src="http://via.placeholder.com/300x300" alt="bug">
-			<div class="new-content">
-				<h4>Cây Kim Tiền</h4>
-				<span>Giá: 500K</span>
-				<button>Thêm Vào Giỏ Hàng</button>
-			</div>
-		</div>
-		<div class="card">
-			<img src="http://via.placeholder.com/300x300" alt="bug">
-			<div class="new-content">
-				<h4>Cây Kim Tiền</h4>
-				<span>Giá: 500K</span>
-				<button>Thêm Vào Giỏ Hàng</button>
-			</div>
-		</div>
-
-	</div>
-
-	<div id="tab3-garden" class="tabcontent-garden">
-		<div class="card">
-			<img src="http://via.placeholder.com/300x300" alt="bug">
-			<div class="new-content">
-				<h4>Cây Kim Tiền</h4>
-				<span>Giá: 500K</span>
-				<button>Thêm Vào Giỏ Hàng</button>
-			</div>
-		</div>
-		<div class="card">
-			<img src="http://via.placeholder.com/300x300" alt="bug">
-			<div class="new-content">
-				<h4>Cây Kim Tiền</h4>
-				<span>Giá: 500K</span>
-				<button>Thêm Vào Giỏ Hàng</button>
-			</div>
-		</div>
-		<div class="card">
-			<img src="http://via.placeholder.com/300x300" alt="bug">
-			<div class="new-content">
-				<h4>Cây Kim Tiền</h4>
-				<span>Giá: 500K</span>
-				<button>Thêm Vào Giỏ Hàng</button>
-			</div>
-		</div>
-
-	</div>
-
-
-
-</div>		<!-- End of cay xanh vuon nha -->
-
-<h1>Sản Phẩm Hỗ Trợ</h1>
-<hr>
-<div class="row-hottrends-support">
-	<div class="tab">
-		<button id="openDefaultSupport" class="tablinks-support" onclick="openContentSupport(event, 'tab1-support')">Mới và Nổi Bật</button>
-		<button class="tablinks-support" onclick="openContentSupport(event, 'tab2-support')">Bán Chạy</button>
-		<button class="tablinks-support" onclick="openContentSupport(event, 'tab3-support')">Giảm giá</button>
-	</div>
-	<div id="tab1-support" class="tabcontent-support">
-		<div class="card">
-			<img src="src/images/product1.jpg" alt="bug">
-			<div class="new-content">
-				<h4>Cây Thiết Mộc Lan</h4>
-				<div class="product-price">
-					<span class="new-price">500 000 vnđ</span><br>
-					<span class="old-price">750 000 vnđ</span>
-				</div>
-				<div class="product-review">
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star-half-o"></i>
-				</div>
-				<button>Thêm Vào Giỏ Hàng</button>
-				<!-- <span class="banner-new">New</span> -->
-			</div>
-		</div>
-		<div class="card">
-			<img src="src/images/kim-ngan.jpg" alt="bug">
-			<div class="new-content">
-				<h4>Cây Thiết Mộc Lan</h4>
-				<div class="product-price">
-					<span class="new-price">500 000 vnđ</span><br>
-					<span class="old-price">750 000 vnđ</span>
-				</div>
-				<div class="product-review">
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star-half-o"></i>
-				</div>
-				<button>Thêm Vào Giỏ Hàng</button>
-				<!-- <span class="banner-new">New</span> -->
-			</div>
-		</div>
-		<div class="card">
-			<img src="src/images/product3.jpg" alt="bug">
-			<div class="new-content">
-				<h4>Cây Thiết Mộc Lan</h4>
-				<div class="product-price">
-					<span class="new-price">500 000 vnđ</span><br>
-					<span class="old-price">750 000 vnđ</span>
-				</div>
-				<div class="product-review">
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star-half-o"></i>
-				</div>
-				<button>Thêm Vào Giỏ Hàng</button>
-				<!-- <span class="banner-new">New</span> -->
-			</div>
-		</div>
-
-	</div>
-	<div id="tab2-support" class="tabcontent-support">
-		<div class="card">
-			<img src="http://via.placeholder.com/300x300" alt="bug">
-			<div class="new-content">
-				<h4>Cây Kim Tiền</h4>
-				<span>Giá: 500K</span>
-				<button>Thêm Vào Giỏ Hàng</button>
-			</div>
-		</div>
-		<div class="card">
-			<img src="http://via.placeholder.com/300x300" alt="bug">
-			<div class="new-content">
-				<h4>Cây Kim Tiền</h4>
-				<span>Giá: 500K</span>
-				<button>Thêm Vào Giỏ Hàng</button>
-			</div>
-		</div>
-		<div class="card">
-			<img src="http://via.placeholder.com/300x300" alt="bug">
-			<div class="new-content">
-				<h4>Cây Kim Tiền</h4>
-				<span>Giá: 500K</span>
-				<button>Thêm Vào Giỏ Hàng</button>
-			</div>
-		</div>
-
-	</div>
-
-	<div id="tab3-support" class="tabcontent-support">
-		<div class="card">
-			<img src="http://via.placeholder.com/300x300" alt="bug">
-			<div class="new-content">
-				<h4>Cây Kim Tiền</h4>
-				<span>Giá: 500K</span>
-				<button>Thêm Vào Giỏ Hàng</button>
-			</div>
-		</div>
-		<div class="card">
-			<img src="http://via.placeholder.com/300x300" alt="bug">
-			<div class="new-content">
-				<h4>Cây Kim Tiền</h4>
-				<span>Giá: 500K</span>
-				<button>Thêm Vào Giỏ Hàng</button>
-			</div>
-		</div>
-		<div class="card">
-			<img src="http://via.placeholder.com/300x300" alt="bug">
-			<div class="new-content">
-				<h4>Cây Kim Tiền</h4>
-				<span>Giá: 500K</span>
-				<br>
-				<button>Thêm Vào Giỏ Hàng</button>
-			</div>
-		</div>
-
-	</div>
-</div>		<!-- end of san pham ho tro -->
-<br>
-
-<div class="info">
-	<div class="info-quality">
-		<h2>Cam kết chất lượng</h2>
-		<div class="info-quality-box">
-			<i class="fa fa-check"></i>
-			<div>
-				<h3>100% ĐÃ KIỂM TRA</h3>
-				<p>Chuyên Nghiệp Theo Quy Trình</p>
-			</div>
-		</div>
-	</div>
-	<div class="info-order">
-		<h2>Hướng dẫn đặt hàng</h2>
-		<div class="info-order-box">
-			<i class="fa fa-phone"></i>
-			<div>
-				<h3>đặt hàng online</h3>
-				<p>Phone: 01646 197 752</p>
-			</div>
-		</div>
-	</div>
-	<div class="info-ship">
-		<h2>Vận chuyển</h2>
-		<div class="info-ship-box">
-			<i class="fa fa-dollar"></i>
-			<div>
-				<h3>mua hàng tiết kiệm</h3>
-				<p>miễn phí vận chuyển</p>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="footer-row">
-	<div id="contact" class="footer-column">
-		<h4>Thông Tin Liên Hệ</h4>
-		<p><i class="fa fa-map-marker"></i>Đ/c: 14 ngõ 4 Nguyễn Đình Chiểu, Hai Bà Trưng, Hà Nội</p>
-		<p><i class="fa fa-phone"></i>Hotline: 01646 197 752.</p>
-		<p><i class="fa fa-envelope"></i>Email: hadangktmt@gmail.com.</p>
-	</div>
-	<div id="open-time" class="footer-column">
-		<h4>Thời Gian Mở Cửa</h4>
-		<p>Thứ 2 - thứ 6: 8AM - 10PM</p>
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
 		<br>
-		<p>Thứ 7: 9AM - 8PM</p>
+
+
+		<div style="text-align: center">
+			<span class="slide-dot" onclick="currentSlide(1)"></span>	
+			<span class="slide-dot" onclick="currentSlide(2)"></span>
+			<span class="slide-dot" onclick="currentSlide(3)"></span>
+			<span class="slide-dot" onclick="currentSlide(4)"></span>
+		</div>
+	</div>		<!-- end of slides -->
+
+	<div class="wrap">
+		<!-- main services -->
+		<div class="main-services">
+			<div class="col-md-4">
+				<div class="main-services">
+					<a href="products.html">
+						<img src="src/images/main-service-seed.jpg">
+
+					</a>
+					<h2>Giống cây trồng</h2>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="main-services">
+					<a href="products.html">
+						<img src="src/images/main-service-reference.jpg">
+
+					</a>
+					<h2>Tư vấn cảnh quan miễn phí</h2>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="main-services">
+					<a href="products.html">
+						<img src="src/images/main-service-online.jpg">
+
+					</a>
+					<h2>Giao dịch online, giao hàng nhanh</h2>
+				</div>
+			</div>
+		</div>		<!-- end of main services -->
+
+		<div class="container">
+			<h1>Hot trends</h1>
+			<hr>
+			<div class="row-hottrends">
+				<div class="tab">
+					<button id="openDefault" class="tablinks" onclick="openContent(event, 'tab1', 'openDefault')">
+						<a class="tab-index-style">Mới & Nổi Bật</a>
+					</button>
+					<button id="tablinks-22" class="tablinks" onclick="openContent(event, 'tab2', 'tablinks-22')">
+						<a class="tab-index-style">Bán chạy</a>
+					</button>
+					<button id="tablinks-33" class="tablinks" onclick="openContent(event, 'tab3', 'tablinks-33')">
+						<a class="tab-index-style">Giảm giá</a>
+					</button>
+					<a id="justify-button" href="products.html">Xem tất cả </a>
+				</div>      <!-- end of tab row hot trends --> 
+				<div id="tab1" class="tabcontent">
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product99.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp1.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp2.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp2.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp2.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+				</div>		<!-- end of tab1 row hot trends -->
+				<div id="tab2" class="tabcontent">
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div id="tab3" class="tabcontent">
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+
+			</div>		<!-- end of cay xanh vuon nha -->
+		</div>
+
+		<div class="container">
+			<h1>Cây xanh vườn nhà</h1>
+			<hr>
+			<div class="row-hottrends-garden">
+				<div class="tab">
+					<button id="tablinks-garden-1" class="tablinks-garden" onclick="openContentGarden(event, 'tab1-garden', 'tablinks-garden-1')">
+						<a class="tab-index-style">Mới & Nổi Bật</a>
+					</button>
+					<button id="openDefaultGarden111" class="tablinks-garden" onclick="openContentGarden(event, 'tab2-garden', 'openDefaultGarden111')">
+						<a class="tab-index-style">Bán chạy</a>
+					</button>
+					<button id="tablinks-garden-3" class="tablinks-garden" onclick="openContentGarden(event, 'tab3-garden', 'tablinks-garden-3')">
+						<a class="tab-index-style">Giảm giá</a>
+					</button>	
+					<a id="justify-button-garden" href="products.html">Xem tất cả Mới và nổi bật</a>
+				</div>      <!-- end of tab row hot trends --> 
+				<div id="tab1-garden" class="tabcontent-garden">
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product99.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp1.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp2.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp2.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp2.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+				</div>		<!-- end of tab1 row hot trends -->
+				<div id="tab2-garden" class="tabcontent-garden">
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div id="tab3-garden" class="tabcontent-garden">
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+
+
+			</div>		<!-- end of hot trends -->
+		</div>
+
+		<div class="container">
+			<h1>Sản phẩm hỗ trợ</h1>
+			<hr>
+			<div class="row-hottrends-support">
+				<div class="tab">
+					<button id="openDefaultSupport" class="tablinks-support" onclick="openContentSupport(event, 'tab1-support', 'openDefaultSupport')">
+						<a class="tab-index-style">Mới & Nổi Bật</a>
+					</button>
+					<button id="tablinks-support-2" class="tablinks-support" onclick="openContentSupport(event, 'tab2-support', 'tablinks-support-2')">
+						<a class="tab-index-style">Bán chạy</a>
+					</button>
+					<button id="tablinks-support-3" class="tablinks-support" onclick="openContentSupport(event, 'tab3-support', 'tablinks-support-3')">
+						<a class="tab-index-style">Giảm giá</a>
+					</button>
+					<a id="justify-button-support" href="products.html">Xem tất cả Mới và nổi bật</a>
+				</div>      <!-- end of tab row hot trends --> 
+				<div id="tab1-support" class="tabcontent-support">
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product99.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp1.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp2.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp2.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp2.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+				</div>		<!-- end of tab1 row hot trends -->
+				<div id="tab2-support" class="tabcontent-support">
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/sp3.jpg" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div id="tab3-support" class="tabcontent-support">
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					<div class="responsive-card">
+						<div class="card">
+							<a href="productdetail.html">
+								<img src="src/images/product98.png" alt="bug">
+							</a>
+							<div class="new-content">
+								<h4>Cây Thiết Mộc Lan</h4>
+								<div class="product-price">
+									<span class="new-price">500 000 vnđ</span><br>
+									<span class="old-price">750 000 vnđ</span>
+								</div>
+								<div class="product-review">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</div>
+								<button>Thêm Vào Giỏ Hàng</button>
+								<!-- <span class="banner-status">New</span> -->
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+
+
+			</div>		<!-- end of support -->
+		</div>
 		<br>
-		<p>Nghỉ Chủ Nhật và các ngày Lễ Tết</p>
+
+		
 	</div>
-	<div id="support-customer" class="footer-column">
-		<h4>Hỗ Trợ Khách Hàng</h4>
-	</div>
-	<div id="social-network" class="footer-column">
-		<h4>Mạng Xã Hội</h4>
-		<div class="social-button">
-			<a href="#" class="fa fa-facebook"></a>
-			<a href="#" class="fa fa-twitter"></a>
-			<a href="#" class="fa fa-google"></a>
-			<a href="#" class="fa fa-linkedin"></a>
-			<a href="#" class="fa fa-youtube"></a>
+	<!-- footer -->
+
+	<div class="info">
+		<div class="info-quality">
+			<h2>Cam kết chất lượng</h2>
+			<div class="info-quality-box">
+				<i class="fa fa-check"></i>
+				<div>
+					<h3>100% ĐÃ KIỂM TRA</h3>
+					<p>Chuyên Nghiệp Theo Quy Trình</p>
+				</div>
+			</div>
+		</div>
+		<div class="info-order">
+			<h2>Hướng dẫn đặt hàng</h2>
+			<div class="info-order-box">
+				<i class="fa fa-phone"></i>
+				<div>
+					<h3>đặt hàng online</h3>
+					<p>Phone: 01646 197 752</p>
+				</div>
+			</div>
+		</div>
+		<div class="info-ship">
+			<h2>Vận chuyển</h2>
+			<div class="info-ship-box">
+				<i class="fa fa-dollar"></i>
+				<div>
+					<h3>mua hàng tiết kiệm</h3>
+					<p>miễn phí vận chuyển</p>
+				</div>
+			</div>
 		</div>
 	</div>
+	<!-- footer row-->
+
+	<div class="footer-row">
+		<div id="contact" class="footer-column">
+			<h4>Thông Tin Liên Hệ</h4>
+			<p><i class="fa fa-map-marker"></i>Đ/c: 14 ngõ 4 Nguyễn Đình Chiểu, Hai Bà Trưng, Hà Nội</p>
+			<p><i class="fa fa-phone"></i>Hotline: 01646 197 752.</p>
+			<p><i class="fa fa-envelope"></i>Email: hadangktmt@gmail.com.</p>
+		</div>
+		<div id="open-time" class="footer-column">
+			<h4>Thời Gian Mở Cửa</h4>
+			<p>Thứ 2 - thứ 6: 8AM - 10PM</p>
+			<br>
+			<p>Thứ 7: 9AM - 8PM</p>
+			<br>
+			<p>Nghỉ Chủ Nhật và các ngày Lễ Tết</p>
+		</div>
+		<div id="support-customer" class="footer-column">
+			<h4>Hỗ Trợ Khách Hàng</h4>
+		</div>
+		<div id="social-network" class="footer-column">
+			<h4>Mạng Xã Hội</h4>
+			<div class="social-button">
+				<a href="#" class="fa fa-facebook"></a>
+				<a href="#" class="fa fa-twitter"></a>
+				<a href="#" class="fa fa-google"></a>
+				<a href="#" class="fa fa-linkedin"></a>
+				<a href="#" class="fa fa-youtube"></a>
+			</div>
+		</div>
 
 
-</div>			<!-- end of footer -->
-<script type="text/javascript" src="js/slide.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+	</div>			<!-- end of footer -->
+
+	<script type="text/javascript" src="js/slide.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

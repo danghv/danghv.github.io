@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>News</title>
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
@@ -10,16 +11,18 @@
 <body>
 	<!-- login box -->
 	
-		<div id="loginModal" class="modal-container">
-			<div class="modal-container-content">
-				<button onclick="document.getElementById('loginModal').style.display='none'" class="close">x</button>
-				<div class=	"modal-body">
-					<div class="modal-body-content">
-						<div class="modal-content-detail">
-							<div class="tab">
-								<button onclick="document.getElementById('loginModal').style.display='block'" class="button-login">Đăng nhập</button>
-								<button onclick="document.getElementById('registryModal').style.display='block'" class="button-registry">Đăng ký</button>
-							</div>
+	<div id="loginModal" class="modal-container">
+		<div class="modal-container-content">
+			<button onclick="document.getElementById('loginModal').style.display='none'" class="close">x</button>
+			
+			<div class=	"modal-body">
+				<div class="modal-body-content">
+					<div class="modal-content-detail">
+						<div class="tab">
+							<button id="open-login" onclick="openTabForm(event, 'login-form-id')" class="button-form button-login">Đăng nhập</button>
+							<button id="open-registry" onclick="openTabForm(event, 'registry-form-id')" class="button-form button-registry">Đăng ký</button>
+						</div>
+						<div id="login-form-id" class="form-container login-container">
 							<form>
 								<div class="form-modal-login">
 									<label for="login-email">Email / SĐT</label>
@@ -60,22 +63,7 @@
 
 							</form>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>		<!-- end of login box -->
-
-		<!-- registry box -->
-		<div id="registryModal" class="modal-container">
-			<div class="modal-container-content">
-				<button onclick="document.getElementById('registryModal').style.display='none'" class="close">x</button>
-				<div class=	"modal-body">
-					<div class="modal-body-content">
-						<div class="modal-content-detail">
-							<div class="tab">
-								<button class="button-login registry-form">Đăng nhập</button>
-								<button class="button-registry registry-form">Đăng ký</button>
-							</div>
+						<div id="registry-form-id" class="form-container registry-container">
 							<form>
 								<div class="form-modal-login">
 									<label for="registry-name">Họ tên</label>
@@ -93,7 +81,7 @@
 									<div></div>
 									<button class="button-registry-form">Đăng ký</button>
 								</div>
-								
+
 
 							</form>
 						</div>
@@ -101,245 +89,258 @@
 				</div>
 			</div>
 		</div>
+	</div>		<!-- end of login box -->
+
+	<!-- banner -->
 	<div class="banner">
 		<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
 		<p><i class="fa fa-phone"></i>01646 197 752</p>
 
 	</div>	<!-- end of banner -->
 
+
+	<!-- banner 2 -->
 	<div class="banner2">
+		
 		<div class="logo">
-			<img src="src/images/logo.png">
+			<img src="src/images/logo88.png">
 		</div>
 		<div class="search-box">
 			<input type="text" class="search-box-input" placeholder="Nhập từ khóa bạn muốn tìm kiếm">
 			<button><i class="fa fa-search customize-search"></i></button>
 		</div>
 		<div class="shopping-cart">
-			<div><i class="fa fa-shopping-cart"></i><span>(0)</span></div>
+			<div>
+				<i class="fa fa-shopping-cart customize-cart"></i>
+				<p>Giỏ hàng</p>
+				<span>(0)</span>
+			</div>
 
 		</div>
 		<div class="form-login">
 			<div class="form-login-login">
-				<div id="openLoginModal">Đăng Nhập</div>
-				<div onclick="document.getElementById('registryModal').style.display='block'">Đăng Ký</div>
+				<div id="openLoginForm" onclick="openModal('openLoginForm', 'login-form-id')">Đăng Nhập</div>
+				<div id="openRegistryForm" onclick="openModal('openRegistryForm', 'registry-form-id')">Đăng Ký</div>
 			</div>
 		</div>
+		
+
 	</div>			<!-- end of banner2 -->
+
+	<!-- topnav responsive -->
 	<div class="topnav" id="myTopnav">
 		<a href="">Trang chủ</a>
 		<a href="products.html">Cây</a>
 		<a href="products.html">Sản Phẩm</a>
-		<a href="">Cẩm Nang - Tin Tức</a>
+		<a href="blog.html">Cẩm Nang - Tin Tức</a>
 		<a onclick="toggleMenu()" class="menu-icon">&#9776;</a>
 	</div>	<!-- end of navbar -->
-</div>
-<div class="blog-container">
-	<div class="blog-breadcrumb">
-		<ul class="breadcrumb">
-			<li><a href="">Trang chủ</a></li>
-			<li><a href="">Blog</a></li>
-		</ul> <!-- end of breadcrumb -->
-	</div>
-	<div class="blog-content">
-		<div class="blog-content-news">
-			<h1>Trang trí nội thất đẹp với cây xanh giữa nhà</h1>
-			<p>Một nhành lá xanh đung đưa giữa nhà sẽ truyền cho bạn sức sống tươi mới từ thiên nhiên. Sống trong không gian xanh, ai lại từ chối?</p>
-			<div class="share-article">
-				<button>
-					<i class="fa fa-thumbs-o-up"></i>
-					Like
-					<span>0</span>
-				</button>
-				<button>
-					Share
-				</button>
-			</div>
-			<hr>
-			<div class="article-content">
-				<img src="src/images/article1.jpg">
-				<p>
-					Có nhiều cách để <strong>trang trí nội thất đẹp</strong> bằng việc đưa cây xanh vào nhà. Với nhà phố vốn không có nhiều diện tích để làm sân vườn, bạn có thể tận dụng góc dưới giếng trời để làm vườn ươm mini. Xu hướng nội thất mới là những mảng xanh giữa nhà phải nằm gọn trong các tấm kính trong suốt, vừa đẹp, vừa vệ sinh lại rất an toàn. Thiết kế này đang được ứng dụng rộng rãi ở các nhà hàng, khách sạn, sân bay và cả văn phòng làm việc.
-				</p>
-				<h2>Bí quyết trang trí nội thất đẹp với cây xanh giữa nhà</h2>
-				<h4>Khu vực dưới giếng trời</h4>
-				<img src="src/images/article2.jpg">
-				<p>
-					Dưới giếng trời, vị trí đẹp nhất vẫn là ngay giữa. Nếu không, lệch sang góc tường một chút cũng chẳng sao, có khi lại phá cách hơn!
-				</p>
-				<p>Bạn hãy bắt tay vào tạo một tiểu cảnh xanh ngát phong cách nhiệt đới với nhiều loại cây xanh có sắc là đậm nhạt xen kẽ nhau. Để tạo điểm nhấn cho khu vườn, bạn hãy chọn những cây có chiều cao tốt làm cây chính. Ví dụ: cây phát tài dáng thẳng, đẹp, sẽ được trồng cao nhất, các loại cây phụ tầm thấp sẽ được bố trí trồng đều xung quanh. Sau đó, bạn lót nền cho tiểu cảnh này bằng một mảng thảm xanh dưới chân làm từ cỏ hoặc cây mười giờ Úc (chỉ có lá mà không có hoa).</p>
-				<p>Muốn <em>trang trí nội thất</em> đẹp hơn bằng vườn ươm tại gia, bạn có thể trồng xen kẽ hoa chuối pháo và mỏ két để thêm màu sắc nhiệt đới cho góc vườn. Trên thảm cỏ, bạn nên đặt những viên đá cuội và rải sỏi để tạo thành lối đi dẫn vào vườn, vừa giúp bạn tiện ra vào, vừa dễ dàng cho việc tưới tiêu.</p>
-				<h4>Ở đâu có sân, ở đó có vườn</h4>
-				<img src="src/images/article3.jpg">
-				<p>Xu hướng thiết kế mới đang được nhiều hộ gia đình hiện đại ưa chuộng là tạo khoảng không gian xanh ngay tại những khoảng sân trống giữa nhà. Ví dụ: giữa phòng khách và phòng bếp có một khoảng trống không mái che và có thể nhìn trực tiếp lên trời, bạn có thể tận dụng nơi đây để trồng cây cảnh, cây ăn trái hoặc đặt hồ cá. Từ phòng khách, bạn có thể nhìn sang nhà bếp qua khu vườn và ngược lại, khi sang phòng ăn từ phòng khách, bạn sẽ có dịp đi ngang qua khu vườn này để ngắm cây xanh và tận hưởng khí trời. Thiết kế này không đòi hỏi nhà bạn phải có diện tích rộng mà chủ yếu là chiều dài, lý tưởng nhất là 17m trở lên.</p>
-				<h4>Chọn chuẩn cây, gây vườn chuẩn đẹp</h4>
-				<img src="src/images/article4.jpg">
-				<p>Khi chọn cây trồng ở khu vực giếng trời, lựa chọn thích hợp nhất cho bạn vẫn là cácc loại cây ưa bóng râm như cây đa búp đỏ, trúc mây, cọ lá tre, kim phát tài… Nếu thích không khí làng quê, bạn có thể trồng vài loại cây ăn trái dễ thích nghi. Để tiết kiệm thời gian tưới tiêu, chăm sóc và dọn dẹp, bạn nên ưu tiên trồng các loại cây ít rụng lá. Bạn nên tránh trồng cây sung, cây bàng vì trái và lá của các cây này thường rụng rất nhiều, khá dơ và khó quét.</p>
-				<p>Vườn trong nhà thường khá nhỏ. Nếu không thể làm lối đi để tưới tiêu, bạn có thể gắn sẵn một hệ thống tưới tự động để làm thay bạn công việc này. Thời gian tưới cây tốt nhất là vào buổi sáng sớm, khi nắng vẫn còn dịu nhẹ và trời chưa nóng gắt. Bạn nên lưu ý tưới vừa phải để nước dễ thoát và cây không bị úng.</p>
-				<p>Việc <strong>trang trí nội thất đẹp</strong> bằng cây xanh không hề khó, đúng không nào? Chỉ cần một chút sáng tạo và sự tỉ mẫn, bạn đã mang cả không gian xanh gần gũi với thiên nhiên vào ngay chính ngôi nhà của mình rồi đấy!</p>
-			</div>
-			<hr>
+	<div class="blog-container">
+		<div class="blog-breadcrumb">
+			<ul class="breadcrumb">
+				<li><a href="">Trang chủ</a></li>
+				<li><a href="">Blog</a></li>
+			</ul> <!-- end of breadcrumb -->
 		</div>
-		<div class="blog-content-list">
+		<div class="blog-content">
+			<div class="blog-content-news">
+				<h1>Trang trí nội thất đẹp với cây xanh giữa nhà</h1>
+				<p>Một nhành lá xanh đung đưa giữa nhà sẽ truyền cho bạn sức sống tươi mới từ thiên nhiên. Sống trong không gian xanh, ai lại từ chối?</p>
+				<div class="share-article">
+					<button>
+						<i class="fa fa-thumbs-o-up"></i>
+						Like
+						<span>0</span>
+					</button>
+					<button>
+						Share
+					</button>
+				</div>
+				<hr>
+				<div class="article-content">
+					<img src="src/images/article1.jpg">
+					<p>
+						Có nhiều cách để <strong>trang trí nội thất đẹp</strong> bằng việc đưa cây xanh vào nhà. Với nhà phố vốn không có nhiều diện tích để làm sân vườn, bạn có thể tận dụng góc dưới giếng trời để làm vườn ươm mini. Xu hướng nội thất mới là những mảng xanh giữa nhà phải nằm gọn trong các tấm kính trong suốt, vừa đẹp, vừa vệ sinh lại rất an toàn. Thiết kế này đang được ứng dụng rộng rãi ở các nhà hàng, khách sạn, sân bay và cả văn phòng làm việc.
+					</p>
+					<h2>Bí quyết trang trí nội thất đẹp với cây xanh giữa nhà</h2>
+					<h4>Khu vực dưới giếng trời</h4>
+					<img src="src/images/article2.jpg">
+					<p>
+						Dưới giếng trời, vị trí đẹp nhất vẫn là ngay giữa. Nếu không, lệch sang góc tường một chút cũng chẳng sao, có khi lại phá cách hơn!
+					</p>
+					<p>Bạn hãy bắt tay vào tạo một tiểu cảnh xanh ngát phong cách nhiệt đới với nhiều loại cây xanh có sắc là đậm nhạt xen kẽ nhau. Để tạo điểm nhấn cho khu vườn, bạn hãy chọn những cây có chiều cao tốt làm cây chính. Ví dụ: cây phát tài dáng thẳng, đẹp, sẽ được trồng cao nhất, các loại cây phụ tầm thấp sẽ được bố trí trồng đều xung quanh. Sau đó, bạn lót nền cho tiểu cảnh này bằng một mảng thảm xanh dưới chân làm từ cỏ hoặc cây mười giờ Úc (chỉ có lá mà không có hoa).</p>
+					<p>Muốn <em>trang trí nội thất</em> đẹp hơn bằng vườn ươm tại gia, bạn có thể trồng xen kẽ hoa chuối pháo và mỏ két để thêm màu sắc nhiệt đới cho góc vườn. Trên thảm cỏ, bạn nên đặt những viên đá cuội và rải sỏi để tạo thành lối đi dẫn vào vườn, vừa giúp bạn tiện ra vào, vừa dễ dàng cho việc tưới tiêu.</p>
+					<h4>Ở đâu có sân, ở đó có vườn</h4>
+					<img src="src/images/article3.jpg">
+					<p>Xu hướng thiết kế mới đang được nhiều hộ gia đình hiện đại ưa chuộng là tạo khoảng không gian xanh ngay tại những khoảng sân trống giữa nhà. Ví dụ: giữa phòng khách và phòng bếp có một khoảng trống không mái che và có thể nhìn trực tiếp lên trời, bạn có thể tận dụng nơi đây để trồng cây cảnh, cây ăn trái hoặc đặt hồ cá. Từ phòng khách, bạn có thể nhìn sang nhà bếp qua khu vườn và ngược lại, khi sang phòng ăn từ phòng khách, bạn sẽ có dịp đi ngang qua khu vườn này để ngắm cây xanh và tận hưởng khí trời. Thiết kế này không đòi hỏi nhà bạn phải có diện tích rộng mà chủ yếu là chiều dài, lý tưởng nhất là 17m trở lên.</p>
+					<h4>Chọn chuẩn cây, gây vườn chuẩn đẹp</h4>
+					<img src="src/images/article4.jpg">
+					<p>Khi chọn cây trồng ở khu vực giếng trời, lựa chọn thích hợp nhất cho bạn vẫn là cácc loại cây ưa bóng râm như cây đa búp đỏ, trúc mây, cọ lá tre, kim phát tài… Nếu thích không khí làng quê, bạn có thể trồng vài loại cây ăn trái dễ thích nghi. Để tiết kiệm thời gian tưới tiêu, chăm sóc và dọn dẹp, bạn nên ưu tiên trồng các loại cây ít rụng lá. Bạn nên tránh trồng cây sung, cây bàng vì trái và lá của các cây này thường rụng rất nhiều, khá dơ và khó quét.</p>
+					<p>Vườn trong nhà thường khá nhỏ. Nếu không thể làm lối đi để tưới tiêu, bạn có thể gắn sẵn một hệ thống tưới tự động để làm thay bạn công việc này. Thời gian tưới cây tốt nhất là vào buổi sáng sớm, khi nắng vẫn còn dịu nhẹ và trời chưa nóng gắt. Bạn nên lưu ý tưới vừa phải để nước dễ thoát và cây không bị úng.</p>
+					<p>Việc <strong>trang trí nội thất đẹp</strong> bằng cây xanh không hề khó, đúng không nào? Chỉ cần một chút sáng tạo và sự tỉ mẫn, bạn đã mang cả không gian xanh gần gũi với thiên nhiên vào ngay chính ngôi nhà của mình rồi đấy!</p>
+				</div>
+				<hr>
+			</div>
+			<div class="blog-content-list">
 
-			<ul>
-				<li class="header-list-news">
-					<h2>Danh mục bài viết</h2>
-				</li>
-				<li>
-					<a href=""><h4>Cẩm nang chăm sóc cây</h4></a>
-				</li>
-				<li>
-					<a href=""><h4>Cây phong thủy</h4></a>
-				</li>
-				<li>
-					<a href=""><h4>Xu hướng</h4></a>
-				</li>
-				<li>
-					<a href=""><h4>Cây may mắn, tài lộc</h4></a>
-				</li>
-				<li>
-					<a href=""><h4>Ý nghĩa các loài cây</h4></a>
-				</li>
-				<li class="header-list-news">
-					<h2>Bài viết gần đây</h2>
-
-				</li>
-				<li>
-					<a href="">
-						<h4 class="title-list">22 loại cây cảnh gia tăng tài lộc trên bàn làm việc</h4>
-					</a>
-
-				</li>
-				<li>
-					<a href="">
-						<h4 class="title-list">7 Loại cây cảnh nên trồng tại văn phòng làm việc</h4>
-					</a>
-
-				</li>
-				<li>
-					<a href="">
-						<h4 class="title-list">Chọn loại cây gì để trồng trong sân vườn?</h4>
-					</a>
-
-				</li>
-				<li>
-					<a href="">
-						<h4 class="title-list">Những loại cây nên trồng trước nhà để đón tài lộc, xua tà khí </h4>
-					</a>
-
-				</li>
-				<li>
-					<a href="">
-						<h4 class="title-list">Cách trồng và chăm sóc cây cảnh trong chậu đúng cách nhất </h4>
-					</a>
-
-				</li>
-				<li class="header-list-news">
-					<h2>Bog tag</h2>
-				</li>
-
-				<ul class="blog-tag">
+				<ul>
+					<li class="header-list-news">
+						<h2>Danh mục bài viết</h2>
+					</li>
 					<li>
-						<a href="">
-							cây văn phòng
-						</a>
+						<a href=""><h4>Cẩm nang chăm sóc cây</h4></a>
+					</li>
+					<li>
+						<a href=""><h4>Cây phong thủy</h4></a>
+					</li>
+					<li>
+						<a href=""><h4>Xu hướng</h4></a>
+					</li>
+					<li>
+						<a href=""><h4>Cây may mắn, tài lộc</h4></a>
+					</li>
+					<li>
+						<a href=""><h4>Ý nghĩa các loài cây</h4></a>
+					</li>
+					<li class="header-list-news">
+						<h2>Bài viết gần đây</h2>
+
 					</li>
 					<li>
 						<a href="">
-							cây phong thủy
+							<h4 class="title-list">22 loại cây cảnh gia tăng tài lộc trên bàn làm việc</h4>
 						</a>
+
 					</li>
 					<li>
 						<a href="">
-							cây vườn nhà
+							<h4 class="title-list">7 Loại cây cảnh nên trồng tại văn phòng làm việc</h4>
 						</a>
+
 					</li>
 					<li>
 						<a href="">
-							cây may mắn
+							<h4 class="title-list">Chọn loại cây gì để trồng trong sân vườn?</h4>
 						</a>
+
 					</li>
 					<li>
 						<a href="">
-							dụng cụ làm vườn
+							<h4 class="title-list">Những loại cây nên trồng trước nhà để đón tài lộc, xua tà khí </h4>
 						</a>
+
 					</li>
 					<li>
 						<a href="">
-							cây thiết mộc lan
+							<h4 class="title-list">Cách trồng và chăm sóc cây cảnh trong chậu đúng cách nhất </h4>
 						</a>
+
 					</li>
+					<li class="header-list-news">
+						<h2>Bog tag</h2>
+					</li>
+
+					<ul class="blog-tag">
+						<li>
+							<a href="">
+								cây văn phòng
+							</a>
+						</li>
+						<li>
+							<a href="">
+								cây phong thủy
+							</a>
+						</li>
+						<li>
+							<a href="">
+								cây vườn nhà
+							</a>
+						</li>
+						<li>
+							<a href="">
+								cây may mắn
+							</a>
+						</li>
+						<li>
+							<a href="">
+								dụng cụ làm vườn
+							</a>
+						</li>
+						<li>
+							<a href="">
+								cây thiết mộc lan
+							</a>
+						</li>
+					</ul>
 				</ul>
-			</ul>
-		</div>
-	</div>	<!-- end of blog-content -->
-</div>		<!-- end of blog-container -->
+			</div>
+		</div>	<!-- end of blog-content -->
+	</div>		<!-- end of blog-container -->
 
-<div class="info">
-	<div class="info-quality">
-		<h2>Cam kết chất lượng</h2>
-		<div class="info-quality-box">
-			<i class="fa fa-check"></i>
-			<div>
-				<h3>100% ĐÃ KIỂM TRA</h3>
-				<p>Chuyên Nghiệp Theo Quy Trình</p>
+	<div class="info">
+		<div class="info-quality">
+			<h2>Cam kết chất lượng</h2>
+			<div class="info-quality-box">
+				<i class="fa fa-check"></i>
+				<div>
+					<h3>100% ĐÃ KIỂM TRA</h3>
+					<p>Chuyên Nghiệp Theo Quy Trình</p>
+				</div>
+			</div>
+		</div>
+		<div class="info-order">
+			<h2>Hướng dẫn đặt hàng</h2>
+			<div class="info-order-box">
+				<i class="fa fa-phone"></i>
+				<div>
+					<h3>đặt hàng online</h3>
+					<p>Phone: 01646 197 752</p>
+				</div>
+			</div>
+		</div>
+		<div class="info-ship">
+			<h2>Vận chuyển</h2>
+			<div class="info-ship-box">
+				<i class="fa fa-dollar"></i>
+				<div>
+					<h3>mua hàng tiết kiệm</h3>
+					<p>miễn phí vận chuyển</p>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="info-order">
-		<h2>Hướng dẫn đặt hàng</h2>
-		<div class="info-order-box">
-			<i class="fa fa-phone"></i>
-			<div>
-				<h3>đặt hàng online</h3>
-				<p>Phone: 01646 197 752</p>
+	<div class="footer-row">
+		<div id="contact" class="footer-column">
+			<h4>Thông Tin Liên Hệ</h4>
+			<p><i class="fa fa-map-marker"></i>Đ/c: 14 ngõ 4 Nguyễn Đình Chiểu, Hai Bà Trưng, Hà Nội</p>
+			<p><i class="fa fa-phone"></i>Hotline: 01646 197 752.</p>
+			<p><i class="fa fa-envelope"></i>Email: hadangktmt@gmail.com.</p>
+		</div>
+		<div id="open-time" class="footer-column">
+			<h4>Thời Gian Mở Cửa</h4>
+			<p>Thứ 2 - thứ 6: 8AM - 10PM</p>
+			<br>
+			<p>Thứ 7: 9AM - 8PM</p>
+			<br>
+			<p>Nghỉ Chủ Nhật và các ngày Lễ Tết</p>
+		</div>
+		<div id="support-customer" class="footer-column">
+			<h4>Hỗ Trợ Khách Hàng</h4>
+		</div>
+		<div id="social-network" class="footer-column">
+			<h4>Mạng Xã Hội</h4>
+			<div class="social-button">
+				<a href="#" class="fa fa-facebook"></a>
+				<a href="#" class="fa fa-twitter"></a>
+				<a href="#" class="fa fa-google"></a>
+				<a href="#" class="fa fa-linkedin"></a>
+				<a href="#" class="fa fa-youtube"></a>
 			</div>
 		</div>
-	</div>
-	<div class="info-ship">
-		<h2>Vận chuyển</h2>
-		<div class="info-ship-box">
-			<i class="fa fa-dollar"></i>
-			<div>
-				<h3>mua hàng tiết kiệm</h3>
-				<p>miễn phí vận chuyển</p>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="footer-row">
-	<div id="contact" class="footer-column">
-		<h4>Thông Tin Liên Hệ</h4>
-		<p><i class="fa fa-map-marker"></i>Đ/c: 14 ngõ 4 Nguyễn Đình Chiểu, Hai Bà Trưng, Hà Nội</p>
-		<p><i class="fa fa-phone"></i>Hotline: 01646 197 752.</p>
-		<p><i class="fa fa-envelope"></i>Email: hadangktmt@gmail.com.</p>
-	</div>
-	<div id="open-time" class="footer-column">
-		<h4>Thời Gian Mở Cửa</h4>
-		<p>Thứ 2 - thứ 6: 8AM - 10PM</p>
-		<br>
-		<p>Thứ 7: 9AM - 8PM</p>
-		<br>
-		<p>Nghỉ Chủ Nhật và các ngày Lễ Tết</p>
-	</div>
-	<div id="support-customer" class="footer-column">
-		<h4>Hỗ Trợ Khách Hàng</h4>
-	</div>
-	<div id="social-network" class="footer-column">
-		<h4>Mạng Xã Hội</h4>
-		<div class="social-button">
-			<a href="#" class="fa fa-facebook"></a>
-			<a href="#" class="fa fa-twitter"></a>
-			<a href="#" class="fa fa-google"></a>
-			<a href="#" class="fa fa-linkedin"></a>
-			<a href="#" class="fa fa-youtube"></a>
-		</div>
-	</div>
 
 
-</div>			<!-- end of footer -->
+	</div>			<!-- end of footer -->
 
-<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

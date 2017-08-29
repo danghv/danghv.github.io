@@ -51,3 +51,8 @@ function openProductTab(evt, nameTab) {
 	evt.currentTarget.className += ' active';
 }
 document.getElementById("defaultOpenProductReview").click();
+
+function countProduct (number){
+	var elm = document.getElementById('counterProduct');
+	elm.innerHTML = Number(elm.innerHTML) + number;
+}

@@ -36,8 +36,11 @@ function showSlides(n) {
 
 //process tab new content Hot Trends
 
-function openContent(evt, tabId) {
+function openContent(evt, tabId, btnId) {
 	var i, tablinks, tabcontents;
+	var justifyButton = document.getElementById('justify-button');
+	var x = document.getElementById(btnId);
+
 	tablinks = document.getElementsByClassName('tablinks');
 	for (i = 0; i < tablinks.length; i++) {
 		tablinks[i].className = tablinks[i].className.replace(' active', '');
@@ -47,32 +50,42 @@ function openContent(evt, tabId) {
 		tabcontents[i].style.display = 'none';
 	}
 	document.getElementById(tabId).style.display = 'block';
+	
 	evt.currentTarget.className += ' active';
+
+	justifyButton.innerHTML = 'Xem tất cả '
+	justifyButton.innerHTML += x.firstElementChild.innerHTML;
 }
 
 document.getElementById('openDefault').click();
 
 //process Cay xanh vuon nha
-function openContentGarden(evt, tabId) {
+function openContentGarden(evt, tabId, btnId) {
 	var i, tablinksGarden, tabcontentsGarden;
+	var justifyButtonGarden = document.getElementById('justify-button-garden');
+	var x = document.getElementById(btnId);
 	tablinksGarden = document.getElementsByClassName('tablinks-garden');
 	for (i = 0; i < tablinksGarden.length; i++) {
 		tablinksGarden[i].className = tablinksGarden[i].className.replace(' active', '');
 	}
 	tabcontentsGarden = document.getElementsByClassName('tabcontent-garden');
-	for (var i = 0; i < tabcontentsGarden.length; i++) {
+	for (i = 0; i < tabcontentsGarden.length; i++) {
 		tabcontentsGarden[i].style.display = 'none';
 	}
 	document.getElementById(tabId).style.display = 'block';
 	evt.currentTarget.className += ' active';
+	justifyButtonGarden.innerHTML = 'Xem tất cả '
+	justifyButtonGarden.innerHTML += x.firstElementChild.innerHTML;
 }
 
-document.getElementById('openDefaultGarden').click();
+document.getElementById('openDefaultGarden111').click();
 
 //process sản phẩm Hỗ Trợ
 
-function openContentSupport(evt, tabId) {
+function openContentSupport(evt, tabId, btnId) {
 	var i, tablinksSupport, tabcontentsSupport;
+	var justifyButtonSupport = document.getElementById('justify-button-support');
+	var x = document.getElementById(btnId);
 	tablinksSupport = document.getElementsByClassName('tablinks-support');
 	for (i = 0; i < tablinksSupport.length; i++) {
 		tablinksSupport[i].className = tablinksSupport[i].className.replace(' active', '');
@@ -83,6 +96,9 @@ function openContentSupport(evt, tabId) {
 	}
 	document.getElementById(tabId).style.display = 'block';
 	evt.currentTarget.className += ' active';
+	justifyButtonSupport.innerHTML = 'Xem tất cả '
+	justifyButtonSupport.innerHTML += x.firstElementChild.innerHTML;
 }
 
 document.getElementById('openDefaultSupport').click();
+

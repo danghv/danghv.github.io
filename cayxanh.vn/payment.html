@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>payment</title>
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
@@ -13,315 +14,314 @@
 	<div id="loginModal" class="modal-container">
 		<div class="modal-container-content">
 			<button onclick="document.getElementById('loginModal').style.display='none'" class="close">x</button>
+			
 			<div class=	"modal-body">
 				<div class="modal-body-content">
 					<div class="modal-content-detail">
 						<div class="tab">
-							<button onclick="document.getElementById('loginModal').style.display='block'" class="button-login">Đăng nhập</button>
-							<button onclick="document.getElementById('registryModal').style.display='block'" class="button-registry">Đăng ký</button>
+							<button id="open-login" onclick="openTabForm(event, 'login-form-id')" class="button-form button-login">Đăng nhập</button>
+							<button id="open-registry" onclick="openTabForm(event, 'registry-form-id')" class="button-form button-registry">Đăng ký</button>
 						</div>
-						<form>
-							<div class="form-modal-login">
-								<label for="login-email">Email / SĐT</label>
-								<input type="text" id="login-email" placeholder="Nhập Email hoặc Số điện thoại" name="">
-							</div>
-							<div class="form-modal-login">
-								<label for="login-password">Mật khẩu</label>
-								<input type="text" id="login-password" placeholder="Mật khẩu từ 6 đến 32 ký tự" name="">
-							</div>
-							<div class="form-modal-login">
-								<div></div>
-								<p class="reset">Quên mật khẩu? Nhấn vào 
-									<a href="">đây</a>
-								</p>
-							</div>
-							<div class="form-modal-login">
-								<div></div>
-								<button class="button-login-form">Đăng nhập</button>
-							</div>
-							<div class="form-modal-login">
-								<div></div>
-								<a class="facebook" href="">
-									<i class="fa fa-facebook customize-login"></i>
-									<span>Đăng nhập bằng Facebook</span>
-								</a>
-							</div>
-							<div class="form-modal-login">
-								<div></div>
-								<a class="google" href="">
-									<i class="fa fa-google customize-login"></i>
-									<span>Đăng nhập bằng Google</span>
-								</a>
-							</div>
-							<div class="form-modal-login">
-								<div></div>
-								<button class="button-login-form">Đăng nhập bằng zalo</button>
-							</div>
-
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>		<!-- end of login box -->
-
-	<!-- registry box -->
-	<div id="registryModal" class="modal-container">
-		<div class="modal-container-content">
-			<button onclick="document.getElementById('registryModal').style.display='none'" class="close">x</button>
-			<div class=	"modal-body">
-				<div class="modal-body-content">
-					<div class="modal-content-detail">
-						<div class="tab">
-							<button class="button-login registry-form">Đăng nhập</button>
-							<button class="button-registry registry-form">Đăng ký</button>
-						</div>
-						<form>
-							<div class="form-modal-login">
-								<label for="registry-name">Họ tên</label>
-								<input type="text" id="registry-name" placeholder="Nhập họ tên" name="">
-							</div>
-							<div class="form-modal-login">
-								<label for="login-email">Email / SĐT</label>
-								<input type="text" id="login-email" placeholder="Nhập Email hoặc Số điện thoại" name="">
-							</div>
-							<div class="form-modal-login">
-								<label for="login-password">Mật khẩu</label>
-								<input type="text" id="login-password" placeholder="Mật khẩu từ 6 đến 32 ký tự" name="">
-							</div>
-							<div class="form-modal-login">
-								<div></div>
-								<button class="button-registry-form">Đăng ký</button>
-							</div>
-							
-
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="banner">
-		<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
-		<p><i class="fa fa-phone"></i>01646 197 752</p>
-
-	</div>	<!-- end of banner -->
-
-	<div class="banner2">
-		<div class="logo">
-			<img src="src/images/logo.png">
-		</div>
-		<div class="search-box">
-			<input type="text" class="search-box-input" placeholder="Nhập từ khóa bạn muốn tìm kiếm">
-			<button><i class="fa fa-search customize-search"></i></button>
-		</div>
-		<div class="shopping-cart">
-			<div><i class="fa fa-shopping-cart"></i><span>(0)</span></div>
-
-		</div>
-		<div class="form-login">
-			<div class="form-login-login">
-				<div id="openLoginModal">Đăng Nhập</div>
-				<div onclick="document.getElementById('registryModal').style.display='block'">Đăng Ký</div>
-			</div>
-		</div>
-	</div>			<!-- end of banner2 -->
-	<div class="topnav" id="myTopnav">
-		<a href="">Trang chủ</a>
-		<a href="products.html">Cây</a>
-		<a href="products.html">Sản Phẩm</a>
-		<a href="">Cẩm Nang - Tin Tức</a>
-		<a onclick="toggleMenu()" class="menu-icon">&#9776;</a>
-	</div>	<!-- end of navbar -->
-</div>
-<div class="payment-container">
-	<div class="payment-content">
-		<div class="payment-content-detail">
-			<div class="payment-tabs-container">
-				<div class="payment-tabs">
-					<h3>Địa chỉ giao hàng</h3>
-					<form>
-						<div class="form-group row">
-							<label for="full_name">Họ tên</label>
-							<input type="" id="full_name" placeholder="Nhập họ tên" name="">
-						</div>
-						<div class="form-group row">
-							<label for="telephone">Điện thoại di động</label>
-							<input type="" id="telephone" placeholder="Nhập số điện thoại" name="">
-						</div>
-						<div class="form-group row">
-							<label for="region_id">Tỉnh/Thành phố</label>
-							<select id="region_id">
-								<option>Hồ Chí Minh</option>
-								<option>Đà Nẵng</option>
-								<option>Hà Nội</option>
-							</select>
-						</div>
-						<div class="form-group row">
-							<label for="city_id">Quận/Huyện</label>
-							<select id="city_id">
-								<option>Hai Bà Trưng</option>
-								<option>Ba Đình</option>
-								<option>Đống Đa</option>
-							</select>
-						</div>
-						<div class="form-group row">
-							<label for="ward_id">Phường/Xã</label>
-							<select id="ward_id">
-								<option>Mễ Trì</option>
-								<option>Trung Văn</option>
-								<option>Thanh Xuân Bắc</option>
-							</select>
-						</div>
-						<div class="form-group row">
-							<label for="street">Địa Chỉ</label>
-
-							<input id="street" type="" placeholder="Ví dụ: 162 Trần Duy Hưng" name="">
-
-						</div>
-						<div class="form-group row">
-							<label></label>
-							<span>Để nhận hàng thuận tiện hơn, bạn vui lòng cho cayxanh.vn biết loại địa chỉ</span>
-						</div>
-						<div class="form-group row">
-							<label>Loại địa chỉ</label>
-							<div class="radio-payment-container">
-								<div class="radio radio-float">
-									<label for="delivery_address_type_1" class="reset-style">
-										<input type="radio" id="delivery_address_type_1" name="delivery_address_type">
-										Nhà riêng/ Chung cư</label>
-									</div>
-									<div class="radio radio-float">
-										<label for="delivery_address_type_2" class="reset-style">
-											<input type="radio" id="delivery_address_type_2" name="delivery_address_type">
-											Cơ quan/ Công ty</label>
-										</div>
-									</div>
+						<div id="login-form-id" class="form-container login-container">
+							<form>
+								<div class="form-modal-login">
+									<label for="login-email">Email / SĐT</label>
+									<input type="text" id="login-email" placeholder="Nhập Email hoặc Số điện thoại" name="">
 								</div>
-								<div class="form-group row">
+								<div class="form-modal-login">
+									<label for="login-password">Mật khẩu</label>
+									<input type="text" id="login-password" placeholder="Mật khẩu từ 6 đến 32 ký tự" name="">
+								</div>
+								<div class="form-modal-login">
 									<div></div>
-									<div class="button-group-apply">
-										<button class="btn-cancel">
-											Hủy bỏ
-										</button>
-										<button class="btn-update">
-											Cập nhật
-										</button>
-									</div>
+									<p class="reset">Quên mật khẩu? Nhấn vào 
+										<a href="">đây</a>
+									</p>
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<button class="button-login-form">Đăng nhập</button>
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<a class="facebook" href="">
+										<i class="fa fa-facebook customize-login"></i>
+										<span>Đăng nhập bằng Facebook</span>
+									</a>
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<a class="google" href="">
+										<i class="fa fa-google customize-login"></i>
+										<span>Đăng nhập bằng Google</span>
+									</a>
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<button class="button-login-form">Đăng nhập bằng zalo</button>
+								</div>
+
+							</form>
+						</div>
+						<div id="registry-form-id" class="form-container registry-container">
+							<form>
+								<div class="form-modal-login">
+									<label for="registry-name">Họ tên</label>
+									<input type="text" id="registry-name" placeholder="Nhập họ tên" name="">
+								</div>
+								<div class="form-modal-login">
+									<label for="login-email">Email / SĐT</label>
+									<input type="text" id="login-email" placeholder="Nhập Email hoặc Số điện thoại" name="">
+								</div>
+								<div class="form-modal-login">
+									<label for="login-password">Mật khẩu</label>
+									<input type="text" id="login-password" placeholder="Mật khẩu từ 6 đến 32 ký tự" name="">
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<button class="button-registry-form">Đăng ký</button>
 								</div>
 
 
 							</form>
 						</div>
 					</div>
-					<div class="payment-tabs-container">
-						<div class="payment-tabs">
-							<h3>Thông tin đơn hàng</h3>
-							<div class="payment-info">
-								<div class="payment-info-row1">
-									<div class="row1-image">
-										<img src="src/images/product2.jpg">
-										<span class="row1-image-quantity">2</span>
-									</div>
-									<h6>Thiết mộc lan</h6>
-									<div class="row1-price"><span class="row-money">1.000.000</span></div>
-								</div>
-								<div class="payment-info-row2">
-									<div class="row2-image">
-										<img src="src/images/product2.jpg">
-										<span class="row2-image-quantity">3</span>
-									</div>
-									<h6>Thiết mộc lan</h6>
-									<div class="row2-price"><span class="row-money">1.000.000</span></div>
-								</div>
-							</div>
-							<div class="payment-final">
-								<div>
-									<span>Tạm tính</span>
-									<span class="row-money">99.999.999</span>
-								</div>
-								<div>
-									<span>Phí giao hàng</span>
-									<span class="row-money">0</span>
-								</div>
-								<div>
-									<span>Tổng tiền</span>
-									<span class="row-money">99.999.999</span>
-								</div>
-								<button>Đặt hàng</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>		<!-- end of payment content -->
-		</div>		<!-- end of payment container -->
-
-		<div class="info">
-			<div class="info-quality">
-				<h2>Cam kết chất lượng</h2>
-				<div class="info-quality-box">
-					<i class="fa fa-check"></i>
-					<div>
-						<h3>100% ĐÃ KIỂM TRA</h3>
-						<p>Chuyên Nghiệp Theo Quy Trình</p>
-					</div>
-				</div>
-			</div>
-			<div class="info-order">
-				<h2>Hướng dẫn đặt hàng</h2>
-				<div class="info-order-box">
-					<i class="fa fa-phone"></i>
-					<div>
-						<h3>đặt hàng online</h3>
-						<p>Phone: 01646 197 752</p>
-					</div>
-				</div>
-			</div>
-			<div class="info-ship">
-				<h2>Vận chuyển</h2>
-				<div class="info-ship-box">
-					<i class="fa fa-dollar"></i>
-					<div>
-						<h3>mua hàng tiết kiệm</h3>
-						<p>miễn phí vận chuyển</p>
-					</div>
 				</div>
 			</div>
 		</div>
-		<div class="footer-row">
-			<div id="contact" class="footer-column">
-				<h4>Thông Tin Liên Hệ</h4>
-				<p><i class="fa fa-map-marker"></i>Đ/c: 14 ngõ 4 Nguyễn Đình Chiểu, Hai Bà Trưng, Hà Nội</p>
-				<p><i class="fa fa-phone"></i>Hotline: 01646 197 752.</p>
-				<p><i class="fa fa-envelope"></i>Email: hadangktmt@gmail.com.</p>
+	</div>		<!-- end of login box -->
+
+	<!-- banner -->
+	<div class="banner">
+		<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
+		<p><i class="fa fa-phone"></i>01646 197 752</p>
+
+	</div>	<!-- end of banner -->
+
+
+	<!-- banner 2 -->
+	<div class="banner2">
+		
+		<div class="logo">
+			<img src="src/images/logo88.png">
+		</div>
+		<div class="search-box">
+			<input type="text" class="search-box-input" placeholder="Nhập từ khóa bạn muốn tìm kiếm">
+			<button><i class="fa fa-search customize-search"></i></button>
+		</div>
+		<div class="shopping-cart">
+			<div>
+				<i class="fa fa-shopping-cart customize-cart"></i>
+				<p>Giỏ hàng</p>
+				<span>(0)</span>
 			</div>
-			<div id="open-time" class="footer-column">
-				<h4>Thời Gian Mở Cửa</h4>
-				<p>Thứ 2 - thứ 6: 8AM - 10PM</p>
-				<br>
-				<p>Thứ 7: 9AM - 8PM</p>
-				<br>
-				<p>Nghỉ Chủ Nhật và các ngày Lễ Tết</p>
+
+		</div>
+		<div class="form-login">
+			<div class="form-login-login">
+				<div id="openLoginForm" onclick="openModal('openLoginForm', 'login-form-id')">Đăng Nhập</div>
+				<div id="openRegistryForm" onclick="openModal('openRegistryForm', 'registry-form-id')">Đăng Ký</div>
 			</div>
-			<div id="support-customer" class="footer-column">
-				<h4>Hỗ Trợ Khách Hàng</h4>
-			</div>
-			<div id="social-network" class="footer-column">
-				<h4>Mạng Xã Hội</h4>
-				<div class="social-button">
-					<a href="#" class="fa fa-facebook"></a>
-					<a href="#" class="fa fa-twitter"></a>
-					<a href="#" class="fa fa-google"></a>
-					<a href="#" class="fa fa-linkedin"></a>
-					<a href="#" class="fa fa-youtube"></a>
+		</div>
+		
+
+	</div>			<!-- end of banner2 -->
+
+	<!-- topnav responsive -->
+	<div class="topnav" id="myTopnav">
+		<a href="">Trang chủ</a>
+		<a href="products.html">Cây</a>
+		<a href="products.html">Sản Phẩm</a>
+		<a href="blog.html">Cẩm Nang - Tin Tức</a>
+		<a onclick="toggleMenu()" class="menu-icon">&#9776;</a>
+	</div>	<!-- end of navbar -->
+	<div class="payment-container">
+		<div class="payment-content">
+			<div class="payment-content-detail">
+				<div class="payment-tabs-container">
+					<div class="payment-tabs">
+						<h3>Địa chỉ giao hàng</h3>
+						<form>
+							<div class="form-group row">
+								<label for="full_name">Họ tên</label>
+								<input type="" id="full_name" placeholder="Nhập họ tên" name="">
+							</div>
+							<div class="form-group row">
+								<label for="telephone">Điện thoại di động</label>
+								<input type="" id="telephone" placeholder="Nhập số điện thoại" name="">
+							</div>
+							<div class="form-group row">
+								<label for="region_id">Tỉnh/Thành phố</label>
+								<select id="region_id">
+									<option>Hồ Chí Minh</option>
+									<option>Đà Nẵng</option>
+									<option>Hà Nội</option>
+								</select>
+							</div>
+							<div class="form-group row">
+								<label for="city_id">Quận/Huyện</label>
+								<select id="city_id">
+									<option>Hai Bà Trưng</option>
+									<option>Ba Đình</option>
+									<option>Đống Đa</option>
+								</select>
+							</div>
+							<div class="form-group row">
+								<label for="ward_id">Phường/Xã</label>
+								<select id="ward_id">
+									<option>Mễ Trì</option>
+									<option>Trung Văn</option>
+									<option>Thanh Xuân Bắc</option>
+								</select>
+							</div>
+							<div class="form-group row">
+								<label for="street">Địa Chỉ</label>
+
+								<input id="street" type="" placeholder="Ví dụ: 162 Trần Duy Hưng" name="">
+
+							</div>
+							<div class="form-group row">
+								<label></label>
+								<span>Để nhận hàng thuận tiện hơn, bạn vui lòng cho cayxanh.vn biết loại địa chỉ</span>
+							</div>
+							<div class="form-group row">
+								<label>Loại địa chỉ</label>
+								<div class="radio-payment-container">
+									<div class="radio radio-float">
+										<label for="delivery_address_type_1" class="reset-style">
+											<input type="radio" id="delivery_address_type_1" name="delivery_address_type">
+											Nhà riêng/ Chung cư</label>
+										</div>
+										<div class="radio radio-float">
+											<label for="delivery_address_type_2" class="reset-style">
+												<input type="radio" id="delivery_address_type_2" name="delivery_address_type">
+												Cơ quan/ Công ty</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<div></div>
+										<div class="button-group-apply">
+											<button class="btn-cancel">
+												Hủy bỏ
+											</button>
+											<button class="btn-update">
+												Cập nhật
+											</button>
+										</div>
+									</div>
+
+
+								</form>
+							</div>
+						</div>
+						<div class="payment-tabs-container">
+							<div class="payment-tabs">
+								<h3>Thông tin đơn hàng</h3>
+								<div class="payment-info">
+									<div class="payment-info-row1">
+										<div class="row1-image">
+											<img src="src/images/product2.jpg">
+											<span class="row1-image-quantity">2</span>
+										</div>
+										<h6>Thiết mộc lan</h6>
+										<div class="row1-price"><span class="row-money">1.000.000</span></div>
+									</div>
+									<div class="payment-info-row2">
+										<div class="row2-image">
+											<img src="src/images/product2.jpg">
+											<span class="row2-image-quantity">3</span>
+										</div>
+										<h6>Thiết mộc lan</h6>
+										<div class="row2-price"><span class="row-money">1.000.000</span></div>
+									</div>
+								</div>
+								<div class="payment-final">
+									<div>
+										<span>Tạm tính</span>
+										<span class="row-money">99.999.999</span>
+									</div>
+									<div>
+										<span>Phí giao hàng</span>
+										<span class="row-money">0</span>
+									</div>
+									<div>
+										<span>Tổng tiền</span>
+										<span class="row-money">99.999.999</span>
+									</div>
+									<button>Đặt hàng</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>		<!-- end of payment content -->
+			</div>		<!-- end of payment container -->
+
+			<div class="info">
+				<div class="info-quality">
+					<h2>Cam kết chất lượng</h2>
+					<div class="info-quality-box">
+						<i class="fa fa-check"></i>
+						<div>
+							<h3>100% ĐÃ KIỂM TRA</h3>
+							<p>Chuyên Nghiệp Theo Quy Trình</p>
+						</div>
+					</div>
+				</div>
+				<div class="info-order">
+					<h2>Hướng dẫn đặt hàng</h2>
+					<div class="info-order-box">
+						<i class="fa fa-phone"></i>
+						<div>
+							<h3>đặt hàng online</h3>
+							<p>Phone: 01646 197 752</p>
+						</div>
+					</div>
+				</div>
+				<div class="info-ship">
+					<h2>Vận chuyển</h2>
+					<div class="info-ship-box">
+						<i class="fa fa-dollar"></i>
+						<div>
+							<h3>mua hàng tiết kiệm</h3>
+							<p>miễn phí vận chuyển</p>
+						</div>
+					</div>
 				</div>
 			</div>
+			<div class="footer-row">
+				<div id="contact" class="footer-column">
+					<h4>Thông Tin Liên Hệ</h4>
+					<p><i class="fa fa-map-marker"></i>Đ/c: 14 ngõ 4 Nguyễn Đình Chiểu, Hai Bà Trưng, Hà Nội</p>
+					<p><i class="fa fa-phone"></i>Hotline: 01646 197 752.</p>
+					<p><i class="fa fa-envelope"></i>Email: hadangktmt@gmail.com.</p>
+				</div>
+				<div id="open-time" class="footer-column">
+					<h4>Thời Gian Mở Cửa</h4>
+					<p>Thứ 2 - thứ 6: 8AM - 10PM</p>
+					<br>
+					<p>Thứ 7: 9AM - 8PM</p>
+					<br>
+					<p>Nghỉ Chủ Nhật và các ngày Lễ Tết</p>
+				</div>
+				<div id="support-customer" class="footer-column">
+					<h4>Hỗ Trợ Khách Hàng</h4>
+				</div>
+				<div id="social-network" class="footer-column">
+					<h4>Mạng Xã Hội</h4>
+					<div class="social-button">
+						<a href="#" class="fa fa-facebook"></a>
+						<a href="#" class="fa fa-twitter"></a>
+						<a href="#" class="fa fa-google"></a>
+						<a href="#" class="fa fa-linkedin"></a>
+						<a href="#" class="fa fa-youtube"></a>
+					</div>
+				</div>
 
 
-		</div>			<!-- end of footer -->
+			</div>			<!-- end of footer -->
 
-		<script type="text/javascript" src="js/script.js"></script>
-	</body>
-	</html>
+			<script type="text/javascript" src="js/script.js"></script>
+		</body>
+		</html>
