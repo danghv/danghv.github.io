@@ -57,4 +57,10 @@ function confirmToCart() {
 	document.getElementById('confirmModal').style.display = 'none';
 }
 
-
+function loginAction() {
+	var x = document.getElementById('before-login');
+	x.style.display = 'none';
+	var y = document.getElementById('after-login');
+	y.style.display = 'block';
+	document.getElementById('loginModal').style.display = 'none';
+}
