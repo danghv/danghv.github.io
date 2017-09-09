@@ -9,15 +9,15 @@ function toggleMenu() {
 	}
 }
 
-window.addEventListener("scroll", function(){
-	var topnav = document.getElementById('myTopnav');
+// window.addEventListener("scroll", function(){
+// 	var topnav = document.getElementById('myTopnav');
 
-if(document.documentElement.scrollTop > 150){
-	topnav.classList.add('fix-topnav');
-} else {
-	topnav.classList.remove('fix-topnav');
-}
-});
+// if(document.documentElement.scrollTop > 150){
+// 	topnav.classList.add('fix-topnav');
+// } else {
+// 	topnav.classList.remove('fix-topnav');
+// }
+// });
 
 // function openModal(idButton, idButtonClick) {
 // 	var btn = document.getElementById('idButton');

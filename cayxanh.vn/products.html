@@ -8,6 +8,21 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 </head>
 <body>
+	<!-- confirm-modal -->
+
+	<div id="confirmModal" class="confirm-modal">
+		<div class="confirm-modal-container animate">
+			<div class="confirm-container-content">
+				<p>Bạn muốn thêm sản phẩm này vào giỏ hàng?</p>
+				<br>
+				<div>
+					<button class="confirm-cart" onclick="confirmToCart()">Xác nhận</button>
+					<button class="cancel-cart" onclick="document.getElementById('confirmModal').style.display = 'none'">Hủy bỏ</button>
+				</div>
+			</div>
+		</div>
+		
+	</div>
 	<!-- login box -->
 	
 	<div id="loginModal" class="modal-container">
@@ -39,7 +54,7 @@
 								</div>
 								<div class="form-modal-login">
 									<div></div>
-									<button class="button-login-form">Đăng nhập</button>
+									<button type="button" class="button-login-form" onclick="loginAction()">Đăng nhập</button>
 								</div>
 								<div class="form-modal-login">
 									<div></div>
@@ -92,9 +107,38 @@
 
 	<!-- banner -->
 	<div class="banner">
-		<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
-		<p><i class="fa fa-phone"></i>01646 197 752</p>
+		<div class="banner-contact">
+			<p class="banner-mail"><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
+			<p><i class="fa fa-phone"></i>01646 197 752</p>
+		</div>
+		<div class="form-login">
+			<div id="before-login" class="form-login-login">
+				<div id="openLoginForm" onclick="openModal('openLoginForm', 'login-form-id')">Đăng Nhập</div>
+				<div id="openRegistryForm" onclick="openModal('openRegistryForm', 'registry-form-id')">Đăng Ký</div>
+			</div>
+			<div id="after-login" class="form-after-login">
+				<div class="form-after-login-content">
+				<div class="account-info">
+					<a class="account-icon"><i class="fa fa-user"></i></a>
+					<a id="accountID" href="">Hello,<span> Dang Ha</span>
+						<ul class="dropdown-account">
+							<li class="logout-account">
+								<a href="">Đăng xuất</a>
+							</li>
+							<li class="change-info-account">
+								<a href="">Thay đổi thông tin</a>
+							</li>
+							<li class="product-account">
+								<a href="">Sản phẩm bạn đã xem</a>
+							</li>
+						</ul>
+					</a>
+				</div>
+					
 
+				</div>
+			</div>
+		</div>
 	</div>	<!-- end of banner -->
 
 
@@ -102,7 +146,7 @@
 	<div class="banner2">
 		
 		<div class="logo">
-			<img src="src/images/logo88.png">
+			<a href="index.html"><img src="src/images/logo88.png"></a>
 		</div>
 		<div class="search-box">
 			<input type="text" class="search-box-input" placeholder="Nhập từ khóa bạn muốn tìm kiếm">
@@ -113,19 +157,15 @@
 				<a href="cart.html">
 					<i class="fa fa-shopping-cart customize-cart"></i>
 				</a>
-				<a href="cart.html"><p>Giỏ hàng</p></a>
+				<a class="display-responsive" href="cart.html"><p>Giỏ hàng</p></a>
 				<a class="cart-number" href="cart.html">
-					<span id="number-product">(0)</span>
+					<span>(<span id="number-product">0</span>)</span>
 				</a>
 			</div>
 
 		</div>
-		<div class="form-login">
-			<div class="form-login-login">
-				<div id="openLoginForm" onclick="openModal('openLoginForm', 'login-form-id')">Đăng Nhập</div>
-				<div id="openRegistryForm" onclick="openModal('openRegistryForm', 'registry-form-id')">Đăng Ký</div>
-			</div>
-		</div>
+		
+		
 		
 
 	</div>			<!-- end of banner2 -->
@@ -133,9 +173,9 @@
 	<!-- topnav responsive -->
 	<div class="topnav" id="myTopnav">
 		<a href="index.html">Trang chủ</a>
-		<a href="products.html">Sản Phẩm</a>
-		<a href="products.html">Dịch Vụ</a>
-		<a href="blog.html">Cẩm Nang - Tin Tức</a>
+		<a href="products.html">Sản phẩm</a>
+		<a href="blog.html">Tin tức</a>
+		<a href="contact.html">Liên hệ</a>
 		<a onclick="toggleMenu()" class="menu-icon">&#9776;</a>
 	</div>	<!-- end of navbar -->
 

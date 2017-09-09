@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dịch Vụ Cây Xanh VN</title>
+	
+	
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Titilliu	m+Web" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<!-- confirm-modal -->
+
+	<div id="confirmModal" class="confirm-modal">
+		<div class="confirm-modal-container animate">
+			<div class="confirm-container-content">
+				<p>Bạn muốn thêm sản phẩm này vào giỏ hàng?</p>
+				<br>
+				<div>
+					<button class="confirm-cart" onclick="confirmToCart()">Xác nhận</button>
+					<button class="cancel-cart" onclick="document.getElementById('confirmModal').style.display = 'none'">Hủy bỏ</button>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<!-- login box -->
+	
+	<div id="loginModal" class="modal-container">
+		<div class="modal-container-content">
+			<button onclick="document.getElementById('loginModal').style.display='none'" class="close">x</button>
+			
+			<div class=	"modal-body">
+				<div class="modal-body-content">
+					<div class="modal-content-detail">
+						<div class="tab">
+							<button id="open-login" onclick="openTabForm(event, 'login-form-id')" class="button-form button-login">Đăng nhập</button>
+							<button id="open-registry" onclick="openTabForm(event, 'registry-form-id')" class="button-form button-registry">Đăng ký</button>
+						</div>
+						<div id="login-form-id" class="form-container login-container">
+							<form>
+								<div class="form-modal-login">
+									<label for="login-email">Email / SĐT</label>
+									<input type="text" id="login-email" placeholder="Nhập Email hoặc Số điện thoại" name="">
+								</div>
+								<div class="form-modal-login">
+									<label for="login-password">Mật khẩu</label>
+									<input type="text" id="login-password" placeholder="Mật khẩu từ 6 đến 32 ký tự" name="">
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<p class="reset">Quên mật khẩu? Nhấn vào 
+										<a href="">đây</a>
+									</p>
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<button type="button" class="button-login-form" onclick="loginAction()">Đăng nhập</button>
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<a class="facebook" href="">
+										<i class="fa fa-facebook customize-login"></i>
+										<span>Đăng nhập bằng Facebook</span>
+									</a>
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<a class="google" href="">
+										<i class="fa fa-google customize-login"></i>
+										<span>Đăng nhập bằng Google</span>
+									</a>
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<button class="button-login-form">Đăng nhập bằng zalo</button>
+								</div>
+
+							</form>
+						</div>
+						<div id="registry-form-id" class="form-container registry-container">
+							<form>
+								<div class="form-modal-login">
+									<label for="registry-name">Họ tên</label>
+									<input type="text" id="registry-name" placeholder="Nhập họ tên" name="">
+								</div>
+								<div class="form-modal-login">
+									<label for="login-email">Email / SĐT</label>
+									<input type="text" id="login-email" placeholder="Nhập Email hoặc Số điện thoại" name="">
+								</div>
+								<div class="form-modal-login">
+									<label for="login-password">Mật khẩu</label>
+									<input type="text" id="login-password" placeholder="Mật khẩu từ 6 đến 32 ký tự" name="">
+								</div>
+								<div class="form-modal-login">
+									<div></div>
+									<button class="button-registry-form">Đăng ký</button>
+								</div>
+
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>		<!-- end of login box -->
+
+	<!-- banner -->
+	<div class="banner">
+		<div class="banner-contact">
+			<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
+		<p><i class="fa fa-phone"></i>01646 197 752</p>
+		</div>
+		<div class="form-login">
+			<div id="before-login" class="form-login-login">
+				<div id="openLoginForm" onclick="openModal('openLoginForm', 'login-form-id')">Đăng Nhập</div>
+				<div id="openRegistryForm" onclick="openModal('openRegistryForm', 'registry-form-id')">Đăng Ký</div>
+			</div>
+			<div id="after-login" class="form-after-login">
+				<div class="form-after-login-content">
+				<div class="account-info">
+					<a class="account-icon"><i class="fa fa-user"></i></a>
+					<a id="accountID" href="">Hello,<span> Dang Ha</span>
+						<ul class="dropdown-account">
+							<li class="logout-account">
+								<a href="">Đăng xuất</a>
+							</li>
+							<li class="change-info-account">
+								<a href="">Thay đổi thông tin</a>
+							</li>
+							<li class="product-account">
+								<a href="">Sản phẩm bạn đã xem</a>
+							</li>
+						</ul>
+					</a>
+				</div>
+					
+
+				</div>
+			</div>
+		</div>
+	</div>	<!-- end of banner -->
+
+
+	<!-- banner 2 -->
+	<div class="banner2">
+		
+		<div class="logo">
+			<a href="index.html"><img src="src/images/logo88.png"></a>
+		</div>
+		<div class="search-box">
+			<input type="text" class="search-box-input" placeholder="Nhập từ khóa bạn muốn tìm kiếm">
+			<button><i class="fa fa-search customize-search"></i></button>
+		</div>
+		<div class="shopping-cart">
+			<div>
+				<a href="cart.html">
+					<i class="fa fa-shopping-cart customize-cart"></i>
+				</a>
+				<a href="cart.html"><p>Giỏ hàng</p></a>
+				<a class="cart-number" href="cart.html">
+					<span>(<span id="number-product">0</span>)</span>
+				</a>
+			</div>
+
+		</div>
+		
+		
+		
+
+	</div>			<!-- end of banner2 -->
+
+	<!-- topnav responsive -->
+	<div class="topnav" id="myTopnav">
+		<a href="">Trang chủ</a>
+		<a href="products.html">Sản phẩm</a>
+		<a href="products.html">Tin tức</a>
+		<a href="blog.html">Liên hệ</a>
+		<a onclick="toggleMenu()" class="menu-icon">&#9776;</a>
+	</div>	<!-- end of navbar -->
+</body>
+</html>
