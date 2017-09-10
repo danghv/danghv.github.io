@@ -111,8 +111,8 @@
 	<!-- banner -->
 	<div class="banner">
 		<div class="banner-contact">
-			<p><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
-		<p><i class="fa fa-phone"></i>01646 197 752</p>
+			<p class="banner-mail"><i class="fa fa-envelope"></i>hadangktmt@gmail.com</p>
+			<p><i class="fa fa-phone"></i>01646 197 752</p>
 		</div>
 		<div class="form-login">
 			<div id="before-login" class="form-login-login">
@@ -160,7 +160,7 @@
 				<a href="cart.html">
 					<i class="fa fa-shopping-cart customize-cart"></i>
 				</a>
-				<a href="cart.html"><p>Giỏ hàng</p></a>
+				<a class="display-responsive" href="cart.html"><p>Giỏ hàng</p></a>
 				<a class="cart-number" href="cart.html">
 					<span>(<span id="number-product">0</span>)</span>
 				</a>
@@ -175,14 +175,14 @@
 
 	<!-- topnav responsive -->
 	<div class="topnav" id="myTopnav">
-		<a href="">Trang chủ</a>
+		<a href="index.html">Trang chủ</a>
 		<a href="products.html">Sản phẩm</a>
-		<a href="products.html">Tin tức</a>
-		<a href="blog.html">Liên hệ</a>
+		<a href="blog.html">Tin tức</a>
+		<a href="contact.html">Liên hệ</a>
 		<a onclick="toggleMenu()" class="menu-icon">&#9776;</a>
 	</div>	<!-- end of navbar -->
 
-	<div class="container">
+	<div class="container-map">
 		<div class="right-container">
 			<div class="right-content">
 				<div class="contact">
@@ -201,8 +201,8 @@
 					</div>
 					<div class="contact-content">
 						<h3>Liên Hệ</h3>
-						<p><i class="fa fa-mobile-phone"></i>01646 197 752</p>
-						<p><i class="fa fa-envelope-o"></i> hadangktmt@gmail.com</p>
+						<p class="contact-content-mobile"><i class="fa fa-mobile-phone"></i>01646 197 752</p>
+						<p class="contact-content-mail"><i class="fa fa-envelope-o"></i> hadangktmt@gmail.com</p>
 					</div>
 				</div>
 				<div class="contact">
@@ -213,16 +213,107 @@
 						<h3>Thời gian làm việc:</h3>
 						<p>Thứ 2 - thứ 6: 8AM - 10PM</p>
 						<p>Thứ 7: 9AM - 8PM</p>
-						
+
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="left-container">
 			<div class="left-content">
-				
+				<div id="googleMap">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+
+	<div class="container">
+		<div class="info">
+			<div class="info-quality">
+				<h2>Cam kết chất lượng</h2>
+				<div class="info-quality-box">
+					<i class="fa fa-check"></i>
+					<div>
+						<h3>100% ĐÃ KIỂM TRA</h3>
+						<p>Chuyên Nghiệp Theo Quy Trình</p>
+					</div>
+				</div>
+			</div>
+			<div class="info-order">
+				<h2>Hướng dẫn đặt hàng</h2>
+				<div class="info-order-box">
+					<i class="fa fa-phone"></i>
+					<div>
+						<h3>đặt hàng online</h3>
+						<p>Phone: 01646 197 752</p>
+					</div>
+				</div>
+			</div>
+			<div class="info-ship">
+				<h2>Vận chuyển</h2>
+				<div class="info-ship-box">
+					<i class="fa fa-dollar"></i>
+					<div>
+						<h3>mua hàng tiết kiệm</h3>
+						<p>miễn phí vận chuyển</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>	
+	<!-- footer row-->
+
+	<div class="container">
+		<div class="footer-row">
+			<div id="contact" class="footer-column">
+				<h4>Thông Tin Liên Hệ</h4>
+				<p><i class="fa fa-map-marker"></i>Đ/c: 14 ngõ 4 Nguyễn Đình Chiểu, Hai Bà Trưng, Hà Nội</p>
+				<p><i class="fa fa-phone"></i>Hotline: 01646 197 752.</p>
+				<p><i class="fa fa-envelope"></i>Email: hadangktmt@gmail.com.</p>
+			</div>
+			<div id="open-time" class="footer-column">
+				<h4>Thời Gian Mở Cửa</h4>
+				<p>Thứ 2 - thứ 6: 8AM - 10PM</p>
+				<br>
+				<p>Thứ 7: 9AM - 8PM</p>
+				<br>
+				<p>Nghỉ Chủ Nhật và các ngày Lễ Tết</p>
+			</div>
+			<div id="support-customer" class="footer-column">
+				<h4>Hỗ Trợ Khách Hàng</h4>
+			</div>
+			<div id="social-network" class="footer-column">
+				<h4>Mạng Xã Hội</h4>
+				<div class="social-button">
+					<a href="#" class="fa fa-facebook"></a>
+					<a href="#" class="fa fa-twitter"></a>
+					<a href="#" class="fa fa-google"></a>
+					<a href="#" class="fa fa-linkedin"></a>
+					<a href="#" class="fa fa-youtube"></a>
+				</div>
+			</div>
+
+
+		</div>			<!-- end of footer -->
+	</div>
+	<script type="text/javascript">
+		function myMap () {
+			var mapProp = {
+				center: new google.maps.LatLng(21.049261, 105.793930),
+				zoom: 12,
+			};
+			var map = new google.maps.Map(document.getElementById('googleMap'), mapProp);
+			var marker = new google.maps.Marker({
+				position: {lat: 21.049261, lng: 105.793930},
+				map: map
+			});
+			var infowindow = new google.maps.InfoWindow({
+				content: "Số 78 ngõ 107 Hoàng Quốc Việt"
+			});
+			infowindow.open(map, marker);
+		}
+	</script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQKgZWfc-9TDQtRWLX0zkJmIT2Ml7GslE&callback=myMap"></script>
 </body>
 </html>
