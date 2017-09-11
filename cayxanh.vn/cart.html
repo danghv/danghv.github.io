@@ -152,7 +152,9 @@
 		</div>
 		<div class="search-box">
 			<input type="text" class="search-box-input" placeholder="Nhập từ khóa bạn muốn tìm kiếm">
-			<button><i class="fa fa-search customize-search"></i></button>
+			<a href="searchresult.html">
+				<button><i class="fa fa-search customize-search"></i></button>
+			</a>
 		</div>
 		<div class="shopping-cart">
 			<div>
@@ -161,7 +163,7 @@
 				</a>
 				<a class="display-responsive" href="cart.html"><p>Giỏ hàng</p></a>
 				<a class="cart-number" href="cart.html">
-					<span>(<span id="number-product">0</span>)</span>
+					<span>(<span id="number-product">2</span>)</span>
 				</a>
 			</div>
 
@@ -208,11 +210,12 @@
 						<span>Thiết Mộc Lan</span>
 						<span id="dongiarow1" class="row-money row1-price">1.000.000 vnđ</span>
 						<span class="row1-product-quantity">
-							<button>-</button>
-							<input type="text" value="1" id="soluongrow1">
-							<button>+</button>
+							<button onclick="plus(-1, 'soluongrow1', 'row1Total')">-</button>
+							<!-- <input min="0" type="text" value="1" id="soluongrow1"> -->
+							<span id="soluongrow1">1</span>
+							<button onclick="plus(1, 'soluongrow1', 'row1Total')">+</button>
 						</span>
-						<span class="row-money row1-total">1.000.000 vnđ</span>
+						<span id="row1Total" class="row-money row1-total">1.000.000 vnđ</span>
 						<span class="fa fa-trash-o"></span>
 					</div>
 					<div class="cart-data-row2">
@@ -224,11 +227,13 @@
 						<span>Cây Kim Ngân</span>
 						<span id="dongiarow2" class="row-money row2-price">1.000.000 vnđ</span>
 						<span class="row1-product-quantity">
-							<button>-</button>
-							<input id="soluongrow2" type="text" name="quantity" value="1">
-							<button onclick="plus()">+</button>
+							<button onclick="plus(-1, 'soluongrow2', 'row2Total')">-</button>
+							<!-- <input min="0" id="soluongrow2" type="text" name="quantity" value="1">
+							 -->
+							 <span id="soluongrow2">1</span>
+							<button onclick="plus(1, 'soluongrow2', 'row2Total')">+</button>
 						</span>
-						<span class="row-money row2-total">1.000.000 vnđ</span>
+						<span id="row2Total" class="row-money row2-total">1.000.000 vnđ</span>
 						<span class="fa fa-trash-o"></span>
 					</div>
 					<div class="row-button">
@@ -251,7 +256,7 @@
 						<h3>Tổng Tiền</h3>
 						<div class="cart-subtotal">
 							<span>Tạm tính</span>
-							<span class="row-money">1.600.000 vnđ</span>
+							<span id="tamtinh" class="row-money">2.000.000 vnđ</span>
 						</div>
 						<div class="cart-discount">
 							<span>Giảm giá</span>
@@ -259,7 +264,7 @@
 						</div>
 						<div class="cart-oder-total">
 							<span>Tổng tiền</span>
-							<span class="row-money">1.600.000 vnđ</span>
+							<span id="tongtien" class="row-money">2.000.000 vnđ</span>
 						</div>
 						<button>
 							<a href="payment.html">Tiến Hành Đặt Hàng</a>
