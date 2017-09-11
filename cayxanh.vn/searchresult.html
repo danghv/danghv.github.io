@@ -3,14 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>cart</title>
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+	<title>product</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 </head>
 <body>
-	<div class="wrap-wrap">
-		<!-- confirm-modal -->
+	<!-- confirm-modal -->
 
 	<div id="confirmModal" class="confirm-modal">
 		<div class="confirm-modal-container animate">
@@ -180,96 +178,198 @@
 		<a href="contact.html">Liên hệ</a>
 		<a onclick="toggleMenu()" class="menu-icon">&#9776;</a>
 	</div>	<!-- end of navbar -->
-	<div class="blog-container">
-		<div class="blog-breadcrumb">
+
+	<div class="product-content">
+		<div class="product-breadcrumb">
 			<ul class="breadcrumb">
-				<li><a href="">Trang chủ</a></li>
-				<li><a href="">Giỏ hàng</a></li>
+				<li>Kết quả tìm kiếm cho <span><i>thiet moc lan</i></span></li>
 			</ul> <!-- end of breadcrumb -->
-		</div>
-
-		<div class="cart-container">
-			<div class="cart-content">
-				<div class="cart-content-detail">
-					<div class="cart-header">
-						<span>Sản phẩm</span>
-						<span>Tên Sản phẩm</span>
-						<span>Đơn Giá</span>
-						<span>Số Lượng</span>
-						<span>Thành Tiền</span>
-						<span></span>
-					</div>
-					<div class="cart-data-row1">
-						<span class="row1-product-image">
-							<a href="productdetail.html">
-								<img src="src/images/product2.jpg">
-							</a>
-						</span>
-						<span>Thiết Mộc Lan</span>
-						<span id="dongiarow1" class="row-money row1-price">1.000.000 vnđ</span>
-						<span class="row1-product-quantity">
-							<button>-</button>
-							<input type="text" value="1" id="soluongrow1">
-							<button>+</button>
-						</span>
-						<span class="row-money row1-total">1.000.000 vnđ</span>
-						<span class="fa fa-trash-o"></span>
-					</div>
-					<div class="cart-data-row2">
-						<span class="row1-product-image">
-							<a href="productdetail.html">
-								<img src="src/images/sp2.jpg">
-							</a>
-						</span>
-						<span>Cây Kim Ngân</span>
-						<span id="dongiarow2" class="row-money row2-price">1.000.000 vnđ</span>
-						<span class="row1-product-quantity">
-							<button>-</button>
-							<input id="soluongrow2" type="text" name="quantity" value="1">
-							<button onclick="plus()">+</button>
-						</span>
-						<span class="row-money row2-total">1.000.000 vnđ</span>
-						<span class="fa fa-trash-o"></span>
-					</div>
-					<div class="row-button">
-						<button class="delete-button">Xóa Toàn Bộ</button>
-						<button class="buy-button">Tiếp Tục Mua Hàng</button>
+		</div>	
+		
+		<div class="product-wrap">
+			<div class="box-items">
+				<div class="product-card">
+					<div class="card-detail">
+						
+						<a href="productdetail.html"><img src="src/images/product99.jpg" alt="bug"></a>
+						
+						<div class="new-content">
+							<h4>Cây Thiết Mộc Lan</h4>
+							<div class="product-price">
+								<span class="new-price">500 000 vnđ</span><br>
+								<span class="old-price">750 000 vnđ</span>
+							</div>
+							<div class="product-review">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-half-o"></i>
+							</div>
+							<button>Thêm Vào Giỏ Hàng</button>
+						</div>
 					</div>
 				</div>
-
-			</div>		<!-- end of cart-content -->
-			<div class="cart-payment">
-				<div class="cart-coupon">
-					<div class="cart-coupon-container">
-						<h3>Mã giảm giá</h3>
-						<input type="text" name="" placeholder="Nhập mã giảm giá">
-						<button class="apply-coupon">Áp dụng mã giảm giá</button>
+				<div class="product-card">
+					<div class="card-detail">
+						
+						<a href="productdetail.html"><img src="src/images/chau-su-bat-trang.jpg" alt="bug"></a>
+						
+						<div class="new-content">
+							<h4>Chậu Sứ Bát Tràng</h4>
+							<div class="product-price">
+								<span class="new-price">400 000 vnđ</span><br>
+								<span class="old-price">299 000 vnđ</span>
+							</div>
+							<div class="product-review">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-half-o"></i>
+							</div>
+							<button>Thêm Vào Giỏ Hàng</button>
+						</div>
 					</div>
 				</div>
-				<div class="cart-total">
-					<div class="cart-total-container">
-						<h3>Tổng Tiền</h3>
-						<div class="cart-subtotal">
-							<span>Tạm tính</span>
-							<span class="row-money">1.600.000 vnđ</span>
+				<div class="product-card">
+					<div class="card-detail">
+						
+						<a href="productdetail.html"><img src="src/images/sp3.jpg" alt="bug"></a>
+						
+						<div class="new-content">
+							<h4>Chậu cảnh</h4>
+							<div class="product-price">
+								<span class="new-price">200 000 vnđ</span><br>
+								<span class="old-price">199 000 vnđ</span>
+							</div>
+							<div class="product-review">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-half-o"></i>
+							</div>
+							<button>Thêm Vào Giỏ Hàng</button>
 						</div>
-						<div class="cart-discount">
-							<span>Giảm giá</span>
-							<span class="row-money">0 vnđ</span>
-						</div>
-						<div class="cart-oder-total">
-							<span>Tổng tiền</span>
-							<span class="row-money">1.600.000 vnđ</span>
-						</div>
-						<button>
-							<a href="payment.html">Tiến Hành Đặt Hàng</a>
-						</button>
 					</div>
+				</div>
+				
+				
+
+			</div>
+			<div class="product-list-items">
+
+				<div class="list-items-detail">
+					<ul>
+						<li class="main-title">
+							<a href="products.html">
+								<h2>Danh mục sản phẩm</h2>
+							</a>
+						</li>
+						<li class="types-tree"><h3>Cây</h3>
+							
+							<ul class="styles-tree">
+								<li class="children">cây ăn quả</li>
+								<li class="children">cây chậu treo</li>
+								<li class="children check-point">cây công trình
+									<ul class="styles-grandson">
+										<li class="grandson">cây bóng mát</li>
+										<li class="grandson">cây có hoa</li>
+										<li class="grandson">cây dây leo</li>
+										<li class="grandson">cây trồng hàng rào</li>
+										<li class="grandson">cây lá màu</li>
+										<li class="grandson">cây xanh đô thị</li>
+										<li class="grandson">cỏ các loại</li>
+									</ul>
+								</li>
+								<li class="children">cây để bàn</li>
+								<li class="children">cây lọc không khí</li>
+								<li class="children">cây may mắn</li>
+								<li class="children">cây nội thất - cây văn phòng</li>
+								<li class="children">cây thủy sinh</li>
+								<li class="children">cây trồng trong nước</li>
+							</ul>
+						</li>
+						<li class="types-tree"><h3>Chậu</h3>
+							<ul class="styles-tree">
+								<li class="children">chậu gốm sứ mỹ nghệ</li>
+								<li class="children">chậu gốm / chậu đất nung</li>
+								<li class="children">chậu nhựa</li>
+								<li class="children">chậu sứ</li>
+								<li class="children">chậu thủy tinh</li>
+								<li class="children">chậu treo</li>
+								<li class="children">chậu handmade</li>
+							</ul>
+						</li>
+						<li class="types-tree"><h3>Đồ trang trí</h3>
+							<ul class="styles-tree">
+								<li class="children">Bàn ghế sân vườn</li>
+								<li class="children">Bánh xe bò</li>
+								<li class="children">Chế tác bánh xe bò</li>
+								<li class="children">Đá granite</li>
+								<li class="children">Đá ốp tường</li>
+								<li class="children">Đá tảng</li>
+								<li class="children check-point"> Đèn trang trí
+									<ul class="styles-grandson">
+										<li class="grandson">Đèn cắm cỏ</li>
+										<li class="grandson">Đèn năng lượng mặt trời</li>
+										<li class="grandson">Đèn sân vườn</li>
+									</ul>
+								</li>
+								<li class="children">Mây tre lá</li>
+								<li class="children">Phù Điêu</li>
+								<li class="children">Sỏi - Đá cuội</li>
+								<li class="children">Thủ công mỹ nghệ</li>
+							</ul>
+						</li>
+						
+						<li class="types-tree"><h3>Hoa chậu</h3>
+							<ul class="styles-tree">
+								<li class="children">Hoa đá - xương rồng</li>
+								<li class="children">Hoa lan - orchid</li>
+								<li class="children">Lan dendrobium</li>
+								<li class="children">Lan hồ điệp</li>
+								<li class="children">Lan vandar</li>
+								<li class="children">Lan ghép gốc cây</li>
+								<li class="children">Lan mokara</li>
+							</ul>
+						</li>
+						<li class="types-tree"><h3>Vật tư nông nghiệp</h3>
+							<ul class="styles-tree">
+								<li class="children">Cây giống - hạt giống cây trồng các loại</li>
+								<li class="children">Dụng cụ làm vườn</li>
+								<li class="children">Đất trồng cây</li>
+								<li class="children">Phân bón</li>
+								<li class="children">Máy đo hỗ trợ nông nghiệp</li>
+							</ul>
+						</li>
+
+					</ul>
 				</div>
 			</div>
+		</div>		<!-- end of product content -->
+	</div>
+
+	<!-- <div class="cooperate-link">
+		<div class="link1">
+			<img src="src/images/link1.jpg">
 		</div>
-		
-	</div>		<!-- end of blog-container -->
+		<div class="link2">
+			<img src="src/images/link2.jpg">
+		</div>
+		<div class="link3">
+			<img src="src/images/link3.png">
+		</div>
+		<div class="link4">
+			<img src="src/images/link4.png">
+		</div>
+		<div class="link5">
+
+		</div>
+	</div>		<!-- end of cooperate-link --> -->
+
+	<br>
 
 	<div class="info">
 		<div class="info-quality">
@@ -303,6 +403,7 @@
 			</div>
 		</div>
 	</div>
+	<!-- footer -->
 	<div class="footer-row">
 		<div id="contact" class="footer-column">
 			<h4>Thông Tin Liên Hệ</h4>
@@ -334,9 +435,7 @@
 
 
 	</div>			<!-- end of footer -->
-	</div>
 
 	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript" src="js/cart.js"></script>
 </body>
 </html>
